@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace ScitaniLidu
 {
-    public partial class Form1 : Form
+    public partial class LoginPage : Form
     {
         private MySql.Data.MySqlClient.MySqlConnection connection;
         private string server;
@@ -16,7 +16,7 @@ namespace ScitaniLidu
         private string password;
 
 
-        public Form1()
+        public LoginPage()
         {
             InitializeComponent();
             // Nastavení velikosti písma Labelu

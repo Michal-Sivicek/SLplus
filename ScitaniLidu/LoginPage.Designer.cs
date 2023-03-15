@@ -1,6 +1,6 @@
 ﻿namespace ScitaniLidu
 {
-    partial class Form1
+    partial class LoginPage
     {
         /// <summary>
         ///  Required designer variable.
