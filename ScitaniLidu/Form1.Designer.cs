@@ -124,6 +124,7 @@
             this.LoginButton.TabIndex = 6;
             this.LoginButton.Text = "Přihlásit se";
             this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // Form1
             // 
