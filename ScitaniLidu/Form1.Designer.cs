@@ -36,9 +36,9 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.UserName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LoginUsername = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.LoginPassword = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
@@ -93,12 +93,13 @@
             this.UserName.Text = "Jmeno";
             this.UserName.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // LoginUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(302, 178);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 23);
-            this.textBox1.TabIndex = 3;
+            this.LoginUsername.Location = new System.Drawing.Point(302, 178);
+            this.LoginUsername.Name = "LoginUsername";
+            this.LoginUsername.Size = new System.Drawing.Size(200, 23);
+            this.LoginUsername.TabIndex = 3;
+            this.LoginUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Password
             // 
@@ -109,12 +110,12 @@
             this.Password.TabIndex = 4;
             this.Password.Text = "Heslo";
             // 
-            // textBox2
+            // LoginPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(302, 211);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 23);
-            this.textBox2.TabIndex = 5;
+            this.LoginPassword.Location = new System.Drawing.Point(302, 211);
+            this.LoginPassword.Name = "LoginPassword";
+            this.LoginPassword.Size = new System.Drawing.Size(200, 23);
+            this.LoginPassword.TabIndex = 5;
             // 
             // LoginButton
             // 
@@ -133,9 +134,9 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.LoginButton);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.LoginPassword);
             this.Controls.Add(this.Password);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LoginUsername);
             this.Controls.Add(this.UserName);
             this.Controls.Add(this.LoginText);
             this.Name = "Form1";
@@ -158,9 +159,9 @@
         private ToolStripTextBox toolStripTextBox1;
         private ToolStripComboBox toolStripComboBox1;
         private Label UserName;
-        private TextBox textBox2;
+        private TextBox LoginPassword;
         private Label Password;
-        private TextBox textBox1;
+        private TextBox LoginUsername;
         private Button LoginButton;
     }
 }

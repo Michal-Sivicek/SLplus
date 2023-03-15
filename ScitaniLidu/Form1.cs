@@ -3,6 +3,7 @@ using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using MySqlConnector;
+using System.Diagnostics;
 
 namespace ScitaniLidu
 {
@@ -58,8 +59,8 @@ namespace ScitaniLidu
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string username = UserName.Text;
-            string password = Password.Text;
+            string username = LoginUsername.Text;
+            string password = LoginPassword.Text;
 
             if (username == "" || password == "")
             {
@@ -71,13 +72,14 @@ namespace ScitaniLidu
                 {
                     connection.Open();
 
-                    string query = "SELECT COUNT(*) FROM users WHERE username AND password";
+                    string query = "SELECT COUNT(*) FROM users WHERE username = @username AND password = @password";
                     MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand(query, connection);
 
                     command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@password", password);
 
                     int count = Convert.ToInt32(command.ExecuteScalar());
+                   
 
                     if (count > 0)
                     {
@@ -97,6 +99,11 @@ namespace ScitaniLidu
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
