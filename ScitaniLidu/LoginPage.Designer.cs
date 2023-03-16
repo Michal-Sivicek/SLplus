@@ -40,6 +40,7 @@
             this.Password = new System.Windows.Forms.Label();
             this.LoginPassword = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
+            this.ShowPassword = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -127,19 +128,31 @@
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // Form1
+            // ShowPassword
+            // 
+            this.ShowPassword.AutoSize = true;
+            this.ShowPassword.Location = new System.Drawing.Point(303, 242);
+            this.ShowPassword.Name = "ShowPassword";
+            this.ShowPassword.Size = new System.Drawing.Size(92, 19);
+            this.ShowPassword.TabIndex = 7;
+            this.ShowPassword.Text = "Ukázat heslo";
+            this.ShowPassword.UseVisualStyleBackColor = true;
+            this.ShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
+            // 
+            // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ShowPassword);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.LoginPassword);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.LoginUsername);
             this.Controls.Add(this.UserName);
             this.Controls.Add(this.LoginText);
-            this.Name = "Form1";
+            this.Name = "LoginPage";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
@@ -163,5 +176,6 @@
         private Label Password;
         private TextBox LoginUsername;
         private Button LoginButton;
+        private CheckBox ShowPassword;
     }
 }

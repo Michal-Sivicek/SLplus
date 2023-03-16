@@ -25,6 +25,11 @@ namespace ScitaniLidu
             UserName.Font = new Font(UserName.Font.FontFamily, 11);
             // Nastavení velikosti písma Labelu
             Password.Font = new Font(Password.Font.FontFamily, 11);
+            //zobrazení hesla 
+            LoginPassword.UseSystemPasswordChar= true;
+
+            // Registrace události CheckedChanged pro checkbox "Ukázat heslo"
+            ShowPassword.CheckedChanged += new EventHandler(ShowPassword_CheckedChanged);
 
             server = "127.0.0.1";
             database = "loginScitaniLidu";
@@ -107,6 +112,19 @@ namespace ScitaniLidu
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowPassword.Checked)
+            {
+                LoginPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                LoginPassword.UseSystemPasswordChar = true;
+            }
 
         }
     }

@@ -16,7 +16,7 @@ namespace ScitaniLidu
         {
             InitializeComponent();
             // Nastavení velikosti písma Labelu
-            MainText.Font = new Font(MainText.Font.FontFamily, 16);
+            MainText.Font = new Font(MainText.Font.FontFamily, 12);
         }
 
         private void label1_Click(object sender, EventArgs e)
