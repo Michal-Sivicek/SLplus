@@ -154,7 +154,7 @@
             this.Controls.Add(this.UserName);
             this.Controls.Add(this.LoginText);
             this.Name = "LoginPage";
-            this.Text = "Form1";
+            this.Text = "Sčítání lidu";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
