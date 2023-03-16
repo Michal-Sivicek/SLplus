@@ -146,5 +146,13 @@ namespace ScitaniLidu
         {
 
         }
+
+        private void register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegisterPage RegisterPage = new RegisterPage();
+            this.Hide();
+            RegisterPage.Show();
+
+        }
     }
 }

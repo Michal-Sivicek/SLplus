@@ -41,6 +41,7 @@
             this.LoginPassword = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
             this.ShowPassword = new System.Windows.Forms.CheckBox();
+            this.register = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -140,12 +141,24 @@
             this.ShowPassword.UseVisualStyleBackColor = true;
             this.ShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
             // 
+            // register
+            // 
+            this.register.AutoSize = true;
+            this.register.Location = new System.Drawing.Point(315, 264);
+            this.register.Name = "register";
+            this.register.Size = new System.Drawing.Size(187, 15);
+            this.register.TabIndex = 8;
+            this.register.TabStop = true;
+            this.register.Text = "Pokud nemáte účet zaregisrujte se";
+            this.register.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.register_LinkClicked);
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.register);
             this.Controls.Add(this.ShowPassword);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.LoginPassword);
@@ -178,5 +191,6 @@
         private TextBox LoginUsername;
         private Button LoginButton;
         private CheckBox ShowPassword;
+        private LinkLabel register;
     }
 }
