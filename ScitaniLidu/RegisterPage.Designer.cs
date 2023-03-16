@@ -34,8 +34,12 @@
             this.name = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.firstPassword = new System.Windows.Forms.TextBox();
             this.registerButton = new System.Windows.Forms.Button();
+            this.secondPassword = new System.Windows.Forms.TextBox();
+            this.confirmText = new System.Windows.Forms.Label();
+            this.checkBoxPodminky = new System.Windows.Forms.CheckBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,16 +90,17 @@
             this.textBox1.Size = new System.Drawing.Size(215, 23);
             this.textBox1.TabIndex = 4;
             // 
-            // textBox2
+            // firstPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(262, 198);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 23);
-            this.textBox2.TabIndex = 5;
+            this.firstPassword.Location = new System.Drawing.Point(262, 198);
+            this.firstPassword.Name = "firstPassword";
+            this.firstPassword.Size = new System.Drawing.Size(215, 23);
+            this.firstPassword.TabIndex = 5;
+            this.firstPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(402, 263);
+            this.registerButton.Location = new System.Drawing.Point(402, 281);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 23);
             this.registerButton.TabIndex = 6;
@@ -103,14 +108,55 @@
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // secondPassword
+            // 
+            this.secondPassword.Location = new System.Drawing.Point(262, 227);
+            this.secondPassword.Name = "secondPassword";
+            this.secondPassword.Size = new System.Drawing.Size(215, 23);
+            this.secondPassword.TabIndex = 7;
+            // 
+            // confirmText
+            // 
+            this.confirmText.AutoSize = true;
+            this.confirmText.Location = new System.Drawing.Point(170, 230);
+            this.confirmText.Name = "confirmText";
+            this.confirmText.Size = new System.Drawing.Size(86, 15);
+            this.confirmText.TabIndex = 8;
+            this.confirmText.Text = "Potvrzení hesla";
+            this.confirmText.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // checkBoxPodminky
+            // 
+            this.checkBoxPodminky.AutoSize = true;
+            this.checkBoxPodminky.Location = new System.Drawing.Point(262, 256);
+            this.checkBoxPodminky.Name = "checkBoxPodminky";
+            this.checkBoxPodminky.Size = new System.Drawing.Size(160, 19);
+            this.checkBoxPodminky.TabIndex = 9;
+            this.checkBoxPodminky.Text = "Souhlasím s podmínkami";
+            this.checkBoxPodminky.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(417, 257);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(60, 15);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
+            // 
             // RegisterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.checkBoxPodminky);
+            this.Controls.Add(this.confirmText);
+            this.Controls.Add(this.secondPassword);
             this.Controls.Add(this.registerButton);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.firstPassword);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.password);
             this.Controls.Add(this.name);
@@ -132,7 +178,11 @@
         private Label name;
         private Label password;
         private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox firstPassword;
         private Button registerButton;
+        private TextBox secondPassword;
+        private Label confirmText;
+        private CheckBox checkBoxPodminky;
+        private LinkLabel linkLabel1;
     }
 }
