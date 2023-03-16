@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.MainText = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MainText
@@ -41,12 +42,22 @@
             this.MainText.Text = "Vítej, pro sečtení prosím vyplň tento formulář";
             this.MainText.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(75, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.MainText);
             this.Name = "MainPage";
             this.Text = "Scitani Lidu";
@@ -58,5 +69,6 @@
         #endregion
 
         private Label MainText;
+        private Label label1;
     }
 }

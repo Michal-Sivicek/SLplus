@@ -82,19 +82,33 @@ namespace ScitaniLidu
 
                     command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@password", password);
-
                     int count = Convert.ToInt32(command.ExecuteScalar());
-
 
                     if (count > 0)
                     {
-                        MessageBox.Show("Login successful!");
-                        // Vytvoøení nové instance druhého okna
-                        MainPage mainForm = new MainPage();
-                        // Skrytí aktuálního okna
-                        this.Hide();
-                        // Zobrazení druhého okna
-                        mainForm.Show();
+                        query = "SELECT role FROM users WHERE username = @username AND password = @password";
+                        command = new MySql.Data.MySqlClient.MySqlCommand(query, connection);
+
+                        command.Parameters.AddWithValue("@username", username);
+                        command.Parameters.AddWithValue("@password", password);
+                        string role = command.ExecuteScalar()?.ToString();
+
+                        if (role == null)
+                        {
+                            MessageBox.Show("Invalid username or password!");
+                        }
+                        else if (role == "admin")
+                        {
+                            AdminPage AdminPage = new AdminPage();
+                            this.Hide();
+                            AdminPage.Show();
+                        }
+                        else
+                        {
+                            MainPage MainPage = new MainPage();
+                            this.Hide();
+                            MainPage.Show();
+                        }
                     }
                     else
                     {
@@ -107,6 +121,7 @@ namespace ScitaniLidu
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
+
             }
         }
 
