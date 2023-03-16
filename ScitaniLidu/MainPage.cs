@@ -28,5 +28,12 @@ namespace ScitaniLidu
         {
 
         }
+
+        private void Return_Click(object sender, EventArgs e)
+        {
+            LoginPage LoginPage = new LoginPage();
+            this.Hide();
+            LoginPage.Show();
+        }
     }
 }
