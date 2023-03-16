@@ -35,5 +35,10 @@ namespace ScitaniLidu
             this.Hide();
             LoginPage.Show();
         }
+
+        private void lastname_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

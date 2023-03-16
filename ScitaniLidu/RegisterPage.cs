@@ -15,6 +15,30 @@ namespace ScitaniLidu
         public RegisterPage()
         {
             InitializeComponent();
+            // Nastavení velikosti písma Labelu
+            MainText.Font = new Font(MainText.Font.FontFamily, 20);
+        }
+
+        private void MainText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            LoginPage LoginPage = new LoginPage();
+            this.Hide();
+            LoginPage.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
