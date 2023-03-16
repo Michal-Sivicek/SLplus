@@ -40,5 +40,15 @@ namespace ScitaniLidu
         {
 
         }
+
+        private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Kontrola, zda uživatel klikl na křížek
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Zastavení běhu aplikace
+                Application.Exit();
+            }
+        }
     }
 }

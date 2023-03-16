@@ -127,6 +127,7 @@
             this.Controls.Add(this.MainText);
             this.Name = "MainPage";
             this.Text = "Scitani Lidu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainPage_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.Return)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -168,6 +168,7 @@
             this.Controls.Add(this.LoginText);
             this.Name = "LoginPage";
             this.Text = "Sčítání lidu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginPage_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);

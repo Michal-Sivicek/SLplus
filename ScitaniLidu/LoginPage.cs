@@ -154,5 +154,15 @@ namespace ScitaniLidu
             RegisterPage.Show();
 
         }
+
+        private void LoginPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Kontrola, zda uživatel klikl na køížek
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Zastavení bìhu aplikace
+                Application.Exit();
+            }
+        }
     }
 }

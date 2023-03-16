@@ -118,6 +118,7 @@
             this.Controls.Add(this.MainText);
             this.Name = "RegisterPage";
             this.Text = "RegisterPage";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegisterPage_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
