@@ -35,11 +35,11 @@ namespace ScitaniLidu
 
             connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
         }
- 
+
 
         private void LoginText_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void fileSystemWatcher1_Changed(object sender, FileSystemEventArgs e)
@@ -79,13 +79,17 @@ namespace ScitaniLidu
                     command.Parameters.AddWithValue("@password", password);
 
                     int count = Convert.ToInt32(command.ExecuteScalar());
-                   
+
 
                     if (count > 0)
                     {
                         MessageBox.Show("Login successful!");
-                        // pøihlášení uživatele a zobrazení hlavního okna
-                        // ...
+                        // Vytvoøení nové instance druhého okna
+                        MainPage mainForm = new MainPage();
+                        // Skrytí aktuálního okna
+                        this.Hide();
+                        // Zobrazení druhého okna
+                        mainForm.Show();
                     }
                     else
                     {
