@@ -87,7 +87,7 @@
             // UserName
             // 
             this.UserName.AutoSize = true;
-            this.UserName.Location = new System.Drawing.Point(228, 186);
+            this.UserName.Location = new System.Drawing.Point(254, 181);
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(42, 15);
             this.UserName.TabIndex = 2;
@@ -105,11 +105,12 @@
             // Password
             // 
             this.Password.AutoSize = true;
-            this.Password.Location = new System.Drawing.Point(228, 219);
+            this.Password.Location = new System.Drawing.Point(259, 214);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(37, 15);
             this.Password.TabIndex = 4;
             this.Password.Text = "Heslo";
+            this.Password.Click += new System.EventHandler(this.Password_Click);
             // 
             // LoginPassword
             // 

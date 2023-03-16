@@ -91,7 +91,7 @@ namespace ScitaniLidu
 
                         command.Parameters.AddWithValue("@username", username);
                         command.Parameters.AddWithValue("@password", password);
-                        string role = command.ExecuteScalar()?.ToString();
+                        string role = command.ExecuteScalar()?.ToString(); //metoda ExecuteScalar provede dotaz na databazi a vrati hodnotu admin/normal, pouziti ToSring kvuli hodnote null
 
                         if (role == null)
                         {
@@ -140,6 +140,10 @@ namespace ScitaniLidu
             {
                 LoginPassword.UseSystemPasswordChar = true;
             }
+
+        }
+        private void Password_Click(object sender, EventArgs e)
+        {
 
         }
     }

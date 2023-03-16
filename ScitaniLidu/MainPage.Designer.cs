@@ -29,7 +29,12 @@
         private void InitializeComponent()
         {
             this.MainText = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lastname = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.phoneNumber = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // MainText
@@ -42,14 +47,54 @@
             this.MainText.Text = "Vítej, pro sečtení prosím vyplň tento formulář";
             this.MainText.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label1
+            // name
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(89, 94);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(41, 15);
+            this.name.TabIndex = 1;
+            this.name.Text = "jmeno";
+            this.name.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(137, 91);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 23);
+            this.textBox1.TabIndex = 2;
+            // 
+            // lastname
+            // 
+            this.lastname.AutoSize = true;
+            this.lastname.Location = new System.Drawing.Point(80, 123);
+            this.lastname.Name = "lastname";
+            this.lastname.Size = new System.Drawing.Size(51, 15);
+            this.lastname.TabIndex = 3;
+            this.lastname.Text = "prijmeni";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(137, 120);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(200, 23);
+            this.textBox2.TabIndex = 4;
+            // 
+            // phoneNumber
+            // 
+            this.phoneNumber.AutoSize = true;
+            this.phoneNumber.Location = new System.Drawing.Point(80, 154);
+            this.phoneNumber.Name = "phoneNumber";
+            this.phoneNumber.Size = new System.Drawing.Size(50, 15);
+            this.phoneNumber.TabIndex = 5;
+            this.phoneNumber.Text = "tel. číslo";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(137, 151);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(200, 23);
+            this.textBox3.TabIndex = 6;
             // 
             // MainPage
             // 
@@ -57,7 +102,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.phoneNumber);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lastname);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.MainText);
             this.Name = "MainPage";
             this.Text = "Scitani Lidu";
@@ -69,6 +119,11 @@
         #endregion
 
         private Label MainText;
-        private Label label1;
+        private Label name;
+        private TextBox textBox1;
+        private Label lastname;
+        private TextBox textBox2;
+        private Label phoneNumber;
+        private TextBox textBox3;
     }
 }
