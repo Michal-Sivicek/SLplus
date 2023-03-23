@@ -54,13 +54,11 @@
             this.LoginText.Size = new System.Drawing.Size(65, 15);
             this.LoginText.TabIndex = 1;
             this.LoginText.Text = "Sčítání lidu";
-            this.LoginText.Click += new System.EventHandler(this.LoginText_Click);
             // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
-            this.fileSystemWatcher1.Changed += new System.IO.FileSystemEventHandler(this.fileSystemWatcher1_Changed);
             // 
             // contextMenuStrip1
             // 
@@ -93,7 +91,6 @@
             this.UserName.Size = new System.Drawing.Size(42, 15);
             this.UserName.TabIndex = 2;
             this.UserName.Text = "Jmeno";
-            this.UserName.Click += new System.EventHandler(this.label1_Click);
             // 
             // LoginUsername
             // 
@@ -101,7 +98,6 @@
             this.LoginUsername.Name = "LoginUsername";
             this.LoginUsername.Size = new System.Drawing.Size(200, 23);
             this.LoginUsername.TabIndex = 3;
-            this.LoginUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Password
             // 
@@ -111,7 +107,6 @@
             this.Password.Size = new System.Drawing.Size(37, 15);
             this.Password.TabIndex = 4;
             this.Password.Text = "Heslo";
-            this.Password.Click += new System.EventHandler(this.Password_Click);
             // 
             // LoginPassword
             // 
@@ -169,7 +164,6 @@
             this.Name = "LoginPage";
             this.Text = "Sčítání lidu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginPage_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
             this.contextMenuStrip2.PerformLayout();

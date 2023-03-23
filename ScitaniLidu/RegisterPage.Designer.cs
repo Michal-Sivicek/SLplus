@@ -51,7 +51,6 @@
             this.MainText.Size = new System.Drawing.Size(77, 15);
             this.MainText.TabIndex = 0;
             this.MainText.Text = "Zaregistruj se";
-            this.MainText.Click += new System.EventHandler(this.MainText_Click);
             // 
             // pictureBox1
             // 
@@ -72,7 +71,6 @@
             this.name.Size = new System.Drawing.Size(42, 15);
             this.name.TabIndex = 2;
             this.name.Text = "Jmeno";
-            this.name.Click += new System.EventHandler(this.label1_Click);
             // 
             // password
             // 
@@ -96,7 +94,6 @@
             this.firstPassword.Name = "firstPassword";
             this.firstPassword.Size = new System.Drawing.Size(215, 23);
             this.firstPassword.TabIndex = 5;
-            this.firstPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // registerButton
             // 
@@ -123,7 +120,6 @@
             this.confirmText.Size = new System.Drawing.Size(86, 15);
             this.confirmText.TabIndex = 8;
             this.confirmText.Text = "Potvrzení hesla";
-            this.confirmText.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // checkBoxPodminky
             // 
@@ -144,6 +140,7 @@
             this.linkLabel1.TabIndex = 10;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // RegisterPage
             // 

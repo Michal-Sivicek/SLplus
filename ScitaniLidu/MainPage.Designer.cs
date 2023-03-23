@@ -48,7 +48,6 @@
             this.MainText.Size = new System.Drawing.Size(246, 15);
             this.MainText.TabIndex = 0;
             this.MainText.Text = "Vítej, pro sečtení prosím vyplň tento formulář";
-            this.MainText.Click += new System.EventHandler(this.label1_Click);
             // 
             // name
             // 
@@ -58,7 +57,6 @@
             this.name.Size = new System.Drawing.Size(41, 15);
             this.name.TabIndex = 1;
             this.name.Text = "jmeno";
-            this.name.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // textBox1
             // 
@@ -75,7 +73,6 @@
             this.lastname.Size = new System.Drawing.Size(51, 15);
             this.lastname.TabIndex = 3;
             this.lastname.Text = "prijmeni";
-            this.lastname.Click += new System.EventHandler(this.lastname_Click);
             // 
             // textBox2
             // 

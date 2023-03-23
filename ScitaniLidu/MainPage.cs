@@ -19,26 +19,11 @@ namespace ScitaniLidu
             MainText.Font = new Font(MainText.Font.FontFamily, 12);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void Return_Click(object sender, EventArgs e)
         {
             LoginPage LoginPage = new LoginPage();
             this.Hide();
             LoginPage.Show();
-        }
-
-        private void lastname_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void MainPage_FormClosing(object sender, FormClosingEventArgs e)

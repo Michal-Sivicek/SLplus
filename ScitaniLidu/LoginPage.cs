@@ -31,35 +31,14 @@ namespace ScitaniLidu
             // Registrace události CheckedChanged pro checkbox "Ukázat heslo"
             ShowPassword.CheckedChanged += new EventHandler(ShowPassword_CheckedChanged);
 
-            server = "127.0.0.1";
+            server = "37.120.169.246";
             database = "loginScitaniLidu";
-            uid = "root";
-            password = "";
+            uid = "michal30";
+            password = "xgamerx";
             string connectionString = "SERVER=" + server + ";" + "DATABASE=" +
                 database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
             connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
-        }
-
-
-        private void LoginText_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fileSystemWatcher1_Changed(object sender, FileSystemEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -69,7 +48,7 @@ namespace ScitaniLidu
 
             if (username == "" || password == "")
             {
-                MessageBox.Show("Please enter username and password!");
+                MessageBox.Show("Prosím zadejte jmeno a heslo!");
             }
             else
             {
@@ -95,7 +74,7 @@ namespace ScitaniLidu
 
                         if (role == null)
                         {
-                            MessageBox.Show("Invalid username or password!");
+                            MessageBox.Show("Špatnì zadané jméno a heslo!");
                         }
                         else if (role == "admin")
                         {
@@ -112,7 +91,7 @@ namespace ScitaniLidu
                     }
                     else
                     {
-                        MessageBox.Show("Invalid username or password!");
+                        MessageBox.Show("Špatnì zadané jméno a heslo!");
                     }
 
                     connection.Close();
@@ -125,11 +104,6 @@ namespace ScitaniLidu
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (ShowPassword.Checked)
@@ -140,10 +114,6 @@ namespace ScitaniLidu
             {
                 LoginPassword.UseSystemPasswordChar = true;
             }
-
-        }
-        private void Password_Click(object sender, EventArgs e)
-        {
 
         }
 

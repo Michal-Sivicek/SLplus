@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,16 +21,9 @@ namespace ScitaniLidu
             //zobrazení hesla 
             firstPassword.UseSystemPasswordChar = true;
             secondPassword.UseSystemPasswordChar = true;
-        }
-
-        private void MainText_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            linkLabel1.LinkColor = Color.Blue;
+            // Nastavení vlastnosti Text pro zobrazení textu odkazu
+            linkLabel1.Text = "Podmínky";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -46,21 +40,24 @@ namespace ScitaniLidu
             bool agreedToTerms = checkBoxPodminky.Checked;
 
             // Ověření, zda byly podmínky přijaty
-            if (agreedToTerms)
-            {
-                // Podmínky byly přijaty - provedení dalších akcí
-                // ...
-                this.Close();
-            }
-            else
+            if (!agreedToTerms)
             {
                 // Podmínky nebyly přijaty - zobrazení chybové zprávy
                 MessageBox.Show("Musíte souhlasit s podmínkami, abyste mohli pokračovat.");
+                return;
             }
 
             // Získání hodnot hesel z textových polí
             string password = firstPassword.Text;
             string confirmPassword = secondPassword.Text;
+
+            // Kontrola, zda byla hesla zadána
+            if (string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
+            {
+                // Hesla nebyla zadána - zobrazení chybové zprávy
+                MessageBox.Show("Zadejte prosím heslo a potvrzení hesla.");
+                return;
+            }
 
             // Porovnání hesel
             if (password == confirmPassword)
@@ -86,15 +83,10 @@ namespace ScitaniLidu
                 Application.Exit();
             }
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
+       
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
+            Process.Start(new ProcessStartInfo("https://www.google.com") { UseShellExecute = true });
         }
     }
 }
