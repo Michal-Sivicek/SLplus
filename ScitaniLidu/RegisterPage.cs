@@ -5,15 +5,24 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace ScitaniLidu
 {
     public partial class RegisterPage : Form
     {
+        private MySql.Data.MySqlClient.MySqlConnection connection;
+        private string server;
+        private string database;
+        private string uid;
+        private string passwordDatabase;
+        private string connectionString;
+
         public RegisterPage()
         {
             InitializeComponent();
@@ -25,6 +34,15 @@ namespace ScitaniLidu
             linkLabel1.LinkColor = Color.Blue;
             // Nastavení vlastnosti Text pro zobrazení textu odkazu
             linkLabel1.Text = "Podmínky";
+
+            server = "37.120.169.246";
+            database = "loginScitaniLidu";
+            uid = "michal30";
+            passwordDatabase = "xgamerx";
+            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+                database + ";" + "UID=" + uid + ";" + "PASSWORD=" + passwordDatabase + ";";
+
+            connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -38,8 +56,8 @@ namespace ScitaniLidu
         {
             if (ValidateAgreedToTerms() && ValidateUserInput())
             {
-                MessageBox.Show("Registrace proběhlá úspěšně");
                 SaveDataAndLoginPage();
+                MessageBox.Show("Registrace proběhla úspěšně");
             }
         }
 
@@ -84,6 +102,23 @@ namespace ScitaniLidu
 
         private void SaveDataAndLoginPage()
         {
+            connection.Open();
+            string username = registerUsername.Text;
+            string password = firstPassword.Text;
+
+            // Vložení nového uživatele s rolí "normal" do tabulky "users"
+            string query = "INSERT INTO users (username, password, role) VALUES (@Username, @Password, 'normal')";
+
+            using (MySql.Data.MySqlClient.MySqlConnection connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString))
+            {
+                MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@Password", password);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+
             LoginPage LoginPage = new LoginPage();
             this.Hide();
             LoginPage.Show();
