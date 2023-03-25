@@ -102,7 +102,7 @@ namespace ScitaniLidu
 
         private void SaveDataAndLoginPage()
         {
-            connection.Open();
+            
             string username = registerUsername.Text;
             string password = firstPassword.Text;
 
