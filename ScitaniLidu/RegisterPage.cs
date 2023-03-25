@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace ScitaniLidu
 {
@@ -35,44 +36,58 @@ namespace ScitaniLidu
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (ValidateAgreedToTerms() && ValidateUserInput())
+            {
+                MessageBox.Show("Registrace proběhlá úspěšně");
+                SaveDataAndLoginPage();
+            }
+        }
 
-            // Zjištění, zda byl checkbox s podmínkami označen
+        private bool ValidateAgreedToTerms()
+        {
             bool agreedToTerms = checkBoxPodminky.Checked;
 
-            // Ověření, zda byly podmínky přijaty
             if (!agreedToTerms)
             {
                 // Podmínky nebyly přijaty - zobrazení chybové zprávy
                 MessageBox.Show("Musíte souhlasit s podmínkami, abyste mohli pokračovat.");
-                return;
+                return false;
             }
-
-            // Získání hodnot hesel z textových polí
-            string password = firstPassword.Text;
-            string confirmPassword = secondPassword.Text;
-
-            // Kontrola, zda byla hesla zadána
-            if (string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
-            {
-                // Hesla nebyla zadána - zobrazení chybové zprávy
-                MessageBox.Show("Zadejte prosím heslo a potvrzení hesla.");
-                return;
-            }
-
-            // Porovnání hesel
-            if (password == confirmPassword)
-            {
-                // Hesla se shodují - uložení dat a zavření formuláře
-                // ...
-                this.Close();
-            }
-            else
-            {
-                // Hesla se neshodují - zobrazení chybové zprávy
-                MessageBox.Show("Hesla se neshodují, zadejte prosím správné heslo.");
-            }
+            return true;
         }
 
+        private bool ValidateUserInput()
+        {
+            string password = firstPassword.Text;
+            string confirmPassword = secondPassword.Text;
+            string username = registerUsername.Text;
+
+            if (string.IsNullOrEmpty(username))
+            {
+                MessageBox.Show("Zadejte prosím uživatelské jméno.");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
+            {
+                MessageBox.Show("Zadejte prosím heslo a potvrzení hesla.");
+                return false;
+            }
+
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Hesla se neshodují, zadejte prosím správné heslo.");
+                return false;
+            }
+            return true;
+        }
+
+        private void SaveDataAndLoginPage()
+        {
+            LoginPage LoginPage = new LoginPage();
+            this.Hide();
+            LoginPage.Show();
+        }
 
         private void RegisterPage_FormClosing(object sender, FormClosingEventArgs e)
         {

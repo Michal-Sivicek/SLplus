@@ -33,7 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.name = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.registerUsername = new System.Windows.Forms.TextBox();
             this.firstPassword = new System.Windows.Forms.TextBox();
             this.registerButton = new System.Windows.Forms.Button();
             this.secondPassword = new System.Windows.Forms.TextBox();
@@ -81,12 +81,12 @@
             this.password.TabIndex = 3;
             this.password.Text = "Heslo";
             // 
-            // textBox1
+            // registerUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(262, 169);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 23);
-            this.textBox1.TabIndex = 4;
+            this.registerUsername.Location = new System.Drawing.Point(262, 169);
+            this.registerUsername.Name = "registerUsername";
+            this.registerUsername.Size = new System.Drawing.Size(215, 23);
+            this.registerUsername.TabIndex = 4;
             // 
             // firstPassword
             // 
@@ -154,7 +154,7 @@
             this.Controls.Add(this.secondPassword);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.firstPassword);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.registerUsername);
             this.Controls.Add(this.password);
             this.Controls.Add(this.name);
             this.Controls.Add(this.pictureBox1);
@@ -174,7 +174,7 @@
         private PictureBox pictureBox1;
         private Label name;
         private Label password;
-        private TextBox textBox1;
+        private TextBox registerUsername;
         private TextBox firstPassword;
         private Button registerButton;
         private TextBox secondPassword;

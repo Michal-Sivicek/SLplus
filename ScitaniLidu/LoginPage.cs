@@ -22,9 +22,9 @@ namespace ScitaniLidu
             // Nastavení velikosti písma Labelu
             LoginText.Font = new Font(LoginText.Font.FontFamily, 20);
             // Nastavení velikosti písma Labelu
-            UserName.Font = new Font(UserName.Font.FontFamily, 11);
+            UserName.Font = new Font(UserName.Font.FontFamily, 8);
             // Nastavení velikosti písma Labelu
-            Password.Font = new Font(Password.Font.FontFamily, 11);
+            Password.Font = new Font(Password.Font.FontFamily, 8);
             //zobrazení hesla 
             LoginPassword.UseSystemPasswordChar= true;
 
