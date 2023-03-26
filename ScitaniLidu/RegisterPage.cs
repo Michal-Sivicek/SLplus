@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using MySqlConnector;
+using Newtonsoft.Json;
 
 namespace ScitaniLidu
 {
@@ -26,25 +27,35 @@ namespace ScitaniLidu
         public RegisterPage()
         {
             InitializeComponent();
+
             // Nastavení velikosti písma Labelu
             MainText.Font = new Font(MainText.Font.FontFamily, 20);
+
             //zobrazení hesla 
             firstPassword.UseSystemPasswordChar = true;
             secondPassword.UseSystemPasswordChar = true;
             linkLabel1.LinkColor = Color.Blue;
+
             // Nastavení vlastnosti Text pro zobrazení textu odkazu
             linkLabel1.Text = "Podmínky";
 
-            server = "37.120.169.246";
-            database = "loginScitaniLidu";
-            uid = "michal30";
-            passwordDatabase = "xgamerx";
+            // Načtení konfigurace z JSON souboru
+            using (StreamReader r = new StreamReader("C:\\Users\\Admin\\source\\repos\\ScitaniLidu\\ScitaniLidu\\config.json"))
+            {
+                string json = r.ReadToEnd();
+                dynamic config = JsonConvert.DeserializeObject(json);
+                server = config.server;
+                database = config.database;
+                uid = config.uid;
+                passwordDatabase = config.password;
+            }
+
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
                 database + ";" + "UID=" + uid + ";" + "PASSWORD=" + passwordDatabase + ";";
 
             connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
 
-            // Nastavení klávesové zkratky pro tlačítko "registerButton"
+            // Nastavení klávesové zkratky pro tlačítko registrace
             this.AcceptButton = registerButton;
         }
 

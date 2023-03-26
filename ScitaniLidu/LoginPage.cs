@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
@@ -20,16 +20,16 @@ namespace ScitaniLidu
         public LoginPage()
         {
             InitializeComponent();
-            // Nastavení velikosti písma Labelu
+            // NastavenÃ­ velikosti pÃ­sma Labelu
             LoginText.Font = new Font(LoginText.Font.FontFamily, 20);
-            // Nastavení velikosti písma Labelu
+            // NastavenÃ­ velikosti pÃ­sma Labelu
             UserName.Font = new Font(UserName.Font.FontFamily, 8);
-            // Nastavení velikosti písma Labelu
+            // NastavenÃ­ velikosti pÃ­sma Labelu
             Password.Font = new Font(Password.Font.FontFamily, 8);
-            //zobrazení hesla 
-            LoginPassword.UseSystemPasswordChar= true;
+            //zobrazenÃ­ hesla 
+            LoginPassword.UseSystemPasswordChar = true;
 
-            // Registrace události CheckedChanged pro checkbox "Ukázat heslo"
+            // Registrace udÃ¡losti CheckedChanged pro checkbox "UkÃ¡zat heslo"
             ShowPassword.CheckedChanged += new EventHandler(ShowPassword_CheckedChanged);
 
             string json = File.ReadAllText("C:\\Users\\Admin\\source\\repos\\ScitaniLidu\\ScitaniLidu\\config.json");
@@ -45,7 +45,7 @@ namespace ScitaniLidu
 
             connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
 
-            // Nastavení klávesové zkratky pro tlaèítko "LoginButton"
+            // NastavenÃ­ klÃ¡vesovÃ© zkratky pro tlaÃ¨Ã­tko "LoginButton"
             this.AcceptButton = LoginButton;
         }
 
@@ -56,7 +56,7 @@ namespace ScitaniLidu
 
             if (username == "" || password == "")
             {
-                MessageBox.Show("Prosím zadejte jmeno a heslo!");
+                MessageBox.Show("ProsÃ­m zadejte jmeno a heslo!");
                 return;
             }
 
@@ -70,7 +70,7 @@ namespace ScitaniLidu
 
                     if (role == null)
                     {
-                        MessageBox.Show("Špatnì zadané jméno a heslo!");
+                        MessageBox.Show("Å patnÄ› zadanÃ© jmÃ©no a heslo!");
                     }
                     else if (role == "admin")
                     {
@@ -83,7 +83,7 @@ namespace ScitaniLidu
                 }
                 else
                 {
-                    MessageBox.Show("Špatnì zadané jméno a heslo!");
+                    MessageBox.Show("Å patnÄ› zadanÃ© jmÃ©no a heslo!");
                 }
 
                 connection.Close();
@@ -94,7 +94,7 @@ namespace ScitaniLidu
             }
         }
 
-        //Tato metoda se pokouší získat poèet øádkù v tabulce "users", které odpovídají zadané kombinaci uivatelského jména a hesla.
+        //Tato metoda se pokouÅ¡Ã­ zÃ­skat poÄet Å™Ã¡dkÅ¯ v tabulce "users", kterÃ© odpovÃ­dajÃ­ zadanÃ© kombinaci uÅ¾ivatelskÃ©ho jmÃ©na a hesla.
         private bool ValidateUser(string username, string password)
         {
             string query = "SELECT COUNT(*) FROM users WHERE username = @username AND password = @password";
@@ -104,7 +104,7 @@ namespace ScitaniLidu
             command.Parameters.AddWithValue("@password", password);
             int count = Convert.ToInt32(command.ExecuteScalar());
 
-            // Pokud je poèet øádkù vìtší ne 0, pak uivatelské jméno a heslo jsou platné a metoda vrátí hodnotu "true". 
+            // Pokud je poÄet Å™Ã¡dkÅ¯ vÄ›tÅ¡Ã­ neÅ¾ 0, pak uÅ¾ivatelskÃ© jmÃ©no a heslo jsou platnÃ© a metoda vrÃ¡tÃ­ hodnotu "true". 
             return (count > 0);
         }
 
@@ -116,7 +116,7 @@ namespace ScitaniLidu
 
             command.Parameters.AddWithValue("@username", username);
             command.Parameters.AddWithValue("@password", password);
-            //Tento pøíkaz slouí k provedení dotazu na databázi a vrácení hodnoty z prvního sloupce prvního øádku vısledkù.
+            //Tento pÅ™Ã­kaz slouÅ¾Ã­ k provedenÃ­ dotazu na databÃ¡zi a vrÃ¡cenÃ­ hodnoty z prvnÃ­ho sloupce prvnÃ­ho Å™Ã¡dku vÃ½sledkÅ¯.
             string role = command.ExecuteScalar()?.ToString();
 
             return role;
@@ -159,10 +159,10 @@ namespace ScitaniLidu
 
         private void LoginPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Kontrola, zda uivatel klikl na køíek
+            // Kontrola, zda uÅ¾ivatel klikl na kÅ™Ã­Å¾ek
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                // Zastavení bìhu aplikace
+                // ZastavenÃ­ bÄ›hu aplikace
                 Application.Exit();
             }
         }
