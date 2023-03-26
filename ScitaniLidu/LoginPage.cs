@@ -39,6 +39,9 @@ namespace ScitaniLidu
                 database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
             connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
+
+            // Nastavení klávesové zkratky pro tlaèítko "LoginButton"
+            this.AcceptButton = LoginButton;
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -49,59 +52,83 @@ namespace ScitaniLidu
             if (username == "" || password == "")
             {
                 MessageBox.Show("Prosím zadejte jmeno a heslo!");
+                return;
             }
-            else
+
+            try
             {
-                try
+                connection.Open();
+
+                if (ValidateUser(username, password))
                 {
-                    connection.Open();
+                    string role = GetUserRole(username, password);
 
-                    string query = "SELECT COUNT(*) FROM users WHERE username = @username AND password = @password";
-                    MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand(query, connection);
-
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@password", password);
-                    int count = Convert.ToInt32(command.ExecuteScalar());
-
-                    if (count > 0)
-                    {
-                        query = "SELECT role FROM users WHERE username = @username AND password = @password";
-                        command = new MySql.Data.MySqlClient.MySqlCommand(query, connection);
-
-                        command.Parameters.AddWithValue("@username", username);
-                        command.Parameters.AddWithValue("@password", password);
-                        string role = command.ExecuteScalar()?.ToString(); //metoda ExecuteScalar provede dotaz na databazi a vrati hodnotu admin/normal, pouziti ToSring kvuli hodnote null
-
-                        if (role == null)
-                        {
-                            MessageBox.Show("Špatnì zadané jméno a heslo!");
-                        }
-                        else if (role == "admin")
-                        {
-                            AdminPage AdminPage = new AdminPage();
-                            this.Hide();
-                            AdminPage.Show();
-                        }
-                        else
-                        {
-                            MainPage MainPage = new MainPage();
-                            this.Hide();
-                            MainPage.Show();
-                        }
-                    }
-                    else
+                    if (role == null)
                     {
                         MessageBox.Show("Špatnì zadané jméno a heslo!");
                     }
-
-                    connection.Close();
+                    else if (role == "admin")
+                    {
+                        ShowAdminPage();
+                    }
+                    else
+                    {
+                        ShowMainPage();
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Špatnì zadané jméno a heslo!");
                 }
 
+                connection.Close();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        //Tato metoda se pokouší získat poèet øádkù v tabulce "users", které odpovídají zadané kombinaci uživatelského jména a hesla.
+        private bool ValidateUser(string username, string password)
+        {
+            string query = "SELECT COUNT(*) FROM users WHERE username = @username AND password = @password";
+            MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@password", password);
+            int count = Convert.ToInt32(command.ExecuteScalar());
+
+            // Pokud je poèet øádkù vìtší než 0, pak uživatelské jméno a heslo jsou platné a metoda vrátí hodnotu "true". 
+            return (count > 0);
+        }
+
+        //metoda provede dotaz do databaze a zsika zaznam s roli uzivatele na zaklade zadaneho jmena a hesla vrati (admin nebo normal)
+        private string GetUserRole(string username, string password)
+        {
+            string query = "SELECT role FROM users WHERE username = @username AND password = @password";
+            MySql.Data.MySqlClient.MySqlCommand command = new MySql.Data.MySqlClient.MySqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@password", password);
+            //Tento pøíkaz slouží k provedení dotazu na databázi a vrácení hodnoty z prvního sloupce prvního øádku výsledkù.
+            string role = command.ExecuteScalar()?.ToString();
+
+            return role;
+        }
+
+        private void ShowAdminPage()
+        {
+            AdminPage AdminPage = new AdminPage();
+            this.Hide();
+            AdminPage.Show();
+        }
+
+        private void ShowMainPage()
+        {
+            MainPage MainPage = new MainPage();
+            this.Hide();
+            MainPage.Show();
         }
 
         private void ShowPassword_CheckedChanged(object sender, EventArgs e)

@@ -43,6 +43,9 @@ namespace ScitaniLidu
                 database + ";" + "UID=" + uid + ";" + "PASSWORD=" + passwordDatabase + ";";
 
             connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
+
+            // Nastavení klávesové zkratky pro tlačítko "registerButton"
+            this.AcceptButton = registerButton;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
