@@ -4,6 +4,7 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using MySqlConnector;
 using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace ScitaniLidu
 {
@@ -31,10 +32,14 @@ namespace ScitaniLidu
             // Registrace události CheckedChanged pro checkbox "Ukázat heslo"
             ShowPassword.CheckedChanged += new EventHandler(ShowPassword_CheckedChanged);
 
-            server = "37.120.169.246";
-            database = "loginScitaniLidu";
-            uid = "michal30";
-            password = "xgamerx";
+            string json = File.ReadAllText("C:\\Users\\Admin\\source\\repos\\ScitaniLidu\\ScitaniLidu\\config.json");
+            dynamic config = JsonConvert.DeserializeObject(json);
+
+            string server = config.server;
+            string database = config.database;
+            string uid = config.uid;
+            string password = config.password;
+
             string connectionString = "SERVER=" + server + ";" + "DATABASE=" +
                 database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
