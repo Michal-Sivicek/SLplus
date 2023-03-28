@@ -32,7 +32,7 @@ namespace ScitaniLidu
             // Registrace události CheckedChanged pro checkbox "Ukázat heslo"
             ShowPassword.CheckedChanged += new EventHandler(ShowPassword_CheckedChanged);
 
-            string json = File.ReadAllText("C:\\Users\\Admin\\source\\repos\\ScitaniLidu\\ScitaniLidu\\config.json");
+            string json = File.ReadAllText("config.json");
             dynamic config = JsonConvert.DeserializeObject(json);
 
             string server = config.server;
