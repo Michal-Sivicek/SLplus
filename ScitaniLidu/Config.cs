@@ -10,6 +10,7 @@ namespace ScitaniLidu
     internal static class Config
     {
 
+        //Tato metoda slouží k načtení konfiguračních dat ze souboru config.json pokud soubor neexistuje metoda zavolá metodu makeConfig
         public static dynamic GetConfig()
         {
 
@@ -23,7 +24,7 @@ namespace ScitaniLidu
 
         }
 
-
+        //Tato metoda slouží k vytvoření souboru config.json s výchozými daty
         static void makeConfig()
         {
             string configText = @"{
@@ -36,9 +37,5 @@ namespace ScitaniLidu
             File.WriteAllText("config.json", configText);
 
         }
-
-
-
-
     }
 }
