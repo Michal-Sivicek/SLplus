@@ -40,15 +40,12 @@ namespace ScitaniLidu
             linkLabel1.Text = "Podmínky";
 
             // Načtení konfigurace z JSON souboru
-            using (StreamReader r = new StreamReader("config.json"))
-            {
-                string json = r.ReadToEnd();
-                dynamic config = JsonConvert.DeserializeObject(json);
-                server = config.server;
-                database = config.database;
-                uid = config.uid;
-                passwordDatabase = config.password;
-            }
+            dynamic config = Config.GetConfig();
+
+            server = config.server;
+            database = config.database;
+            uid = config.uid;
+            passwordDatabase = config.password;
 
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
                 database + ";" + "UID=" + uid + ";" + "PASSWORD=" + passwordDatabase + ";";
