@@ -37,6 +37,8 @@
             this.confirmText = new System.Windows.Forms.Label();
             this.checkBoxPodminky = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.RegisterPageText = new System.Windows.Forms.Label();
+            this.RegisterPageReturn = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // name
@@ -118,12 +120,41 @@
             this.linkLabel1.Text = "linkLabel1";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // RegisterPageText
+            // 
+            this.RegisterPageText.AutoSize = true;
+            this.RegisterPageText.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RegisterPageText.Location = new System.Drawing.Point(292, 113);
+            this.RegisterPageText.Name = "RegisterPageText";
+            this.RegisterPageText.Size = new System.Drawing.Size(149, 32);
+            this.RegisterPageText.TabIndex = 11;
+            this.RegisterPageText.Text = "Zaregisruj se";
+            this.RegisterPageText.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // RegisterPageReturn
+            // 
+            this.RegisterPageReturn.AutoSize = true;
+            this.RegisterPageReturn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.RegisterPageReturn.Depth = 0;
+            this.RegisterPageReturn.Location = new System.Drawing.Point(742, 26);
+            this.RegisterPageReturn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.RegisterPageReturn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RegisterPageReturn.Name = "RegisterPageReturn";
+            this.RegisterPageReturn.Primary = false;
+            this.RegisterPageReturn.Size = new System.Drawing.Size(45, 36);
+            this.RegisterPageReturn.TabIndex = 12;
+            this.RegisterPageReturn.Text = "Zpět";
+            this.RegisterPageReturn.UseVisualStyleBackColor = true;
+            this.RegisterPageReturn.Click += new System.EventHandler(this.materialFlatButton1_Click);
+            // 
             // RegisterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.RegisterPageReturn);
+            this.Controls.Add(this.RegisterPageText);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.checkBoxPodminky);
             this.Controls.Add(this.confirmText);
@@ -151,5 +182,7 @@
         private Label confirmText;
         private CheckBox checkBoxPodminky;
         private LinkLabel linkLabel1;
+        private Label RegisterPageText;
+        private MaterialSkin.Controls.MaterialFlatButton RegisterPageReturn;
     }
 }
