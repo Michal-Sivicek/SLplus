@@ -55,7 +55,7 @@
             this.buttonDomuABytu.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonDomuABytu.Depth = 0;
             this.buttonDomuABytu.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonDomuABytu.Location = new System.Drawing.Point(10, 165);
+            this.buttonDomuABytu.Location = new System.Drawing.Point(13, 173);
             this.buttonDomuABytu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.buttonDomuABytu.MouseState = MaterialSkin.MouseState.HOVER;
             this.buttonDomuABytu.Name = "buttonDomuABytu";
@@ -73,7 +73,7 @@
             this.buttonObyvatelstvo.BackColor = System.Drawing.SystemColors.ControlDark;
             this.buttonObyvatelstvo.Depth = 0;
             this.buttonObyvatelstvo.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonObyvatelstvo.Location = new System.Drawing.Point(10, 77);
+            this.buttonObyvatelstvo.Location = new System.Drawing.Point(6, 97);
             this.buttonObyvatelstvo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.buttonObyvatelstvo.MouseState = MaterialSkin.MouseState.HOVER;
             this.buttonObyvatelstvo.Name = "buttonObyvatelstvo";
