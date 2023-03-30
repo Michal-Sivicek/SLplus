@@ -15,7 +15,7 @@ using Newtonsoft.Json;
 
 namespace ScitaniLidu
 {
-    public partial class RegisterPage : Form
+    public partial class RegisterPage : MaterialSkin.Controls.MaterialForm
     {
         private MySql.Data.MySqlClient.MySqlConnection connection;
         private string server;
@@ -27,10 +27,6 @@ namespace ScitaniLidu
         public RegisterPage()
         {
             InitializeComponent();
-
-            // Nastavení velikosti písma Labelu
-            MainText.Font = new Font(MainText.Font.FontFamily, 20);
-
             //zobrazení hesla 
             firstPassword.UseSystemPasswordChar = true;
             secondPassword.UseSystemPasswordChar = true;
@@ -54,13 +50,6 @@ namespace ScitaniLidu
 
             // Nastavení klávesové zkratky pro tlačítko registrace
             this.AcceptButton = registerButton;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            LoginPage LoginPage = new LoginPage();
-            this.Hide();
-            LoginPage.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

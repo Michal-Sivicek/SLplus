@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace ScitaniLidu
 {
-    public partial class MainPage : Form
+    public partial class MainPage : MaterialSkin.Controls.MaterialForm
     {
         public MainPage()
         {
             InitializeComponent();
-            // Nastavení velikosti písma Labelu
-            MainText.Font = new Font(MainText.Font.FontFamily, 12);
         }
 
         private void Return_Click(object sender, EventArgs e)

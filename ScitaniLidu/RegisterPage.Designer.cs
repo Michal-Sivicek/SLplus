@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterPage));
-            this.MainText = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.name = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.Label();
             this.registerUsername = new System.Windows.Forms.TextBox();
@@ -40,28 +37,7 @@
             this.confirmText = new System.Windows.Forms.Label();
             this.checkBoxPodminky = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // MainText
-            // 
-            this.MainText.AutoSize = true;
-            this.MainText.Location = new System.Drawing.Point(292, 60);
-            this.MainText.Name = "MainText";
-            this.MainText.Size = new System.Drawing.Size(77, 15);
-            this.MainText.TabIndex = 0;
-            this.MainText.Text = "Zaregistruj se";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // name
             // 
@@ -157,21 +133,15 @@
             this.Controls.Add(this.registerUsername);
             this.Controls.Add(this.password);
             this.Controls.Add(this.name);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.MainText);
             this.Name = "RegisterPage";
             this.Text = "RegisterPage";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegisterPage_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Label MainText;
-        private PictureBox pictureBox1;
         private Label name;
         private Label password;
         private TextBox registerUsername;
