@@ -49,11 +49,12 @@
             // LoginText
             // 
             this.LoginText.AutoSize = true;
-            this.LoginText.Location = new System.Drawing.Point(302, 51);
+            this.LoginText.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LoginText.Location = new System.Drawing.Point(326, 115);
             this.LoginText.Name = "LoginText";
-            this.LoginText.Size = new System.Drawing.Size(65, 15);
+            this.LoginText.Size = new System.Drawing.Size(127, 32);
             this.LoginText.TabIndex = 1;
-            this.LoginText.Text = "Sčítání lidu";
+            this.LoginText.Text = "Přihlásit se";
             // 
             // fileSystemWatcher1
             // 

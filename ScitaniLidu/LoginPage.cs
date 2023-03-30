@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace ScitaniLidu
 {
-    public partial class LoginPage : Form
+    public partial class LoginPage : MaterialSkin.Controls.MaterialForm
     {
         private MySql.Data.MySqlClient.MySqlConnection connection;
         private string server;
@@ -154,7 +154,6 @@ namespace ScitaniLidu
             RegisterPage RegisterPage = new RegisterPage();
             this.Hide();
             RegisterPage.Show();
-
         }
 
         private void LoginPage_FormClosing(object sender, FormClosingEventArgs e)

@@ -129,7 +129,6 @@
             this.RegisterPageText.Size = new System.Drawing.Size(149, 32);
             this.RegisterPageText.TabIndex = 11;
             this.RegisterPageText.Text = "Zaregisruj se";
-            this.RegisterPageText.Click += new System.EventHandler(this.label1_Click);
             // 
             // RegisterPageReturn
             // 

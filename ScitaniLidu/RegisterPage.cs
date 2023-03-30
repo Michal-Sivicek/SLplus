@@ -139,11 +139,6 @@ namespace ScitaniLidu
             Process.Start(new ProcessStartInfo("https://www.google.com") { UseShellExecute = true });
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             LoginPage loginPage = new LoginPage();
