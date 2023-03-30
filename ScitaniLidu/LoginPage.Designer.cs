@@ -28,13 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.LoginText = new System.Windows.Forms.Label();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.UserName = new System.Windows.Forms.Label();
             this.LoginUsername = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.Label();
@@ -43,7 +38,6 @@
             this.ShowPassword = new System.Windows.Forms.CheckBox();
             this.register = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // LoginText
@@ -60,29 +54,6 @@
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox1,
-            this.toolStripComboBox1});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(182, 56);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
-            // 
-            // toolStripComboBox1
-            // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
             // 
             // UserName
             // 
@@ -166,8 +137,6 @@
             this.Text = "Sčítání lidu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginPage_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.contextMenuStrip2.ResumeLayout(false);
-            this.contextMenuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,10 +146,6 @@
 
         private Label LoginText;
         private FileSystemWatcher fileSystemWatcher1;
-        private ContextMenuStrip contextMenuStrip1;
-        private ContextMenuStrip contextMenuStrip2;
-        private ToolStripTextBox toolStripTextBox1;
-        private ToolStripComboBox toolStripComboBox1;
         private Label UserName;
         private TextBox LoginPassword;
         private Label Password;

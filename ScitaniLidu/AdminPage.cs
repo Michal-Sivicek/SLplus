@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ScitaniLidu
 {
-    public partial class AdminPage : Form
+    public partial class AdminPage : MaterialSkin.Controls.MaterialForm
     {
         public AdminPage()
         {

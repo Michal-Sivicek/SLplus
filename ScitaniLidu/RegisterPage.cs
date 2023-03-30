@@ -144,7 +144,6 @@ namespace ScitaniLidu
             LoginPage loginPage = new LoginPage();
             this.Hide();
             loginPage.ShowDialog();
-            this.Show();
         }
     }
 }
