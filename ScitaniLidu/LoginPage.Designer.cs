@@ -42,6 +42,7 @@
             // 
             // LoginText
             // 
+            this.LoginText.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LoginText.AutoSize = true;
             this.LoginText.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LoginText.Location = new System.Drawing.Point(326, 115);
@@ -57,6 +58,7 @@
             // 
             // UserName
             // 
+            this.UserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.UserName.AutoSize = true;
             this.UserName.Location = new System.Drawing.Point(254, 181);
             this.UserName.Name = "UserName";
@@ -66,6 +68,7 @@
             // 
             // LoginUsername
             // 
+            this.LoginUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LoginUsername.Location = new System.Drawing.Point(302, 178);
             this.LoginUsername.Name = "LoginUsername";
             this.LoginUsername.Size = new System.Drawing.Size(200, 23);
@@ -73,6 +76,7 @@
             // 
             // Password
             // 
+            this.Password.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Password.AutoSize = true;
             this.Password.Location = new System.Drawing.Point(259, 214);
             this.Password.Name = "Password";
@@ -82,6 +86,7 @@
             // 
             // LoginPassword
             // 
+            this.LoginPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LoginPassword.Location = new System.Drawing.Point(302, 211);
             this.LoginPassword.Name = "LoginPassword";
             this.LoginPassword.Size = new System.Drawing.Size(200, 23);
@@ -89,6 +94,7 @@
             // 
             // LoginButton
             // 
+            this.LoginButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LoginButton.Location = new System.Drawing.Point(427, 282);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(75, 23);
@@ -99,6 +105,7 @@
             // 
             // ShowPassword
             // 
+            this.ShowPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ShowPassword.AutoSize = true;
             this.ShowPassword.Location = new System.Drawing.Point(303, 242);
             this.ShowPassword.Name = "ShowPassword";
@@ -110,6 +117,7 @@
             // 
             // register
             // 
+            this.register.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.register.AutoSize = true;
             this.register.Location = new System.Drawing.Point(315, 264);
             this.register.Name = "register";

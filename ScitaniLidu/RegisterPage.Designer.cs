@@ -43,6 +43,7 @@
             // 
             // name
             // 
+            this.name.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.name.AutoSize = true;
             this.name.Location = new System.Drawing.Point(214, 172);
             this.name.Name = "name";
@@ -52,6 +53,7 @@
             // 
             // password
             // 
+            this.password.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.password.AutoSize = true;
             this.password.Location = new System.Drawing.Point(219, 201);
             this.password.Name = "password";
@@ -61,6 +63,7 @@
             // 
             // registerUsername
             // 
+            this.registerUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.registerUsername.Location = new System.Drawing.Point(262, 169);
             this.registerUsername.Name = "registerUsername";
             this.registerUsername.Size = new System.Drawing.Size(215, 23);
@@ -68,6 +71,7 @@
             // 
             // firstPassword
             // 
+            this.firstPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.firstPassword.Location = new System.Drawing.Point(262, 198);
             this.firstPassword.Name = "firstPassword";
             this.firstPassword.Size = new System.Drawing.Size(215, 23);
@@ -75,6 +79,7 @@
             // 
             // registerButton
             // 
+            this.registerButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.registerButton.Location = new System.Drawing.Point(402, 281);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 23);
@@ -85,6 +90,7 @@
             // 
             // secondPassword
             // 
+            this.secondPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.secondPassword.Location = new System.Drawing.Point(262, 227);
             this.secondPassword.Name = "secondPassword";
             this.secondPassword.Size = new System.Drawing.Size(215, 23);
@@ -92,6 +98,7 @@
             // 
             // confirmText
             // 
+            this.confirmText.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.confirmText.AutoSize = true;
             this.confirmText.Location = new System.Drawing.Point(170, 230);
             this.confirmText.Name = "confirmText";
@@ -101,6 +108,7 @@
             // 
             // checkBoxPodminky
             // 
+            this.checkBoxPodminky.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBoxPodminky.AutoSize = true;
             this.checkBoxPodminky.Location = new System.Drawing.Point(262, 256);
             this.checkBoxPodminky.Name = "checkBoxPodminky";
@@ -111,6 +119,7 @@
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(417, 257);
             this.linkLabel1.Name = "linkLabel1";
@@ -122,6 +131,7 @@
             // 
             // RegisterPageText
             // 
+            this.RegisterPageText.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RegisterPageText.AutoSize = true;
             this.RegisterPageText.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RegisterPageText.Location = new System.Drawing.Point(292, 113);
@@ -132,6 +142,7 @@
             // 
             // RegisterPageReturn
             // 
+            this.RegisterPageReturn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RegisterPageReturn.AutoSize = true;
             this.RegisterPageReturn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.RegisterPageReturn.Depth = 0;
