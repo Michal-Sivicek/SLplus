@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,11 +33,6 @@ namespace ScitaniLidu
                 // Zastavení běhu aplikace
                 Application.Exit();
             }
-        }
-
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void materialFlatButton1_Click_1(object sender, EventArgs e)
