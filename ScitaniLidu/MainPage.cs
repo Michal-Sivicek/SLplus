@@ -11,11 +11,29 @@ using System.Windows.Forms;
 
 namespace ScitaniLidu
 {
+
     public partial class MainPage : MaterialSkin.Controls.MaterialForm
     {
         public MainPage()
         {
             InitializeComponent();
+
+        }
+
+
+        Form CurrentForm = null;
+
+        public void OpenSection(Form Form)
+        {
+            if (CurrentForm != null)
+                CurrentForm.Hide();
+
+            CurrentForm = Form;
+            Form.TopLevel = false;
+            Form.FormBorderStyle = FormBorderStyle.None;
+            Form.Dock = DockStyle.Fill;
+            this.panel2.Controls.Add(Form);
+            Form.Show();
         }
 
         private void Return_Click(object sender, EventArgs e)
@@ -40,6 +58,17 @@ namespace ScitaniLidu
             LoginPage loginPage = new LoginPage();
             this.Hide();
             loginPage.ShowDialog();
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        LoginPage loginPage = new LoginPage();
+        private void buttonObyvatelstvo_Click(object sender, EventArgs e)
+        {
+            OpenSection(loginPage);
         }
     }
 }

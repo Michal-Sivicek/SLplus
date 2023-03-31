@@ -37,10 +37,7 @@
             this.MainPageLabel = new System.Windows.Forms.Label();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.mainPageText = new System.Windows.Forms.Label();
-            this.TextMainPage = new System.Windows.Forms.Label();
-            this.buttonAddPopulation = new System.Windows.Forms.Button();
-            this.buttonAddHouse = new System.Windows.Forms.Button();
-            this.buttonAddFlat = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +56,7 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(180, 387);
             this.panelMenu.TabIndex = 0;
+            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // buttoncontact
             // 
@@ -128,6 +126,7 @@
             this.buttonObyvatelstvo.TabIndex = 1;
             this.buttonObyvatelstvo.Text = "Sčítání Obyvatelstva";
             this.buttonObyvatelstvo.UseVisualStyleBackColor = false;
+            this.buttonObyvatelstvo.Click += new System.EventHandler(this.buttonObyvatelstvo_Click);
             // 
             // panel1
             // 
@@ -175,46 +174,15 @@
             this.mainPageText.Size = new System.Drawing.Size(0, 15);
             this.mainPageText.TabIndex = 2;
             // 
-            // TextMainPage
+            // panel2
             // 
-            this.TextMainPage.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TextMainPage.AutoSize = true;
-            this.TextMainPage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TextMainPage.Location = new System.Drawing.Point(295, 115);
-            this.TextMainPage.Name = "TextMainPage";
-            this.TextMainPage.Size = new System.Drawing.Size(327, 25);
-            this.TextMainPage.TabIndex = 3;
-            this.TextMainPage.Text = "Vyberte si z možností co chcete sečíst";
-            // 
-            // buttonAddPopulation
-            // 
-            this.buttonAddPopulation.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonAddPopulation.Location = new System.Drawing.Point(251, 300);
-            this.buttonAddPopulation.Name = "buttonAddPopulation";
-            this.buttonAddPopulation.Size = new System.Drawing.Size(111, 52);
-            this.buttonAddPopulation.TabIndex = 4;
-            this.buttonAddPopulation.Text = "Sčítání obyvatelstva";
-            this.buttonAddPopulation.UseVisualStyleBackColor = true;
-            // 
-            // buttonAddHouse
-            // 
-            this.buttonAddHouse.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonAddHouse.Location = new System.Drawing.Point(401, 300);
-            this.buttonAddHouse.Name = "buttonAddHouse";
-            this.buttonAddHouse.Size = new System.Drawing.Size(111, 52);
-            this.buttonAddHouse.TabIndex = 5;
-            this.buttonAddHouse.Text = "Sčítání domů";
-            this.buttonAddHouse.UseVisualStyleBackColor = true;
-            // 
-            // buttonAddFlat
-            // 
-            this.buttonAddFlat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonAddFlat.Location = new System.Drawing.Point(548, 300);
-            this.buttonAddFlat.Name = "buttonAddFlat";
-            this.buttonAddFlat.Size = new System.Drawing.Size(111, 52);
-            this.buttonAddFlat.TabIndex = 6;
-            this.buttonAddFlat.Text = "Sčítání bytů";
-            this.buttonAddFlat.UseVisualStyleBackColor = true;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Location = new System.Drawing.Point(179, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(625, 387);
+            this.panel2.TabIndex = 7;
             // 
             // MainPage
             // 
@@ -223,10 +191,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonAddFlat);
-            this.Controls.Add(this.buttonAddHouse);
-            this.Controls.Add(this.buttonAddPopulation);
-            this.Controls.Add(this.TextMainPage);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.mainPageText);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.panelMenu);
@@ -253,9 +218,6 @@
         private MaterialSkin.Controls.MaterialFlatButton buttonFlat;
         private MaterialSkin.Controls.MaterialFlatButton buttoncontact;
         private Label mainPageText;
-        private Label TextMainPage;
-        private Button buttonAddPopulation;
-        private Button buttonAddHouse;
-        private Button buttonAddFlat;
+        private Panel panel2;
     }
 }
