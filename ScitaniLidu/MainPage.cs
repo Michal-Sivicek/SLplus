@@ -17,12 +17,11 @@ namespace ScitaniLidu
         public MainPage()
         {
             InitializeComponent();
-
         }
 
 
         Form CurrentForm = null;
-
+        //metoda slouží k otevření nového okna v aplikaci
         public void OpenSection(Form Form)
         {
             if (CurrentForm != null)
@@ -60,15 +59,13 @@ namespace ScitaniLidu
             loginPage.ShowDialog();
         }
 
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         LoginPage loginPage = new LoginPage();
+        UserPopulationPage userPopulationPage = new UserPopulationPage();
+
+        //Eventy na otevření nového okna
         private void buttonObyvatelstvo_Click(object sender, EventArgs e)
         {
-            OpenSection(loginPage);
+            OpenSection(userPopulationPage);
         }
     }
 }
