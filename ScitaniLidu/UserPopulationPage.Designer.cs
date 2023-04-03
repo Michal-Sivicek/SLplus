@@ -6,7 +6,6 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -19,9 +18,7 @@
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
-
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -54,7 +51,7 @@
             // usernameTextBox
             // 
             usernameTextBox.Anchor = AnchorStyles.Top;
-            usernameTextBox.Location = new Point(312, 103);
+            usernameTextBox.Location = new Point(312, 51);
             usernameTextBox.Name = "usernameTextBox";
             usernameTextBox.Size = new Size(211, 23);
             usernameTextBox.TabIndex = 0;
@@ -63,7 +60,7 @@
             // 
             username.Anchor = AnchorStyles.Top;
             username.AutoSize = true;
-            username.Location = new Point(264, 106);
+            username.Location = new Point(264, 59);
             username.Name = "username";
             username.Size = new Size(42, 15);
             username.TabIndex = 1;
@@ -73,7 +70,7 @@
             // 
             password.Anchor = AnchorStyles.Top;
             password.AutoSize = true;
-            password.Location = new Point(269, 135);
+            password.Location = new Point(269, 83);
             password.Name = "password";
             password.Size = new Size(37, 15);
             password.TabIndex = 2;
@@ -82,7 +79,7 @@
             // passwordTextBox
             // 
             passwordTextBox.Anchor = AnchorStyles.Top;
-            passwordTextBox.Location = new Point(312, 132);
+            passwordTextBox.Location = new Point(312, 80);
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.Size = new Size(211, 23);
             passwordTextBox.TabIndex = 3;
@@ -90,7 +87,7 @@
             // adressTextBox
             // 
             adressTextBox.Anchor = AnchorStyles.Top;
-            adressTextBox.Location = new Point(312, 161);
+            adressTextBox.Location = new Point(312, 109);
             adressTextBox.Name = "adressTextBox";
             adressTextBox.Size = new Size(211, 23);
             adressTextBox.TabIndex = 4;
@@ -99,7 +96,7 @@
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.Location = new Point(258, 164);
+            label1.Location = new Point(258, 112);
             label1.Name = "label1";
             label1.Size = new Size(48, 15);
             label1.TabIndex = 5;
@@ -109,7 +106,7 @@
             // 
             textBoxNabozenstvi.Anchor = AnchorStyles.Top;
             textBoxNabozenstvi.AutoSize = true;
-            textBoxNabozenstvi.Location = new Point(234, 193);
+            textBoxNabozenstvi.Location = new Point(234, 141);
             textBoxNabozenstvi.Name = "textBoxNabozenstvi";
             textBoxNabozenstvi.Size = new Size(72, 15);
             textBoxNabozenstvi.TabIndex = 7;
@@ -118,7 +115,7 @@
             // checkBoxYes
             // 
             checkBoxYes.AutoSize = true;
-            checkBoxYes.Location = new Point(312, 193);
+            checkBoxYes.Location = new Point(312, 141);
             checkBoxYes.Name = "checkBoxYes";
             checkBoxYes.Size = new Size(48, 19);
             checkBoxYes.TabIndex = 8;
@@ -128,7 +125,7 @@
             // checkBoxNo
             // 
             checkBoxNo.AutoSize = true;
-            checkBoxNo.Location = new Point(366, 193);
+            checkBoxNo.Location = new Point(366, 142);
             checkBoxNo.Name = "checkBoxNo";
             checkBoxNo.Size = new Size(41, 19);
             checkBoxNo.TabIndex = 9;
@@ -148,7 +145,7 @@
             // 
             phoneNumber.Anchor = AnchorStyles.Top;
             phoneNumber.AutoSize = true;
-            phoneNumber.Location = new Point(253, 224);
+            phoneNumber.Location = new Point(253, 169);
             phoneNumber.Name = "phoneNumber";
             phoneNumber.Size = new Size(53, 15);
             phoneNumber.TabIndex = 11;
@@ -157,7 +154,7 @@
             // textBoxPhoneNumber
             // 
             textBoxPhoneNumber.Anchor = AnchorStyles.Top;
-            textBoxPhoneNumber.Location = new Point(312, 218);
+            textBoxPhoneNumber.Location = new Point(312, 166);
             textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             textBoxPhoneNumber.Size = new Size(211, 23);
             textBoxPhoneNumber.TabIndex = 12;
@@ -166,7 +163,7 @@
             // 
             email.Anchor = AnchorStyles.Top;
             email.AutoSize = true;
-            email.Location = new Point(270, 254);
+            email.Location = new Point(270, 198);
             email.Name = "email";
             email.Size = new Size(36, 15);
             email.TabIndex = 13;
@@ -175,7 +172,7 @@
             // textBoxEmail
             // 
             textBoxEmail.Anchor = AnchorStyles.Top;
-            textBoxEmail.Location = new Point(312, 251);
+            textBoxEmail.Location = new Point(312, 195);
             textBoxEmail.Name = "textBoxEmail";
             textBoxEmail.Size = new Size(211, 23);
             textBoxEmail.TabIndex = 14;
@@ -184,7 +181,7 @@
             // 
             nationality.Anchor = AnchorStyles.Top;
             nationality.AutoSize = true;
-            nationality.Location = new Point(243, 282);
+            nationality.Location = new Point(243, 224);
             nationality.Name = "nationality";
             nationality.Size = new Size(63, 15);
             nationality.TabIndex = 15;
@@ -193,7 +190,7 @@
             // textBoxNationality
             // 
             textBoxNationality.Anchor = AnchorStyles.Top;
-            textBoxNationality.Location = new Point(312, 280);
+            textBoxNationality.Location = new Point(312, 224);
             textBoxNationality.Name = "textBoxNationality";
             textBoxNationality.Size = new Size(211, 23);
             textBoxNationality.TabIndex = 16;
@@ -202,7 +199,7 @@
             // 
             citizenShip.Anchor = AnchorStyles.Top;
             citizenShip.AutoSize = true;
-            citizenShip.Location = new Point(213, 311);
+            citizenShip.Location = new Point(213, 256);
             citizenShip.Name = "citizenShip";
             citizenShip.Size = new Size(93, 15);
             citizenShip.TabIndex = 17;
@@ -211,7 +208,7 @@
             // textBoxCitizenShip
             // 
             textBoxCitizenShip.Anchor = AnchorStyles.Top;
-            textBoxCitizenShip.Location = new Point(312, 308);
+            textBoxCitizenShip.Location = new Point(312, 253);
             textBoxCitizenShip.Name = "textBoxCitizenShip";
             textBoxCitizenShip.Size = new Size(211, 23);
             textBoxCitizenShip.TabIndex = 18;
@@ -220,7 +217,7 @@
             // 
             edjucation.Anchor = AnchorStyles.Top;
             edjucation.AutoSize = true;
-            edjucation.Location = new Point(255, 339);
+            edjucation.Location = new Point(255, 288);
             edjucation.Name = "edjucation";
             edjucation.Size = new Size(51, 15);
             edjucation.TabIndex = 19;
@@ -231,14 +228,14 @@
             checkedListBox1.Anchor = AnchorStyles.Top;
             checkedListBox1.FormattingEnabled = true;
             checkedListBox1.Items.AddRange(new object[] { "Základní škola", "Střední škola", "Vysoká škola" });
-            checkedListBox1.Location = new Point(312, 337);
+            checkedListBox1.Location = new Point(321, 288);
             checkedListBox1.Name = "checkedListBox1";
             checkedListBox1.Size = new Size(113, 58);
             checkedListBox1.TabIndex = 20;
             // 
             // sendButton
             // 
-            sendButton.Location = new Point(460, 405);
+            sendButton.Location = new Point(448, 361);
             sendButton.Name = "sendButton";
             sendButton.Size = new Size(75, 23);
             sendButton.TabIndex = 21;
@@ -276,9 +273,7 @@
             ResumeLayout(false);
             PerformLayout();
         }
-
         #endregion
-
         private TextBox usernameTextBox;
         private Label username;
         private Label password;
