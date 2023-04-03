@@ -28,7 +28,7 @@
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.Label();
             this.lastname = new System.Windows.Forms.Label();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.lastnameTextBox = new System.Windows.Forms.TextBox();
             this.adressTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNabozenstvi = new System.Windows.Forms.Label();
@@ -76,13 +76,13 @@
             this.lastname.TabIndex = 2;
             this.lastname.Text = "Příjmení";
             // 
-            // passwordTextBox
+            // lastnameTextBox
             // 
-            this.passwordTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.passwordTextBox.Location = new System.Drawing.Point(312, 80);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(211, 23);
-            this.passwordTextBox.TabIndex = 3;
+            this.lastnameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lastnameTextBox.Location = new System.Drawing.Point(312, 80);
+            this.lastnameTextBox.Name = "lastnameTextBox";
+            this.lastnameTextBox.Size = new System.Drawing.Size(211, 23);
+            this.lastnameTextBox.TabIndex = 3;
             // 
             // adressTextBox
             // 
@@ -270,7 +270,7 @@
             this.Controls.Add(this.textBoxNabozenstvi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.adressTextBox);
-            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.lastnameTextBox);
             this.Controls.Add(this.lastname);
             this.Controls.Add(this.username);
             this.Controls.Add(this.usernameTextBox);
@@ -284,7 +284,7 @@
         private TextBox usernameTextBox;
         private Label username;
         private Label lastname;
-        private TextBox passwordTextBox;
+        private TextBox lastnameTextBox;
         private TextBox adressTextBox;
         private Label label1;
         private Label textBoxNabozenstvi;
