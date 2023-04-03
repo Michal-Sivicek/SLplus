@@ -114,6 +114,7 @@
             // 
             // checkBoxYes
             // 
+            checkBoxYes.Anchor = AnchorStyles.Top;
             checkBoxYes.AutoSize = true;
             checkBoxYes.Location = new Point(312, 141);
             checkBoxYes.Name = "checkBoxYes";
@@ -124,6 +125,7 @@
             // 
             // checkBoxNo
             // 
+            checkBoxNo.Anchor = AnchorStyles.Top;
             checkBoxNo.AutoSize = true;
             checkBoxNo.Location = new Point(366, 142);
             checkBoxNo.Name = "checkBoxNo";
@@ -235,6 +237,7 @@
             // 
             // sendButton
             // 
+            sendButton.Anchor = AnchorStyles.Top;
             sendButton.Location = new Point(448, 361);
             sendButton.Name = "sendButton";
             sendButton.Size = new Size(75, 23);
