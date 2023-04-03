@@ -16,11 +16,5 @@ namespace ScitaniLidu
         {
             InitializeComponent();
         }
-
-        private void UserPopulationPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
