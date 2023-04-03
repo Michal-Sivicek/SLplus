@@ -44,6 +44,11 @@
             textBoxEmail = new TextBox();
             nationality = new Label();
             textBoxNationality = new TextBox();
+            citizenShip = new Label();
+            textBoxCitizenShip = new TextBox();
+            edjucation = new Label();
+            checkedListBox1 = new CheckedListBox();
+            sendButton = new Button();
             SuspendLayout();
             // 
             // usernameTextBox
@@ -188,16 +193,68 @@
             // textBoxNationality
             // 
             textBoxNationality.Anchor = AnchorStyles.Top;
-            textBoxNationality.Location = new Point(312, 282);
+            textBoxNationality.Location = new Point(312, 280);
             textBoxNationality.Name = "textBoxNationality";
             textBoxNationality.Size = new Size(211, 23);
             textBoxNationality.TabIndex = 16;
+            // 
+            // citizenShip
+            // 
+            citizenShip.Anchor = AnchorStyles.Top;
+            citizenShip.AutoSize = true;
+            citizenShip.Location = new Point(213, 311);
+            citizenShip.Name = "citizenShip";
+            citizenShip.Size = new Size(93, 15);
+            citizenShip.TabIndex = 17;
+            citizenShip.Text = "Státní Občanství";
+            // 
+            // textBoxCitizenShip
+            // 
+            textBoxCitizenShip.Anchor = AnchorStyles.Top;
+            textBoxCitizenShip.Location = new Point(312, 308);
+            textBoxCitizenShip.Name = "textBoxCitizenShip";
+            textBoxCitizenShip.Size = new Size(211, 23);
+            textBoxCitizenShip.TabIndex = 18;
+            // 
+            // edjucation
+            // 
+            edjucation.Anchor = AnchorStyles.Top;
+            edjucation.AutoSize = true;
+            edjucation.Location = new Point(255, 339);
+            edjucation.Name = "edjucation";
+            edjucation.Size = new Size(51, 15);
+            edjucation.TabIndex = 19;
+            edjucation.Text = "Vzdělání";
+            // 
+            // checkedListBox1
+            // 
+            checkedListBox1.Anchor = AnchorStyles.Top;
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Items.AddRange(new object[] { "Základní škola", "Střední škola", "Vysoká škola" });
+            checkedListBox1.Location = new Point(312, 337);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(113, 58);
+            checkedListBox1.TabIndex = 20;
+            // 
+            // sendButton
+            // 
+            sendButton.Location = new Point(460, 405);
+            sendButton.Name = "sendButton";
+            sendButton.Size = new Size(75, 23);
+            sendButton.TabIndex = 21;
+            sendButton.Text = "Odeslat";
+            sendButton.UseVisualStyleBackColor = true;
             // 
             // UserPopulationPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(sendButton);
+            Controls.Add(checkedListBox1);
+            Controls.Add(edjucation);
+            Controls.Add(textBoxCitizenShip);
+            Controls.Add(citizenShip);
             Controls.Add(textBoxNationality);
             Controls.Add(nationality);
             Controls.Add(textBoxEmail);
@@ -238,5 +295,10 @@
         private TextBox textBoxEmail;
         private Label nationality;
         private TextBox textBoxNationality;
+        private Label citizenShip;
+        private TextBox textBoxCitizenShip;
+        private Label edjucation;
+        private CheckedListBox checkedListBox1;
+        private Button sendButton;
     }
 }
