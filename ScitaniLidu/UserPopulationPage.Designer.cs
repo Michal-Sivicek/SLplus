@@ -60,7 +60,7 @@
             // 
             this.username.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.username.AutoSize = true;
-            this.username.Location = new System.Drawing.Point(264, 59);
+            this.username.Location = new System.Drawing.Point(264, 54);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(42, 15);
             this.username.TabIndex = 1;
