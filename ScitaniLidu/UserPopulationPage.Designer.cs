@@ -32,8 +32,6 @@
             this.adressTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNabozenstvi = new System.Windows.Forms.Label();
-            this.checkBoxYes = new System.Windows.Forms.CheckBox();
-            this.checkBoxNo = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.phoneNumber = new System.Windows.Forms.Label();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
@@ -44,8 +42,9 @@
             this.citizenShip = new System.Windows.Forms.Label();
             this.textBoxCitizenShip = new System.Windows.Forms.TextBox();
             this.edjucation = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.sendButton = new System.Windows.Forms.Button();
+            this.textBoxReligion = new System.Windows.Forms.TextBox();
+            this.textBoxEdjucation = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // usernameTextBox
@@ -111,28 +110,6 @@
             this.textBoxNabozenstvi.Size = new System.Drawing.Size(72, 15);
             this.textBoxNabozenstvi.TabIndex = 7;
             this.textBoxNabozenstvi.Text = "Náboženství";
-            // 
-            // checkBoxYes
-            // 
-            this.checkBoxYes.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.checkBoxYes.AutoSize = true;
-            this.checkBoxYes.Location = new System.Drawing.Point(312, 141);
-            this.checkBoxYes.Name = "checkBoxYes";
-            this.checkBoxYes.Size = new System.Drawing.Size(48, 19);
-            this.checkBoxYes.TabIndex = 8;
-            this.checkBoxYes.Text = "Ano";
-            this.checkBoxYes.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxNo
-            // 
-            this.checkBoxNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.checkBoxNo.AutoSize = true;
-            this.checkBoxNo.Location = new System.Drawing.Point(366, 142);
-            this.checkBoxNo.Name = "checkBoxNo";
-            this.checkBoxNo.Size = new System.Drawing.Size(41, 19);
-            this.checkBoxNo.TabIndex = 9;
-            this.checkBoxNo.Text = "Ne";
-            this.checkBoxNo.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -225,36 +202,41 @@
             this.edjucation.TabIndex = 19;
             this.edjucation.Text = "Vzdělání";
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Základní škola",
-            "Střední škola",
-            "Vysoká škola"});
-            this.checkedListBox1.Location = new System.Drawing.Point(321, 288);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(113, 58);
-            this.checkedListBox1.TabIndex = 20;
-            // 
             // sendButton
             // 
             this.sendButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.sendButton.Location = new System.Drawing.Point(448, 346);
+            this.sendButton.Location = new System.Drawing.Point(448, 324);
             this.sendButton.Name = "sendButton";
             this.sendButton.Size = new System.Drawing.Size(75, 23);
             this.sendButton.TabIndex = 21;
             this.sendButton.Text = "Odeslat";
             this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click_1);
+            // 
+            // textBoxReligion
+            // 
+            this.textBoxReligion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxReligion.Location = new System.Drawing.Point(312, 137);
+            this.textBoxReligion.Name = "textBoxReligion";
+            this.textBoxReligion.Size = new System.Drawing.Size(211, 23);
+            this.textBoxReligion.TabIndex = 22;
+            // 
+            // textBoxEdjucation
+            // 
+            this.textBoxEdjucation.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxEdjucation.Location = new System.Drawing.Point(312, 285);
+            this.textBoxEdjucation.Name = "textBoxEdjucation";
+            this.textBoxEdjucation.Size = new System.Drawing.Size(211, 23);
+            this.textBoxEdjucation.TabIndex = 23;
             // 
             // UserPopulationPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxEdjucation);
+            this.Controls.Add(this.textBoxReligion);
             this.Controls.Add(this.sendButton);
-            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.edjucation);
             this.Controls.Add(this.textBoxCitizenShip);
             this.Controls.Add(this.citizenShip);
@@ -265,8 +247,6 @@
             this.Controls.Add(this.textBoxPhoneNumber);
             this.Controls.Add(this.phoneNumber);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkBoxNo);
-            this.Controls.Add(this.checkBoxYes);
             this.Controls.Add(this.textBoxNabozenstvi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.adressTextBox);
@@ -288,8 +268,6 @@
         private TextBox adressTextBox;
         private Label label1;
         private Label textBoxNabozenstvi;
-        private CheckBox checkBoxYes;
-        private CheckBox checkBoxNo;
         private Label label2;
         private Label phoneNumber;
         private TextBox textBoxPhoneNumber;
@@ -300,7 +278,8 @@
         private Label citizenShip;
         private TextBox textBoxCitizenShip;
         private Label edjucation;
-        private CheckedListBox checkedListBox1;
         private Button sendButton;
+        private TextBox textBoxReligion;
+        private TextBox textBoxEdjucation;
     }
 }
