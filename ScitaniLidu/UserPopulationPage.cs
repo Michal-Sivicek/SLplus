@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions; 
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,7 +22,7 @@ namespace ScitaniLidu
         {
             //získání dat z textových polí a kontrolních prvků
             string jmeno = Regex.Replace(usernameTextBox.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
-           
+
             //ověření, zda jméno obsahuje pouze písmena
             if (jmeno.Length != usernameTextBox.Text.Length)
             {
@@ -34,7 +34,7 @@ namespace ScitaniLidu
             if (prijmeni.Length != lastnameTextBox.Text.Length)
             {
                 MessageBox.Show("Příjmení musí obsahovat pouze písmena.");
-                return; 
+                return;
             }
 
             string bydliste = Regex.Replace(adressTextBox.Text, @"[^a-zA-Z0-9/ ]+", "");
@@ -42,7 +42,7 @@ namespace ScitaniLidu
             if (bydliste.Length != adressTextBox.Text.Length)
             {
                 MessageBox.Show("Bydliště musí obsahovat pouze písmena, čísla, lomítka.");
-                return; 
+                return;
             }
 
             string nabozenstvi = Regex.Replace(textBoxReligion.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
@@ -50,7 +50,7 @@ namespace ScitaniLidu
             if (nabozenstvi.Length != textBoxReligion.Text.Length)
             {
                 MessageBox.Show("Náboženství musí obsahovat pouze písmena.");
-                return; 
+                return;
             }
 
 
