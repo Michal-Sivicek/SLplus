@@ -17,8 +17,6 @@ namespace ScitaniLidu
             InitializeComponent();
         }
 
-      
-
         private void AdminPage_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Kontrola, zda uživatel klikl na křížek

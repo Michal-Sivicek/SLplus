@@ -35,7 +35,7 @@ namespace ScitaniLidu
             try
             {
                 connection.Open();
-                
+
                 //vytvoření SQL dotazu pro vložení uživatele do tabulky users_info
                 string query = "INSERT INTO users_info (jmeno, prijmeni, bydliste, nabozenstvi, telefonni_cislo, email, narodnost, statni_obcanstvi, vzdelani) VALUES (@jmeno, @prijmeni, @bydliste, @nabozenstvi, @telefonni_cislo, @email, @narodnost, @statni_obcanstvi, @vzdelani)";
                 MySqlCommand command = new MySqlCommand(query, connection);
