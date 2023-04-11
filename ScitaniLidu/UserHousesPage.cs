@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,31 @@ namespace ScitaniLidu
         {
             InitializeComponent();
             this.AcceptButton = button1; //nastavení klávesové zkratky na enter
+            checkBoxGDPR.CheckedChanged += new EventHandler(checkBoxGDPR_CheckedChanged);
+            button1.Enabled = false; //tlačítko odeslat je na začátku neaktivní
+        }
 
+        private void checkBoxGDPR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxGDPR.Checked == true)
+            {
+                button1.Enabled = true; //povolí tlačítko odeslat, pokud je CheckBox označen
+            }
+            else
+            {
+                button1.Enabled = false; //neaktivní, pokud CheckBox není označen
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Kontrola, zda jsou všechny textové pole vyplněny
+            if (textBox1.Text == "" || textBoxObec.Text == "" || textBoxNumberHouse.Text == "" || textBoxAdress.Text == "" || textBoxPSC.Text == "" || textBoxObydlenostDomu.Text == "" || textBoxVystavbaRekonstrukce.Text == "" || textBoxMaterialZdi.Text == "" || textBoxPocetPodlazi.Text == "")
+            {
+                MessageBox.Show("Všechna pole musí být vyplněna.");
+                return;
+            }
+
             string jmeno_prijmeni = Regex.Replace(textBox1.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
 
             if (jmeno_prijmeni.Length != textBox1.Text.Length)
@@ -108,6 +129,11 @@ namespace ScitaniLidu
             {
                 MessageBox.Show("Nastala chyba při ukládání dat do databáze.");
             }
+        }
+
+        private void linkLabelGDPR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://www.uoou.cz/obecne-narizeni-o-ochrane-osobnich-udaju-gdpr/ds-3938/p1=3938") { UseShellExecute = true });
         }
     }
 }

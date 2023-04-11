@@ -245,6 +245,7 @@
             this.linkLabelGDPR.TabIndex = 20;
             this.linkLabelGDPR.TabStop = true;
             this.linkLabelGDPR.Text = "GDPR";
+            this.linkLabelGDPR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelGDPR_LinkClicked);
             // 
             // UserHousesPage
             // 
