@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,10 +17,32 @@ namespace ScitaniLidu
         public UserPopulationPage()
         {
             InitializeComponent();
+            this.AcceptButton = sendButton; //nastavení klávesové zkratky na enter
+            checkBoxGDPR.CheckedChanged += new EventHandler(checkBoxGDPR_CheckedChanged);
+            sendButton.Enabled = false; //tlačítko odeslat je na začátku neaktivní                                 
+        }
+
+        private void checkBoxGDPR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxGDPR.Checked == true)
+            {
+                sendButton.Enabled = true; //povolí tlačítko odeslat, pokud je CheckBox označen
+            }
+            else
+            {
+                sendButton.Enabled = false; //neaktivní, pokud CheckBox není označen
+            }
         }
 
         private void sendButton_Click_1(object sender, EventArgs e)
         {
+            // Kontrola, zda jsou všechny textové pole vyplněny
+            if (usernameTextBox.Text == "" || lastnameTextBox.Text == "" || adressTextBox.Text == "" || textBoxReligion.Text == "" || textBoxPhoneNumber.Text == "" || textBoxEmail.Text == "" || textBoxNationality.Text == "" || textBoxCitizenShip.Text == "" || textBoxEdjucation.Text == "")
+            {
+                MessageBox.Show("Všechna pole musí být vyplněna.");
+                return;
+            }
+
             //získání dat z textových polí a kontrolních prvků
             string jmeno = Regex.Replace(usernameTextBox.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
 
@@ -107,6 +130,11 @@ namespace ScitaniLidu
             {
                 MessageBox.Show("Nastala chyba při ukládání dat do databáze.");
             }
+        }
+
+        private void linkLabelGDPR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://www.uoou.cz/obecne-narizeni-o-ochrane-osobnich-udaju-gdpr/ds-3938/p1=3938") { UseShellExecute = true });
         }
     }
 }

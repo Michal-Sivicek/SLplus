@@ -29,7 +29,7 @@ namespace ScitaniLidu
             //zobrazení hesla 
             LoginPassword.UseSystemPasswordChar = true;
 
-            // Registrace události CheckedChanged pro checkbox "Ukázat heslo"
+            // Registrace události CheckedChanged pro checkbox 
             ShowPassword.CheckedChanged += new EventHandler(ShowPassword_CheckedChanged);
 
 
@@ -45,7 +45,7 @@ namespace ScitaniLidu
 
             connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
 
-            // Nastavení klávesové zkratky pro tlaèítko "LoginButton"
+            // Nastavení klávesové zkratky pro tlačítko "LoginButton"
             this.AcceptButton = LoginButton;
         }
 
