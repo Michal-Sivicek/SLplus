@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace ScitaniLidu
 {
-    public class BusinessLogicLayer
+    public class BusinessLogicLayerPopulation
     {
         public bool InsertUser(string jmeno, string prijmeni, string bydliste, string nabozenstvi, string telefonni_cislo, string email, string narodnost, string statni_obcanstvi, string vzdelani)
         {
             //vytvoření objektu uživatele s daty
-            User user = new User();
+            UserPopulation user = new UserPopulation();
             user.jmeno = jmeno;
             user.prijmeni = prijmeni;
             user.bydliste = bydliste;
@@ -24,7 +24,7 @@ namespace ScitaniLidu
             user.vzdelani = vzdelani;
 
             //volání metody pro vložení uživatele do databáze
-            DataAccessLayer DAL = new DataAccessLayer();
+            DataAccessLayerPopulation DAL = new DataAccessLayerPopulation();
             bool result = DAL.InsertUser(user);
 
             return result;

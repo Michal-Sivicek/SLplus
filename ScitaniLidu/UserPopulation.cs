@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScitaniLidu
 {
-    public class User
+    public class UserPopulation
     {
         public int id { get; set; }
         public string jmeno { get; set; }

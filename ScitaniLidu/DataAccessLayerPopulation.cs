@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ScitaniLidu
 {
-    public class DataAccessLayer
+    public class DataAccessLayerPopulation
     {
         private MySql.Data.MySqlClient.MySqlConnection connection;
         private string server;
@@ -20,7 +20,7 @@ namespace ScitaniLidu
         private string uid;
         private string password;
 
-        public bool InsertUser(User user)
+        public bool InsertUser(UserPopulation user)
         {
             dynamic config = Config.GetConfig();
             string server = config.server;
