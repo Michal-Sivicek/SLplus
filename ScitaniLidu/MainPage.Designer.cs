@@ -91,6 +91,7 @@
             this.buttonFlat.TabIndex = 3;
             this.buttonFlat.Text = "Sčítání Bytů";
             this.buttonFlat.UseVisualStyleBackColor = false;
+            this.buttonFlat.Click += new System.EventHandler(this.buttonFlat_Click);
             // 
             // buttonHouse
             // 
@@ -108,6 +109,7 @@
             this.buttonHouse.TabIndex = 2;
             this.buttonHouse.Text = "Sčítání Domů ";
             this.buttonHouse.UseVisualStyleBackColor = false;
+            this.buttonHouse.Click += new System.EventHandler(this.buttonHouse_Click);
             // 
             // buttonObyvatelstvo
             // 

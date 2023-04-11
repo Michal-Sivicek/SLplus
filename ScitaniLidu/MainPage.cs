@@ -67,5 +67,20 @@ namespace ScitaniLidu
         {
             OpenSection(userPopulationPage);
         }
+
+
+        UserHousesPage userHousesPage = new UserHousesPage();
+
+        private void buttonHouse_Click(object sender, EventArgs e)
+        {
+            OpenSection(userHousesPage);
+        }
+
+        UserFlatsPage userFlatsPage= new UserFlatsPage();
+
+        private void buttonFlat_Click(object sender, EventArgs e)
+        {
+            OpenSection(userFlatsPage);
+        }
     }
 }
