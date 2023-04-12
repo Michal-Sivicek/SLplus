@@ -1,4 +1,4 @@
-﻿using ScitaniLidu.ScitaniLidu;
+﻿using ScitaniLidu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -117,7 +117,7 @@ namespace ScitaniLidu
             }
 
 
-            BusinessLogicLayerHouses BLL = new BusinessLogicLayerHouses();
+            BusinessLogicLayer BLL = new BusinessLogicLayer();
             bool result = BLL.InsertHouse(jmeno_prijmeni, obec, cislo_domu, ulice, psc, obydlenost_domu, rok_vystavby, material_zdi, pocet_podlazi);
 
             //zpracování výsledku a vypsání informací uživateli

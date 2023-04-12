@@ -118,7 +118,7 @@ namespace ScitaniLidu
             }
 
             //předání dat do vrstvy business logiky
-            BusinessLogicLayerPopulation BLL = new BusinessLogicLayerPopulation();
+            BusinessLogicLayer BLL = new BusinessLogicLayer();
             bool result = BLL.InsertUser(jmeno, prijmeni, bydliste, nabozenstvi, telefonni_cislo, email, narodnost, statni_obcanstvi, vzdelani);
 
             //zpracování výsledku a vypsání informací uživateli
