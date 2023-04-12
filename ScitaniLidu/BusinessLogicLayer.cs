@@ -49,5 +49,26 @@ namespace ScitaniLidu
 
             return result;
         }
+
+        public bool InsertFlats(string jmeno, string obec, string cislo_domu, string ulice, string psc, string obydlenost_bytu, string velikost_bytu, string podlazi_bytu, string pocet_lidi)
+        {
+            //vytvoření objektu domu s daty
+            UserFlats flats = new UserFlats();
+            flats.jmeno = jmeno;
+            flats.obec = obec;
+            flats.cislo_domu = cislo_domu;
+            flats.ulice = ulice;
+            flats.psc = psc;
+            flats.obydlenost_bytu = obydlenost_bytu;
+            flats.velikost_bytu = velikost_bytu;
+            flats.podlazi_bytu = podlazi_bytu;
+            flats.pocet_lidi = pocet_lidi;
+
+            //volání metody pro vložení domu do databáze
+            DataAccessLayer DAL = new DataAccessLayer();
+            bool result = DAL.InsertFlats(flats);
+
+            return result;
+        }
     }
 }

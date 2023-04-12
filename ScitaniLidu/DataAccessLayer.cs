@@ -100,5 +100,46 @@ namespace ScitaniLidu
                 return false;
             }
         }
+
+        public bool InsertFlats(UserFlats flats)
+        {
+            dynamic config = Config.GetConfig();
+            string server = config.server;
+            string database = config.database;
+            string uid = config.uid;
+            string password = config.password;
+
+            string connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+
+            connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+
+                // vytvoření SQL dotazu pro vložení informací o domě do tabulky users_info_houses
+                string query = "INSERT INTO users_info_flats (jmeno, obec, cislo_domu, ulice, psc, obydlenost_bytu, velikost_bytu, podlazi_bytu, pocet_lidi) VALUES (@jmeno, @obec, @cislo_domu, @ulice, @psc, @obydlenost_bytu, @velikost_bytu, @podlazi_bytu, @pocet_lidi)";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@jmeno", flats.jmeno);
+                command.Parameters.AddWithValue("@obec", flats.obec);
+                command.Parameters.AddWithValue("@cislo_domu", flats.cislo_domu);
+                command.Parameters.AddWithValue("@ulice", flats.ulice);
+                command.Parameters.AddWithValue("@psc", flats.psc);
+                command.Parameters.AddWithValue("@obydlenost_bytu", flats.obydlenost_bytu);
+                command.Parameters.AddWithValue("@velikost_bytu", flats.velikost_bytu);
+                command.Parameters.AddWithValue("@podlazi_bytu", flats.podlazi_bytu);
+                command.Parameters.AddWithValue("@pocet_lidi", flats.pocet_lidi);
+                command.ExecuteNonQuery();
+
+                // uzavření připojení k databázi
+                connection.Close();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

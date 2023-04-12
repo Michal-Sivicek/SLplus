@@ -36,7 +36,7 @@
             this.textBoxCisloDomu = new System.Windows.Forms.TextBox();
             this.PSC = new System.Windows.Forms.Label();
             this.textBoxPSC = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxAdress = new System.Windows.Forms.TextBox();
             this.adress = new System.Windows.Forms.Label();
             this.obydlenostBytu = new System.Windows.Forms.Label();
             this.textBoxObydlenostBytu = new System.Windows.Forms.TextBox();
@@ -63,11 +63,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(179, 56);
+            this.label1.Location = new System.Drawing.Point(123, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 15);
+            this.label1.Size = new System.Drawing.Size(170, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Jméno majitele bytu";
+            this.label1.Text = "Jméno a příjmení majitele bytu";
             // 
             // textBoxObec
             // 
@@ -123,13 +123,13 @@
             this.textBoxPSC.Size = new System.Drawing.Size(307, 23);
             this.textBoxPSC.TabIndex = 7;
             // 
-            // textBox1
+            // textBoxAdress
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(299, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(307, 23);
-            this.textBox1.TabIndex = 8;
+            this.textBoxAdress.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxAdress.Location = new System.Drawing.Point(299, 140);
+            this.textBoxAdress.Name = "textBoxAdress";
+            this.textBoxAdress.Size = new System.Drawing.Size(307, 23);
+            this.textBoxAdress.TabIndex = 8;
             // 
             // adress
             // 
@@ -222,6 +222,7 @@
             this.buttonOdeslat.TabIndex = 18;
             this.buttonOdeslat.Text = "Odeslat";
             this.buttonOdeslat.UseVisualStyleBackColor = true;
+            this.buttonOdeslat.Click += new System.EventHandler(this.buttonOdeslat_Click);
             // 
             // checkBoxPodminky
             // 
@@ -263,7 +264,7 @@
             this.Controls.Add(this.textBoxObydlenostBytu);
             this.Controls.Add(this.obydlenostBytu);
             this.Controls.Add(this.adress);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxAdress);
             this.Controls.Add(this.textBoxPSC);
             this.Controls.Add(this.PSC);
             this.Controls.Add(this.textBoxCisloDomu);
@@ -288,7 +289,7 @@
         private TextBox textBoxCisloDomu;
         private Label PSC;
         private TextBox textBoxPSC;
-        private TextBox textBox1;
+        private TextBox textBoxAdress;
         private Label adress;
         private Label obydlenostBytu;
         private TextBox textBoxObydlenostBytu;
