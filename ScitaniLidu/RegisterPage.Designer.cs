@@ -136,9 +136,9 @@
             this.RegisterPageText.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RegisterPageText.Location = new System.Drawing.Point(292, 113);
             this.RegisterPageText.Name = "RegisterPageText";
-            this.RegisterPageText.Size = new System.Drawing.Size(149, 32);
+            this.RegisterPageText.Size = new System.Drawing.Size(157, 32);
             this.RegisterPageText.TabIndex = 11;
-            this.RegisterPageText.Text = "Zaregisruj se";
+            this.RegisterPageText.Text = "Zaregistruj se";
             // 
             // RegisterPageReturn
             // 

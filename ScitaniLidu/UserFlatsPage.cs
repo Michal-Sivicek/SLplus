@@ -125,9 +125,6 @@ namespace ScitaniLidu
             {
                 MessageBox.Show("Nastala chyba při ukládání dat do databáze.");
             }
-
-
-
         }
     }
 }
