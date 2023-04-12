@@ -17,6 +17,21 @@ namespace ScitaniLidu
             InitializeComponent();
         }
 
+        Form CurrentForm = null;
+        //metoda slouží k otevření nového okna v aplikaci
+        public void OpenSection(Form Form)
+        {
+            if (CurrentForm != null)
+                CurrentForm.Hide();
+
+            CurrentForm = Form;
+            Form.TopLevel = false;
+            Form.FormBorderStyle = FormBorderStyle.None;
+            Form.Dock = DockStyle.Fill;
+            this.panel2.Controls.Add(Form);
+            Form.Show();
+        }
+
         private void AdminPage_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Kontrola, zda uživatel klikl na křížek
@@ -25,6 +40,12 @@ namespace ScitaniLidu
                 // Zastavení běhu aplikace
                 Application.Exit();
             }
+        }
+        UserPopulationPage userPopulationPage = new UserPopulationPage();
+        //Eventy na otevření nového okna
+        private void vypisObyvatelstva_Click(object sender, EventArgs e)
+        {
+            OpenSection(userPopulationPage);
         }
     }
 }
