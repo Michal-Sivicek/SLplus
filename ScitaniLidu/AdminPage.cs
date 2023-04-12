@@ -41,11 +41,11 @@ namespace ScitaniLidu
                 Application.Exit();
             }
         }
-        UserPopulationPage userPopulationPage = new UserPopulationPage();
+        AdminPopulationPage adminPopulationPage = new AdminPopulationPage();
         //Eventy na otevření nového okna
         private void vypisObyvatelstva_Click(object sender, EventArgs e)
         {
-            OpenSection(userPopulationPage);
+            OpenSection(adminPopulationPage);
         }
     }
 }
