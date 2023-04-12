@@ -74,6 +74,7 @@
             this.buttoncontact.TabIndex = 4;
             this.buttoncontact.Text = "Kontakt";
             this.buttoncontact.UseVisualStyleBackColor = false;
+            this.buttoncontact.Click += new System.EventHandler(this.buttoncontact_Click);
             // 
             // buttonFlat
             // 

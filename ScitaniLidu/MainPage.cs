@@ -82,5 +82,12 @@ namespace ScitaniLidu
         {
             OpenSection(userFlatsPage);
         }
+
+        Contact contact = new Contact();
+
+        private void buttoncontact_Click(object sender, EventArgs e)
+        {
+            OpenSection(contact);
+        }
     }
 }
