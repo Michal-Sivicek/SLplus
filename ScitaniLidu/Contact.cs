@@ -22,7 +22,7 @@ namespace ScitaniLidu
         }
         public void SendEmail(string to, string subject, string body)
         {
-            var fromAddress = new MailAddress("info@michalsivicek.cz", "msiv");
+            var fromAddress = new MailAddress("info@michalsivicek.cz", "Sčítání lidu");
             var toAddress = new MailAddress(to);
             const string fromPassword = "Niggod";
             const string smtpServer = "smtp.endora.cz";

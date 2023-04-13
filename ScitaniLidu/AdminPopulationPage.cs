@@ -16,5 +16,13 @@ namespace ScitaniLidu
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BusinessLogicLayer BLL = new BusinessLogicLayer();
+            List<UserPopulation> users = BLL.GetAllUsers();
+
+            dataGridView1.DataSource = users;
+        }
     }
 }

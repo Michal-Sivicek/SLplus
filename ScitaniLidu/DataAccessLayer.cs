@@ -141,5 +141,58 @@ namespace ScitaniLidu
                 return false;
             }
         }
+
+        public List<UserPopulation> GetAllUsers()
+        {
+            dynamic config = Config.GetConfig();
+            string server = config.server;
+            string database = config.database;
+            string uid = config.uid;
+            string password = config.password;
+
+            string connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+                database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+
+            connection = new MySqlConnection(connectionString);
+            List<UserPopulation> users = new List<UserPopulation>();
+
+            try
+            {
+                connection.Open();
+
+                //vytvoření SQL dotazu pro výběr všech záznamů z tabulky users_info
+                string query = "SELECT * FROM users_info";
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                //provedení dotazu a načtení výsledků
+                MySqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    UserPopulation user = new UserPopulation();
+                    user.id = Convert.ToInt32(dataReader["id"]);
+                    user.jmeno = dataReader["jmeno"].ToString();
+                    user.prijmeni = dataReader["prijmeni"].ToString();
+                    user.bydliste = dataReader["bydliste"].ToString();
+                    user.nabozenstvi = dataReader["nabozenstvi"].ToString();
+                    user.telefonni_cislo = dataReader["telefonni_cislo"].ToString();
+                    user.email = dataReader["email"].ToString();
+                    user.narodnost = dataReader["narodnost"].ToString();
+                    user.statni_obcanstvi = dataReader["statni_obcanstvi"].ToString();
+                    user.vzdelani = dataReader["vzdelani"].ToString();
+                    users.Add(user);
+                }
+
+                //uzavření připojení k databázi
+                dataReader.Close();
+                connection.Close();
+            }
+            catch
+            {
+                // chyba připojení k databázi
+            }
+
+            return users;
+        }
+
     }
 }
