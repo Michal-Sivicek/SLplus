@@ -46,9 +46,9 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Location = new System.Drawing.Point(538, 356);
+            this.button1.Location = new System.Drawing.Point(417, 352);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(196, 36);
             this.button1.TabIndex = 1;
             this.button1.Text = "Výpis všech vyplňených uživatelů";
             this.button1.UseVisualStyleBackColor = true;
