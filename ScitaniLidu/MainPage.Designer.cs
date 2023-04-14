@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonSecteniUzivatele = new MaterialSkin.Controls.MaterialFlatButton();
             this.buttoncontact = new MaterialSkin.Controls.MaterialFlatButton();
             this.buttonFlat = new MaterialSkin.Controls.MaterialFlatButton();
             this.buttonHouse = new MaterialSkin.Controls.MaterialFlatButton();
@@ -47,6 +48,7 @@
             this.panelMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelMenu.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panelMenu.Controls.Add(this.buttonSecteniUzivatele);
             this.panelMenu.Controls.Add(this.buttoncontact);
             this.panelMenu.Controls.Add(this.buttonFlat);
             this.panelMenu.Controls.Add(this.buttonHouse);
@@ -56,6 +58,22 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(180, 387);
             this.panelMenu.TabIndex = 0;
+            // 
+            // buttonSecteniUzivatele
+            // 
+            this.buttonSecteniUzivatele.AutoSize = true;
+            this.buttonSecteniUzivatele.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonSecteniUzivatele.Depth = 0;
+            this.buttonSecteniUzivatele.Location = new System.Drawing.Point(22, 246);
+            this.buttonSecteniUzivatele.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.buttonSecteniUzivatele.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonSecteniUzivatele.Name = "buttonSecteniUzivatele";
+            this.buttonSecteniUzivatele.Primary = false;
+            this.buttonSecteniUzivatele.Size = new System.Drawing.Size(141, 36);
+            this.buttonSecteniUzivatele.TabIndex = 5;
+            this.buttonSecteniUzivatele.Text = "Sečtení uživatele";
+            this.buttonSecteniUzivatele.UseVisualStyleBackColor = true;
+            this.buttonSecteniUzivatele.Click += new System.EventHandler(this.buttonSecteniUzivatele_Click);
             // 
             // buttoncontact
             // 
@@ -221,5 +239,6 @@
         private MaterialSkin.Controls.MaterialFlatButton buttoncontact;
         private Label mainPageText;
         private Panel panel2;
+        private MaterialSkin.Controls.MaterialFlatButton buttonSecteniUzivatele;
     }
 }

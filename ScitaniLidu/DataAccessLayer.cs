@@ -8,8 +8,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 namespace ScitaniLidu
 {
     public class DataAccessLayer

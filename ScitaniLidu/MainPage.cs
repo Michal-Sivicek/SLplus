@@ -89,5 +89,12 @@ namespace ScitaniLidu
         {
             OpenSection(contact);
         }
+
+        UserSumPeople userSumPeople= new UserSumPeople();
+
+        private void buttonSecteniUzivatele_Click(object sender, EventArgs e)
+        {
+            OpenSection(userSumPeople);
+        }
     }
 }
