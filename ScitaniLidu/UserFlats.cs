@@ -8,7 +8,6 @@ namespace ScitaniLidu
 {
     public class UserFlats
     {
-        public int id { get; set; }
         public string jmeno { get; set; }
         public string obec { get; set; }
         public string cislo_domu { get; set; }

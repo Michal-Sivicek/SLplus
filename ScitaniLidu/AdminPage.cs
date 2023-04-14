@@ -47,5 +47,12 @@ namespace ScitaniLidu
         {
             OpenSection(adminPopulationPage);
         }
+
+
+        AdminHousesPage adminHousesPage = new AdminHousesPage();
+        private void vypisDomu_Click(object sender, EventArgs e)
+        {
+            OpenSection(adminHousesPage);
+        }
     }
 }

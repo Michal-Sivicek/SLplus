@@ -1,6 +1,6 @@
 ﻿namespace ScitaniLidu
 {
-    partial class AdminPopulationPage
+    partial class AdminHousesPage
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonVypisDomu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -37,32 +37,32 @@
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(179, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(178, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(434, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(452, 292);
             this.dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // buttonVypisDomu
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Location = new System.Drawing.Point(349, 320);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(264, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Výpis všech vyplňených uživatelů";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonVypisDomu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonVypisDomu.Location = new System.Drawing.Point(466, 331);
+            this.buttonVypisDomu.Name = "buttonVypisDomu";
+            this.buttonVypisDomu.Size = new System.Drawing.Size(164, 36);
+            this.buttonVypisDomu.TabIndex = 1;
+            this.buttonVypisDomu.Text = "Výpis domů";
+            this.buttonVypisDomu.UseVisualStyleBackColor = true;
+            this.buttonVypisDomu.Click += new System.EventHandler(this.buttonVypisDomu_Click);
             // 
-            // AdminPopulationPage
+            // AdminHousesPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonVypisDomu);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "AdminPopulationPage";
-            this.Text = "AdminPopulationPage";
+            this.Name = "AdminHousesPage";
+            this.Text = "AdminHousesPage";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -71,6 +71,6 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button button1;
+        private Button buttonVypisDomu;
     }
 }

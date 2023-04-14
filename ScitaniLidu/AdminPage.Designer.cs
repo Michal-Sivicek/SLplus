@@ -82,6 +82,7 @@
             this.vypisDomu.TabIndex = 2;
             this.vypisDomu.Text = "Výpis domů";
             this.vypisDomu.UseVisualStyleBackColor = true;
+            this.vypisDomu.Click += new System.EventHandler(this.vypisDomu_Click);
             // 
             // vypisObyvatelstva
             // 

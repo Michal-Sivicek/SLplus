@@ -8,7 +8,6 @@ namespace ScitaniLidu
 {
     public class UserPopulation
     {
-        public int id { get; set; }
         public string jmeno { get; set; }
         public string prijmeni { get; set; }
         public string bydliste { get; set; }

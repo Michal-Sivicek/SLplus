@@ -76,5 +76,11 @@ namespace ScitaniLidu
             DataAccessLayer DAL = new DataAccessLayer();
             return DAL.GetAllUsers();
         }
+
+        public List<UserHouse> GetAllUserHouses()
+        {
+            DataAccessLayer DAL = new DataAccessLayer();
+            return DAL.GetAllUserHouses();
+        }
     }
 }

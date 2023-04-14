@@ -161,7 +161,7 @@ namespace ScitaniLidu
                 connection.Open();
 
                 //vytvoření SQL dotazu pro výběr všech záznamů z tabulky users_info
-                string query = "SELECT * FROM users_info";
+                string query = "SELECT jmeno, prijmeni, bydliste, nabozenstvi, telefonni_cislo, email, narodnost, statni_obcanstvi, vzdelani FROM users_info;";
                 MySqlCommand command = new MySqlCommand(query, connection);
 
                 //provedení dotazu a načtení výsledků
@@ -169,7 +169,6 @@ namespace ScitaniLidu
                 while (dataReader.Read())
                 {
                     UserPopulation user = new UserPopulation();
-                    user.id = Convert.ToInt32(dataReader["id"]);
                     user.jmeno = dataReader["jmeno"].ToString();
                     user.prijmeni = dataReader["prijmeni"].ToString();
                     user.bydliste = dataReader["bydliste"].ToString();
@@ -192,6 +191,57 @@ namespace ScitaniLidu
             }
 
             return users;
+        }
+
+        public List<UserHouse> GetAllUserHouses()
+        {
+            dynamic config = Config.GetConfig();
+            string server = config.server;
+            string database = config.database;
+            string uid = config.uid;
+            string password = config.password;
+
+            string connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+                database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            List<UserHouse> userHouses = new List<UserHouse>();
+
+            try
+            {
+                connection.Open();
+
+                //vytvoření SQL dotazu pro výběr všech záznamů z tabulky user_houses
+                string query = "SELECT jmeno_prijmeni, obec, cislo_domu, ulice, psc, obydlenost_domu, rok_vystavby, material_zdi, pocet_podlazi FROM users_info_houses;";
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                //provedení dotazu a načtení výsledků
+                MySqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    UserHouse userHouse = new UserHouse();
+                    userHouse.jmeno_prijmeni = dataReader["jmeno_prijmeni"].ToString();
+                    userHouse.obec = dataReader["obec"].ToString();
+                    userHouse.cislo_domu = dataReader["cislo_domu"].ToString();
+                    userHouse.ulice = dataReader["ulice"].ToString();
+                    userHouse.psc = dataReader["psc"].ToString();
+                    userHouse.obydlenost_domu = dataReader["obydlenost_domu"].ToString();
+                    userHouse.rok_vystavby = dataReader["rok_vystavby"].ToString();
+                    userHouse.material_zdi = dataReader["material_zdi"].ToString();
+                    userHouse.pocet_podlazi = dataReader["pocet_podlazi"].ToString();
+                    userHouses.Add(userHouse);
+                }
+
+                //uzavření připojení k databázi
+                dataReader.Close();
+                connection.Close();
+            }
+            catch
+            {
+                // chyba připojení k databázi
+            }
+
+            return userHouses;
         }
 
     }
