@@ -243,6 +243,55 @@ namespace ScitaniLidu
 
             return userHouses;
         }
+        public List<UserFlats> GetAllUserFlats()
+        {
+            dynamic config = Config.GetConfig();
+            string server = config.server;
+            string database = config.database;
+            string uid = config.uid;
+            string password = config.password;
 
+            string connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+                database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            List<UserFlats> userFlats = new List<UserFlats>();
+
+            try
+            {
+                connection.Open();
+
+                // vytvoření SQL dotazu pro výběr všech záznamů z tabulky users_info_flats
+                string query = "SELECT jmeno, obec, cislo_domu, ulice, psc, obydlenost_bytu, velikost_bytu, podlazi_bytu, pocet_lidi FROM users_info_flats JOIN users ON users_info_flats.user_id = users.id";
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                // provedení dotazu a načtení výsledků
+                MySqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    UserFlats userFlat = new UserFlats();
+                    userFlat.jmeno = dataReader["jmeno"].ToString();
+                    userFlat.obec = dataReader["obec"].ToString();
+                    userFlat.cislo_domu = dataReader["cislo_domu"].ToString();
+                    userFlat.ulice = dataReader["ulice"].ToString();
+                    userFlat.psc = dataReader["psc"].ToString();
+                    userFlat.obydlenost_bytu = dataReader["obydlenost_bytu"].ToString();
+                    userFlat.velikost_bytu = dataReader["velikost_bytu"].ToString();
+                    userFlat.podlazi_bytu = dataReader["podlazi_bytu"].ToString();
+                    userFlat.pocet_lidi = dataReader["pocet_lidi"].ToString();
+                    userFlats.Add(userFlat);
+                }
+
+                // uzavření připojení k databázi
+                dataReader.Close();
+                connection.Close();
+            }
+            catch
+            {
+                // chyba připojení k databázi
+            }
+
+            return userFlats;
+        }
     }
 }

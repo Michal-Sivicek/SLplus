@@ -82,5 +82,10 @@ namespace ScitaniLidu
             DataAccessLayer DAL = new DataAccessLayer();
             return DAL.GetAllUserHouses();
         }
+        public List<UserFlats> GetAllUserFlats()
+        {
+            DataAccessLayer DAL = new DataAccessLayer();
+            return DAL.GetAllUserFlats();
+        } 
     }
 }

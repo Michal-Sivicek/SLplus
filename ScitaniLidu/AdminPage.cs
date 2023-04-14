@@ -54,5 +54,11 @@ namespace ScitaniLidu
         {
             OpenSection(adminHousesPage);
         }
+
+        AdminFlatsPage adminFlatsPage = new AdminFlatsPage();
+        private void vypisBytu_Click(object sender, EventArgs e)
+        {
+            OpenSection(adminFlatsPage);
+        }
     }
 }

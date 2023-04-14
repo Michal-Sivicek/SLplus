@@ -67,6 +67,7 @@
             this.vypisBytu.TabIndex = 3;
             this.vypisBytu.Text = "Výpis bytů";
             this.vypisBytu.UseVisualStyleBackColor = true;
+            this.vypisBytu.Click += new System.EventHandler(this.vypisBytu_Click);
             // 
             // vypisDomu
             // 
