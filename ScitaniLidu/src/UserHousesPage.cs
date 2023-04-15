@@ -129,6 +129,17 @@ namespace ScitaniLidu
             {
                 MessageBox.Show("Nastala chyba při ukládání dat do databáze.");
             }
+
+            // Odstranění dat z textových polí po úspěšném uložení do databáze
+            textBox1.Text = "";
+            textBoxObec.Text = "";
+            textBoxNumberHouse.Text = "";
+            textBoxAdress.Text = "";
+            textBoxPSC.Text = "";
+            textBoxObydlenostDomu.Text = "";
+            textBoxVystavbaRekonstrukce.Text = "";
+            textBoxMaterialZdi.Text = "";
+            textBoxPocetPodlazi.Text = "";
         }
 
         private void linkLabelGDPR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

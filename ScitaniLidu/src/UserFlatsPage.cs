@@ -125,6 +125,18 @@ namespace ScitaniLidu
             {
                 MessageBox.Show("Nastala chyba při ukládání dat do databáze.");
             }
+
+            //Vyprázdnění textových polí po uložení dat
+            textBoxName.Text = "";
+            textBoxObec.Text = "";
+            textBoxCisloDomu.Text = "";
+            textBoxAdress.Text = "";
+            textBoxPSC.Text = "";
+            textBoxObydlenostBytu.Text = "";
+            textBoxVelikostBytu.Text = "";
+            textBoxPodlaziBytu.Text = "";
+            textBoxPocetLidi.Text = "";
+
         }
     }
 }

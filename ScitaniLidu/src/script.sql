@@ -3,6 +3,7 @@ use loginScitaniLidu;
 
 drop table users;
 drop table users_info;
+delete from users_info;
 
 SET @@SQL_SAFE_UPDATES = 0;
 SELECT @@AUTOCOMMIT;
