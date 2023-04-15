@@ -56,7 +56,11 @@ namespace ScitaniLidu
 
             SendEmail(to, subject, body);
 
+            textBoxSubject.Text = "";
+            richTextBoxZprava.Text = "";
+
             MessageBox.Show("E-mail byl úspěšně odeslán.");
         }
+
     }
 }
