@@ -266,6 +266,12 @@ namespace ScitaniLidu
 
             return userHouses;
         }
+
+        /// <summary>
+        /// Tato metoda slouží k získání všech záznamů o bytových jednotkách uložených v databázi. 
+        /// Nejprve načte konfiguraci databáze z konfiguračního souboru, poté se připojí k databázi a provede SQL dotaz na výběr všech záznamů z tabulky users_info_flats.
+        /// </summary>
+        /// <returns></returns>
         public List<UserFlats> GetAllUserFlats()
         {
             dynamic config = Config.GetConfig();
