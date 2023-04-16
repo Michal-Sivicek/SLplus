@@ -24,6 +24,12 @@ namespace ScitaniLidu
         private string passwordDatabase;
         private string connectionString;
 
+
+        /// <summary>
+        /// Tato metoda slouží k inicializaci objektu třídy RegisterPage. Při vytvoření instance této třídy jsou v ní provedeny různé operace,
+        /// jako například skrytí hesla, načtení konfigurace z JSON souboru a nastavení klávesové zkratky pro tlačítko registrace. 
+        /// Dále je inicializována proměnná pro připojení k databázi a vytvoření odpovídajícího řetězce připojení.
+        /// </summary>
         public RegisterPage()
         {
             InitializeComponent();
@@ -52,6 +58,13 @@ namespace ScitaniLidu
             this.AcceptButton = registerButton;
         }
 
+
+        /// <summary>
+        /// Tato metoda reaguje na kliknutí na tlačítko "Register" a volá další metody pro ověření, zda uživatel souhlasil s podmínkami
+        /// a zda zadal správné údaje do registračního formuláře. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             if (ValidateAgreedToTerms() && ValidateUserInput())
@@ -61,6 +74,11 @@ namespace ScitaniLidu
             }
         }
 
+        /// <summary>
+        /// Tato metoda slouží k ověření, zda uživatel souhlasil s podmínkami, například při registraci nebo používání služeb aplikace.
+        /// Pokud uživatel nesouhlasil, metoda zobrazí chybovou zprávu a vrátí hodnotu false, jinak vrátí hodnotu true.
+        /// </summary>
+        /// <returns></returns>
         private bool ValidateAgreedToTerms()
         {
             bool agreedToTerms = checkBoxPodminky.Checked;
@@ -74,6 +92,12 @@ namespace ScitaniLidu
             return true;
         }
 
+        /// <summary>
+        /// Tato metoda slouží k validaci uživatelského vstupu při registraci nového uživatele. 
+        /// Kontroluje, zda bylo zadáno uživatelské jméno a heslo, a zda se heslo shoduje s jeho potvrzením. 
+        /// Pokud některá z těchto podmínek není splněna, zobrazí se chybová zpráva a metoda vrátí hodnotu false, jinak vrátí hodnotu true.
+        /// </summary>
+        /// <returns></returns>
         private bool ValidateUserInput()
         {
             string password = firstPassword.Text;
@@ -100,6 +124,12 @@ namespace ScitaniLidu
             return true;
         }
 
+
+        /// <summary>
+        /// Tato metoda slouží k uložení nově zaregistrovaného uživatele do databáze a následnému přesměrování na stránku pro přihlášení.
+        /// Nejprve získává uživatelské jméno a heslo z textových polí na stránce pro registraci.
+        /// Poté se vytváří dotaz pro vložení nového uživatele do tabulky "users" s rolí "normal". 
+        /// </summary>
         private void SaveDataAndLoginPage()
         {
             
@@ -124,6 +154,13 @@ namespace ScitaniLidu
             LoginPage.Show();
         }
 
+
+        /// <summary>
+        /// Tato metoda slouží k obsluze události FormClosing, která se spustí při zavírání formuláře.
+        /// Metoda kontroluje, zda uživatel zavírá formulář kliknutím na křížek. Pokud ano, metoda zastaví běh aplikace voláním metody Application.Exit().
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RegisterPage_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Kontrola, zda uživatel klikl na křížek
@@ -133,12 +170,22 @@ namespace ScitaniLidu
                 Application.Exit();
             }
         }
-       
+
+        /// <summary>
+        /// Tato metoda otevře webovou stránku s podmínkami pro sčítání lidu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://www.czso.cz/csu/scitani2021/zakon-o-scitani-2021") { UseShellExecute = true });
         }
 
+        /// <summary>
+        /// Tato metoda přechází na stránku přihlášení (LoginPage) a skrývá aktuální stránku (RegisterPage).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             LoginPage loginPage = new LoginPage();

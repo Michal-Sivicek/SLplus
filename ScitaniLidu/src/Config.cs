@@ -11,6 +11,12 @@ namespace ScitaniLidu
     {
 
         //Tato metoda slouží k načtení konfiguračních dat ze souboru config.json pokud soubor neexistuje metoda zavolá metodu makeConfig
+
+        /// <summary>
+        /// Tato metoda slouží k načtení konfiguračních dat uložených v souboru "config.json".
+        /// Pokud soubor neexistuje, metoda volá metodu "makeConfig()" pro vytvoření nového souboru.
+        /// </summary>
+        /// <returns></returns>
         public static dynamic GetConfig()
         {
 
@@ -25,6 +31,12 @@ namespace ScitaniLidu
         }
 
         //Tato metoda slouží k vytvoření souboru config.json s výchozými daty
+
+        /// <summary>
+        /// Tato metoda vytváří konfigurační soubor pro připojení k databázi v případě, že soubor neexistuje.
+        /// Konfigurace se ukládá ve formátu JSON a obsahuje informace o serveru, databázi a přihlašovacích údajích.
+        /// Konfigurační soubor se ukládá do souboru "config.json" v aktuálním adresáři.
+        /// </summary>
         static void makeConfig()
         {
             string configText = @"{

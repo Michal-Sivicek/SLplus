@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScitaniLidu
 {
+    //Třída UserPopulation slouží k uchování informací o obyvatelstvu uživatelů. Třída obsahuje vlastnosti, které představují různé údaje o obyvatelstvu
     public class UserPopulation
     {
         public string jmeno { get; set; }

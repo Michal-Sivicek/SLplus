@@ -18,6 +18,12 @@ namespace ScitaniLidu
         private string uid;
         private string password;
 
+
+        /// <summary>
+        /// Metoda pro vložení uživatele do databáze
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public bool InsertUser(UserPopulation user)
         {
             dynamic config = Config.GetConfig();
@@ -57,7 +63,11 @@ namespace ScitaniLidu
                 return false;
             }
         }
-
+        /// <summary>
+        /// Metoda pro vložení domu do databáze
+        /// </summary>
+        /// <param name="house"></param>
+        /// <returns></returns>
         public bool InsertHouse(UserHouse house)
         {
             dynamic config = Config.GetConfig();
@@ -99,6 +109,11 @@ namespace ScitaniLidu
             }
         }
 
+        /// <summary>
+        /// Metoda pro vložení bytu do databáze
+        /// </summary>
+        /// <param name="flats"></param>
+        /// <returns></returns>
         public bool InsertFlats(UserFlats flats)
         {
             dynamic config = Config.GetConfig();
@@ -140,6 +155,11 @@ namespace ScitaniLidu
             }
         }
 
+        /// <summary>
+        /// Tato metoda slouží k získání všech uživatelů ze databáze.
+        /// Nejprve načte konfiguraci připojení k databázi z konfiguračního souboru pomocí třídy Config. 
+        /// </summary>
+        /// <returns></returns>
         public List<UserPopulation> GetAllUsers()
         {
             dynamic config = Config.GetConfig();
@@ -191,6 +211,11 @@ namespace ScitaniLidu
             return users;
         }
 
+        /// <summary>
+        /// Tato metoda slouží k získání všech záznamů o domácnostech z databáze a jejich zobrazení v aplikaci. 
+        /// Připojí se k databázi pomocí konfiguračních údajů, které načte z JSON souboru, a pak provede SQL dotaz na získání všech záznamů z tabulky user_houses. 
+        /// </summary>
+        /// <returns></returns>
         public List<UserHouse> GetAllUserHouses()
         {
             dynamic config = Config.GetConfig();

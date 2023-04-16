@@ -14,6 +14,10 @@ namespace ScitaniLidu
 {
     public partial class UserFlatsPage : Form
     {
+        /// <summary>
+        /// Tato metoda je konstruktor pro třídu UserFlatsPage. Inicializuje komponenty pro uživatelské rozhraní,
+        /// nastavuje obsluhu události pro změnu stavu checkboxu checkBoxPodminky a nastavuje tlačítko buttonOdeslat jako neaktivní.
+        /// </summary>
         public UserFlatsPage()
         {
             InitializeComponent();
@@ -21,6 +25,15 @@ namespace ScitaniLidu
             buttonOdeslat.Enabled = false; //tlačítko odeslat je na začátku neaktivní   
         }
 
+
+        /// <summary>
+        /// Tato metoda slouží k povolení nebo zakázání tlačítka "Odeslat" na stránce s formulářem pro uživatele v závislosti na tom,
+        /// zda uživatel označil zaškrtávací políčko pro souhlas s podmínkami (v tomto případě GDPR).
+        /// Pokud je políčko označeno, tlačítko "Odeslat" se aktivuje a uživatel může formulář odeslat.
+        /// Pokud není políčko označeno, tlačítko "Odeslat" zůstane neaktivní a uživatel nemůže formulář odeslat.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void checkBoxGDPR_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxPodminky.Checked == true)
@@ -33,11 +46,23 @@ namespace ScitaniLidu
             }
         }
 
+        /// <summary>
+        /// Tato metoda slouží k otevření webové stránky s podmínkami GDPR v prohlížeči.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GDPR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://www.uoou.cz/obecne-narizeni-o-ochrane-osobnich-udaju-gdpr/ds-3938/p1=3938") { UseShellExecute = true });
         }
 
+        /// <summary>
+        /// Tato metoda se spustí po kliknutí na tlačítko "Odeslat" a slouží k ověření a uložení dat uživatele do databáze.
+        /// Nejprve se ověří správnost vstupních údajů z textových polí pomocí regulárních výrazů, aby byla zajištěna korektnost dat.
+        /// Pokud jsou vstupní údaje správné, uloží se do databáze pomocí metody "InsertFlats" z třídy BusinessLogicLayer.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonOdeslat_Click(object sender, EventArgs e)
         {
             string jmeno = Regex.Replace(textBoxName.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");

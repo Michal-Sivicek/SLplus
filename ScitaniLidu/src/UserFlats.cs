@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScitaniLidu
 {
+    //Třída UserFlats slouží k uchování informací o bytových jednotkách uživatelů. Třída obsahuje vlastnosti, které představují různé údaje o bytové jednotce
     public class UserFlats
     {
         public string jmeno { get; set; }

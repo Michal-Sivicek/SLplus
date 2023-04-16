@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScitaniLidu
 {
+    //Třída UserHouse slouží k uchování informací o domácnostech uživatelů. Třída obsahuje vlastnosti, které představují různé údaje o domácnosti
     public class UserHouse
     {
         public string jmeno_prijmeni { get; set; }

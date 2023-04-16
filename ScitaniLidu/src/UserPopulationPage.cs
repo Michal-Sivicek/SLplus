@@ -14,6 +14,12 @@ namespace ScitaniLidu
 {
     public partial class UserPopulationPage : Form
     {
+        /// <summary>
+        /// Metoda nastavuje klávesovou zkratku pro tlačítko "Odeslat" na Enter, takže uživatelé mohou rychleji odesílat data. 
+        /// pro událost změny stavu zaškrtávacího políčka GDPR, které uživatelé musí označit, aby mohli odeslat svá data. 
+        /// Pokud uživatel označí políčko GDPR, tlačítko pro odeslání dat se povolí,
+        /// takže uživatelé mohou odeslat svá data. Na začátku je tlačítko pro odeslání dat neaktivní, dokud uživatel neoznačí políčko GDPR.
+        /// </summary>
         public UserPopulationPage()
         {
             InitializeComponent();
@@ -22,6 +28,13 @@ namespace ScitaniLidu
             sendButton.Enabled = false; //tlačítko odeslat je na začátku neaktivní                                 
         }
 
+        /// <summary>
+        /// Tento kód řídí chování tlačítka "Odeslat" na stránce pro zadávání informací o uživateli v závislosti na stavu zaškrtávacího políčka GDPR.
+        /// Pokud je checkbox označen, tlačítko "Odeslat" je povoleno a může být použito k odeslání formuláře,
+        /// pokud není checkbox označen, tlačítko je neaktivní a uživatel nemůže odeslat formulář.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void checkBoxGDPR_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxGDPR.Checked == true)
@@ -34,6 +47,14 @@ namespace ScitaniLidu
             }
         }
 
+        /// <summary>
+        /// Na začátku metody se kontroluje, zda jsou všechny textová pole a datum narození vyplněny a zda byla vybrána alespoň jedna položka v checkedListBoxEducation.
+        /// Pokud některá z podmínek není splněna, zobrazí se uživateli chybové hlášení a metoda se ukončí.
+        /// Poté jsou získána data z textových polí a kontrolních prvků a zkontrolována na platnost.
+        /// Pokud jsou data neplatná, metoda se ukončí a uživateli se zobrazí chybové hlášení.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void sendButton_Click_1(object sender, EventArgs e)
         {
             // Kontrola, zda jsou všechny textové pole a datum narození vyplněny a byla vybrána alespoň jedna položka v checkedListBoxEducation
@@ -153,6 +174,11 @@ namespace ScitaniLidu
             checkedListBox1.ClearSelected(); // Přidána nová řádka pro odznačení položek v checkedListBoxEducation
         }
 
+        /// <summary>
+        /// Tato metoda otevře odkaz na stránku Úřadu pro ochranu osobních údajů
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void linkLabelGDPR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://www.uoou.cz/obecne-narizeni-o-ochrane-osobnich-udaju-gdpr/ds-3938/p1=3938") { UseShellExecute = true });

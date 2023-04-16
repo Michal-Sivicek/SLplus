@@ -16,10 +16,22 @@ namespace ScitaniLidu
 {
     public partial class Contact : Form
     {
+        /// <summary>
+        /// Tato metoda inicializuje všechny komponenty formuláře, včetně grafických prvků a událostí.
+        /// </summary>
         public Contact()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Tato metoda slouží k odeslání e-mailu pomocí SMTP protokolu. Metoda přijímá tři parametry: příjemce (to), předmět e-mailu (subject)
+        /// a text zprávy (body). Metoda vytvoří objekt třídy MailMessage s danými parametry a nastaví adresu odesílatele a SMTP server,
+        /// pomocí kterého se e-mail odesílá. Poté odesílá e-mail pomocí metody Send třídy SmtpClient.
+        /// </summary>
+        /// <param name="to"></param>
+        /// <param name="subject"></param>
+        /// <param name="body"></param>
         public void SendEmail(string to, string subject, string body)
         {
             var fromAddress = new MailAddress("info@michalsivicek.cz", "Sčítání lidu");
@@ -48,6 +60,11 @@ namespace ScitaniLidu
             }
         }
 
+        /// <summary>
+        /// Tato metoda slouží k odeslání e-mailu. Metoda získá předmět a text zprávy z odpovídajících textboxů a zavolá metodu SendEmail().
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             var to = "gamesluxuslp@gmail.com";

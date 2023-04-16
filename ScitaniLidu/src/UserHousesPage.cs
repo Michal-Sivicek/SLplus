@@ -15,6 +15,10 @@ namespace ScitaniLidu
 {
     public partial class UserHousesPage : Form
     {
+        /// <summary>
+        /// Tato metoda nastavuje klávesovou zkratku na tlačítko s názvem "button1" na enter a přidává událost pro změnu stavu CheckBoxu s názvem "checkBoxGDPR".
+        /// Také nastavuje tlačítko "button1" jako neaktivní na začátku.
+        /// </summary>
         public UserHousesPage()
         {
             InitializeComponent();
@@ -23,6 +27,12 @@ namespace ScitaniLidu
             button1.Enabled = false; //tlačítko odeslat je na začátku neaktivní
         }
 
+        /// <summary>
+        /// Tato metoda reaguje na událost změny stavu CheckBoxu označením nebo odznačením souhlasu s podmínkami.
+        /// Pokud je CheckBox označen, metoda povolí tlačítko pro odeslání dat. Pokud je CheckBox odznačen, metoda zakáže tlačítko pro odeslání dat.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void checkBoxGDPR_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxGDPR.Checked == true)
@@ -35,6 +45,14 @@ namespace ScitaniLidu
             }
         }
 
+        /// <summary>
+        /// Tato metoda je pro odeslání formuláře s údaji o domě do databáze. Nejprve se ověřuje, zda jsou všechna pole formuláře vyplněna.
+        /// Pokud některé pole chybí, zobrazí se uživateli chybová hláška a metoda se ukončí.
+        /// Pokud jsou všechna pole vyplněna, provádí se kontrola správného formátování údajů v polích (např. zda jsou jméno a obec napsány pouze písmeny, nebo zda jsou v čísle domu pouze čísla a písmena). 
+        /// Pokud jsou všechny údaje správně formátované, metoda využívá BusinessLogicLayer pro uložení dat do databáze a výsledek této operace se zobrazí uživateli. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             // Kontrola, zda jsou všechny textové pole vyplněny
@@ -142,6 +160,11 @@ namespace ScitaniLidu
             textBoxPocetPodlazi.Text = "";
         }
 
+        /// <summary>
+        /// Tato metoda otevře webovou stránku s podmínkami GDPR
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void linkLabelGDPR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://www.uoou.cz/obecne-narizeni-o-ochrane-osobnich-udaju-gdpr/ds-3938/p1=3938") { UseShellExecute = true });
