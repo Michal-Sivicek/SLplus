@@ -35,12 +35,12 @@ namespace ScitaniLidu
                 connection.Open();
 
                 //vytvoření SQL dotazu pro vložení uživatele do tabulky users_info
-                string query = "INSERT INTO users_info (jmeno, prijmeni, bydliste, nabozenstvi, telefonni_cislo, email, narodnost, statni_obcanstvi, vzdelani) VALUES (@jmeno, @prijmeni, @bydliste, @nabozenstvi, @telefonni_cislo, @email, @narodnost, @statni_obcanstvi, @vzdelani)";
+                string query = "INSERT INTO users_info (jmeno, prijmeni, bydliste, datum_narozeni, telefonni_cislo, email, narodnost, statni_obcanstvi, vzdelani) VALUES (@jmeno, @prijmeni, @bydliste, @datum_narozeni, @telefonni_cislo, @email, @narodnost, @statni_obcanstvi, @vzdelani)";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@jmeno", user.jmeno);
                 command.Parameters.AddWithValue("@prijmeni", user.prijmeni);
                 command.Parameters.AddWithValue("@bydliste", user.bydliste);
-                command.Parameters.AddWithValue("@nabozenstvi", user.nabozenstvi);
+                command.Parameters.AddWithValue("@datum_narozeni", user.datum_narozeni);
                 command.Parameters.AddWithValue("@telefonni_cislo", user.telefonni_cislo);
                 command.Parameters.AddWithValue("@email", user.email);
                 command.Parameters.AddWithValue("@narodnost", user.narodnost);
@@ -159,7 +159,7 @@ namespace ScitaniLidu
                 connection.Open();
 
                 //vytvoření SQL dotazu pro výběr všech záznamů z tabulky users_info
-                string query = "SELECT jmeno, prijmeni, bydliste, nabozenstvi, telefonni_cislo, email, narodnost, statni_obcanstvi, vzdelani FROM users_info;";
+                string query = "SELECT jmeno, prijmeni, bydliste, datum_narozeni, telefonni_cislo, email, narodnost, statni_obcanstvi, vzdelani FROM users_info;";
                 MySqlCommand command = new MySqlCommand(query, connection);
 
                 //provedení dotazu a načtení výsledků
@@ -170,7 +170,7 @@ namespace ScitaniLidu
                     user.jmeno = dataReader["jmeno"].ToString();
                     user.prijmeni = dataReader["prijmeni"].ToString();
                     user.bydliste = dataReader["bydliste"].ToString();
-                    user.nabozenstvi = dataReader["nabozenstvi"].ToString();
+                    user.datum_narozeni = dataReader["datum_narozeni"].ToString();
                     user.telefonni_cislo = dataReader["telefonni_cislo"].ToString();
                     user.email = dataReader["email"].ToString();
                     user.narodnost = dataReader["narodnost"].ToString();

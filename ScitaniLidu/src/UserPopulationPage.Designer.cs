@@ -31,7 +31,7 @@
             this.lastnameTextBox = new System.Windows.Forms.TextBox();
             this.adressTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxNabozenstvi = new System.Windows.Forms.Label();
+            this.datum_narozeni = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.phoneNumber = new System.Windows.Forms.Label();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
@@ -43,11 +43,10 @@
             this.textBoxCitizenShip = new System.Windows.Forms.TextBox();
             this.edjucation = new System.Windows.Forms.Label();
             this.sendButton = new System.Windows.Forms.Button();
-            this.textBoxReligion = new System.Windows.Forms.TextBox();
-            this.textBoxEdjucation = new System.Windows.Forms.TextBox();
             this.checkBoxGDPR = new System.Windows.Forms.CheckBox();
             this.linkLabelGDPR = new System.Windows.Forms.LinkLabel();
-            this.LabelEdjucation = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // usernameTextBox
@@ -98,21 +97,21 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(216, 97);
+            this.label1.Location = new System.Drawing.Point(172, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 15);
+            this.label1.Size = new System.Drawing.Size(92, 15);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Bydliště";
+            this.label1.Text = "Bydliště (město)";
             // 
-            // textBoxNabozenstvi
+            // datum_narozeni
             // 
-            this.textBoxNabozenstvi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxNabozenstvi.AutoSize = true;
-            this.textBoxNabozenstvi.Location = new System.Drawing.Point(192, 126);
-            this.textBoxNabozenstvi.Name = "textBoxNabozenstvi";
-            this.textBoxNabozenstvi.Size = new System.Drawing.Size(72, 15);
-            this.textBoxNabozenstvi.TabIndex = 7;
-            this.textBoxNabozenstvi.Text = "Náboženství";
+            this.datum_narozeni.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.datum_narozeni.AutoSize = true;
+            this.datum_narozeni.Location = new System.Drawing.Point(174, 126);
+            this.datum_narozeni.Name = "datum_narozeni";
+            this.datum_narozeni.Size = new System.Drawing.Size(90, 15);
+            this.datum_narozeni.TabIndex = 7;
+            this.datum_narozeni.Text = "DatumNarozeni";
             // 
             // label2
             // 
@@ -127,7 +126,7 @@
             // 
             this.phoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.phoneNumber.AutoSize = true;
-            this.phoneNumber.Location = new System.Drawing.Point(211, 155);
+            this.phoneNumber.Location = new System.Drawing.Point(211, 157);
             this.phoneNumber.Name = "phoneNumber";
             this.phoneNumber.Size = new System.Drawing.Size(53, 15);
             this.phoneNumber.TabIndex = 11;
@@ -136,7 +135,7 @@
             // textBoxPhoneNumber
             // 
             this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(270, 152);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(268, 149);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(308, 23);
             this.textBoxPhoneNumber.TabIndex = 12;
@@ -145,7 +144,7 @@
             // 
             this.email.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.email.AutoSize = true;
-            this.email.Location = new System.Drawing.Point(228, 184);
+            this.email.Location = new System.Drawing.Point(228, 186);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(36, 15);
             this.email.TabIndex = 13;
@@ -154,7 +153,7 @@
             // textBoxEmail
             // 
             this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxEmail.Location = new System.Drawing.Point(270, 181);
+            this.textBoxEmail.Location = new System.Drawing.Point(268, 178);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(308, 23);
             this.textBoxEmail.TabIndex = 14;
@@ -163,7 +162,7 @@
             // 
             this.nationality.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nationality.AutoSize = true;
-            this.nationality.Location = new System.Drawing.Point(201, 213);
+            this.nationality.Location = new System.Drawing.Point(199, 210);
             this.nationality.Name = "nationality";
             this.nationality.Size = new System.Drawing.Size(63, 15);
             this.nationality.TabIndex = 15;
@@ -172,7 +171,7 @@
             // textBoxNationality
             // 
             this.textBoxNationality.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxNationality.Location = new System.Drawing.Point(270, 210);
+            this.textBoxNationality.Location = new System.Drawing.Point(268, 207);
             this.textBoxNationality.Name = "textBoxNationality";
             this.textBoxNationality.Size = new System.Drawing.Size(308, 23);
             this.textBoxNationality.TabIndex = 16;
@@ -181,7 +180,7 @@
             // 
             this.citizenShip.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.citizenShip.AutoSize = true;
-            this.citizenShip.Location = new System.Drawing.Point(171, 242);
+            this.citizenShip.Location = new System.Drawing.Point(170, 239);
             this.citizenShip.Name = "citizenShip";
             this.citizenShip.Size = new System.Drawing.Size(93, 15);
             this.citizenShip.TabIndex = 17;
@@ -190,7 +189,7 @@
             // textBoxCitizenShip
             // 
             this.textBoxCitizenShip.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxCitizenShip.Location = new System.Drawing.Point(270, 239);
+            this.textBoxCitizenShip.Location = new System.Drawing.Point(269, 236);
             this.textBoxCitizenShip.Name = "textBoxCitizenShip";
             this.textBoxCitizenShip.Size = new System.Drawing.Size(308, 23);
             this.textBoxCitizenShip.TabIndex = 18;
@@ -199,7 +198,7 @@
             // 
             this.edjucation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.edjucation.AutoSize = true;
-            this.edjucation.Location = new System.Drawing.Point(213, 271);
+            this.edjucation.Location = new System.Drawing.Point(213, 268);
             this.edjucation.Name = "edjucation";
             this.edjucation.Size = new System.Drawing.Size(51, 15);
             this.edjucation.TabIndex = 19;
@@ -208,7 +207,7 @@
             // sendButton
             // 
             this.sendButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.sendButton.Location = new System.Drawing.Point(503, 357);
+            this.sendButton.Location = new System.Drawing.Point(503, 346);
             this.sendButton.Name = "sendButton";
             this.sendButton.Size = new System.Drawing.Size(75, 23);
             this.sendButton.TabIndex = 21;
@@ -216,29 +215,12 @@
             this.sendButton.UseVisualStyleBackColor = true;
             this.sendButton.Click += new System.EventHandler(this.sendButton_Click_1);
             // 
-            // textBoxReligion
-            // 
-            this.textBoxReligion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxReligion.Location = new System.Drawing.Point(270, 123);
-            this.textBoxReligion.Name = "textBoxReligion";
-            this.textBoxReligion.Size = new System.Drawing.Size(308, 23);
-            this.textBoxReligion.TabIndex = 22;
-            // 
-            // textBoxEdjucation
-            // 
-            this.textBoxEdjucation.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxEdjucation.Location = new System.Drawing.Point(270, 268);
-            this.textBoxEdjucation.Name = "textBoxEdjucation";
-            this.textBoxEdjucation.Size = new System.Drawing.Size(308, 23);
-            this.textBoxEdjucation.TabIndex = 23;
-            // 
             // checkBoxGDPR
             // 
             this.checkBoxGDPR.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.checkBoxGDPR.AutoSize = true;
-            this.checkBoxGDPR.Location = new System.Drawing.Point(270, 317);
+            this.checkBoxGDPR.Location = new System.Drawing.Point(270, 327);
             this.checkBoxGDPR.Name = "checkBoxGDPR";
-            this.checkBoxGDPR.Size = new System.Drawing.Size(291, 34);
+            this.checkBoxGDPR.Size = new System.Drawing.Size(288, 16);
             this.checkBoxGDPR.TabIndex = 24;
             this.checkBoxGDPR.Text = "Souhlasím s podmínkami ochrana osobních údajů\r\n\r\n";
             this.checkBoxGDPR.UseVisualStyleBackColor = true;
@@ -247,7 +229,7 @@
             // 
             this.linkLabelGDPR.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.linkLabelGDPR.AutoSize = true;
-            this.linkLabelGDPR.Location = new System.Drawing.Point(289, 336);
+            this.linkLabelGDPR.Location = new System.Drawing.Point(289, 346);
             this.linkLabelGDPR.Name = "linkLabelGDPR";
             this.linkLabelGDPR.Size = new System.Drawing.Size(37, 15);
             this.linkLabelGDPR.TabIndex = 25;
@@ -255,27 +237,37 @@
             this.linkLabelGDPR.Text = "GDPR";
             this.linkLabelGDPR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelGDPR_LinkClicked);
             // 
-            // LabelEdjucation
+            // dateTimePicker1
             // 
-            this.LabelEdjucation.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LabelEdjucation.AutoSize = true;
-            this.LabelEdjucation.ForeColor = System.Drawing.Color.Olive;
-            this.LabelEdjucation.Location = new System.Drawing.Point(270, 294);
-            this.LabelEdjucation.Name = "LabelEdjucation";
-            this.LabelEdjucation.Size = new System.Drawing.Size(307, 15);
-            this.LabelEdjucation.TabIndex = 26;
-            this.LabelEdjucation.Text = "Vyplňte prosím základní škola, střední škola, vysoká škola";
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePicker1.Location = new System.Drawing.Point(270, 120);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 28;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "základní škola",
+            "střední škola",
+            "vysoká škola"});
+            this.checkedListBox1.Location = new System.Drawing.Point(270, 265);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 58);
+            this.checkedListBox1.TabIndex = 29;
             // 
             // UserPopulationPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.LabelEdjucation);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.linkLabelGDPR);
             this.Controls.Add(this.checkBoxGDPR);
-            this.Controls.Add(this.textBoxEdjucation);
-            this.Controls.Add(this.textBoxReligion);
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.edjucation);
             this.Controls.Add(this.textBoxCitizenShip);
@@ -287,7 +279,7 @@
             this.Controls.Add(this.textBoxPhoneNumber);
             this.Controls.Add(this.phoneNumber);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxNabozenstvi);
+            this.Controls.Add(this.datum_narozeni);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.adressTextBox);
             this.Controls.Add(this.lastnameTextBox);
@@ -308,7 +300,7 @@
         private TextBox lastnameTextBox;
         private TextBox adressTextBox;
         private Label label1;
-        private Label textBoxNabozenstvi;
+        private Label datum_narozeni;
         private Label label2;
         private Label phoneNumber;
         private TextBox textBoxPhoneNumber;
@@ -320,10 +312,9 @@
         private TextBox textBoxCitizenShip;
         private Label edjucation;
         private Button sendButton;
-        private TextBox textBoxReligion;
-        private TextBox textBoxEdjucation;
         private CheckBox checkBoxGDPR;
         private LinkLabel linkLabelGDPR;
-        private Label LabelEdjucation;
+        private DateTimePicker dateTimePicker1;
+        private CheckedListBox checkedListBox1;
     }
 }

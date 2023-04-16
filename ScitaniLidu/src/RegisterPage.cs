@@ -136,7 +136,7 @@ namespace ScitaniLidu
        
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(new ProcessStartInfo("https://www.google.com") { UseShellExecute = true });
+            Process.Start(new ProcessStartInfo("https://www.czso.cz/csu/scitani2021/zakon-o-scitani-2021") { UseShellExecute = true });
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)

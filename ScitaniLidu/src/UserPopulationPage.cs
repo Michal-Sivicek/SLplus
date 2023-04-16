@@ -36,12 +36,13 @@ namespace ScitaniLidu
 
         private void sendButton_Click_1(object sender, EventArgs e)
         {
-            // Kontrola, zda jsou všechny textové pole vyplněny
-            if (usernameTextBox.Text == "" || lastnameTextBox.Text == "" || adressTextBox.Text == "" || textBoxReligion.Text == "" || textBoxPhoneNumber.Text == "" || textBoxEmail.Text == "" || textBoxNationality.Text == "" || textBoxCitizenShip.Text == "" || textBoxEdjucation.Text == "")
+            // Kontrola, zda jsou všechny textové pole a datum narození vyplněny a byla vybrána alespoň jedna položka v checkedListBoxEducation
+            if (usernameTextBox.Text == "" || lastnameTextBox.Text == "" || adressTextBox.Text == "" || dateTimePicker1.Value == DateTimePicker.MinimumDateTime || textBoxPhoneNumber.Text == "" || textBoxEmail.Text == "" || textBoxNationality.Text == "" || textBoxCitizenShip.Text == "" || checkedListBox1.CheckedItems.Count == 0)
             {
-                MessageBox.Show("Všechna pole musí být vyplněna.");
+                MessageBox.Show("Všechna pole musí být vyplněna a musí být vybrána alespoň jedna položka vzdělání.");
                 return;
             }
+
 
             //získání dat z textových polí a kontrolních prvků
             string jmeno = Regex.Replace(usernameTextBox.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
@@ -68,13 +69,15 @@ namespace ScitaniLidu
                 return;
             }
 
-            string nabozenstvi = Regex.Replace(textBoxReligion.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
+            string datum_narozeni = dateTimePicker1.Value.ToString("dd.MM.yyyy");
+            Regex datum_regex = new Regex(@"^\d{2}\.\d{2}\.\d{4}$");
 
-            if (nabozenstvi.Length != textBoxReligion.Text.Length)
+            if (!datum_regex.IsMatch(datum_narozeni))
             {
-                MessageBox.Show("Náboženství musí obsahovat pouze písmena.");
+                MessageBox.Show("Datum narození musí být ve formátu dd.mm.yyyy.");
                 return;
             }
+
 
 
             string telefonni_cislo = Regex.Replace(textBoxPhoneNumber.Text, @"[^0-9 +]+", "");
@@ -93,7 +96,7 @@ namespace ScitaniLidu
                 return;
             }
 
-            string narodnost = Regex.Replace(textBoxNationality.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ ]+", "");
+            string narodnost = Regex.Replace(textBoxNationality.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
 
             if (narodnost.Length != textBoxNationality.Text.Length)
             {
@@ -101,7 +104,7 @@ namespace ScitaniLidu
                 return;
             }
 
-            string statni_obcanstvi = Regex.Replace(textBoxCitizenShip.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ ]+", "");
+            string statni_obcanstvi = Regex.Replace(textBoxCitizenShip.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
 
             if (statni_obcanstvi.Length != textBoxCitizenShip.Text.Length)
             {
@@ -109,7 +112,13 @@ namespace ScitaniLidu
                 return;
             }
 
-            string vzdelani = Regex.Replace(textBoxEdjucation.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ\s]+", "").ToLower().Trim();
+            // Kontrola vzdělání
+            string vzdelani = "";
+            foreach (object item in checkedListBox1.CheckedItems)
+            {
+                vzdelani += item.ToString() + ", "; // Přidání vybrané položky do řetězce
+            }
+            vzdelani = vzdelani.TrimEnd(',', ' '); // Odstranění poslední čárky a mezery
 
             if (vzdelani != "základní škola" && vzdelani != "střední škola" && vzdelani != "vysoká škola")
             {
@@ -117,9 +126,10 @@ namespace ScitaniLidu
                 return;
             }
 
+
             //předání dat do vrstvy business logiky
             BusinessLogicLayer BLL = new BusinessLogicLayer();
-            bool result = BLL.InsertUser(jmeno, prijmeni, bydliste, nabozenstvi, telefonni_cislo, email, narodnost, statni_obcanstvi, vzdelani);
+            bool result = BLL.InsertUser(jmeno, prijmeni, bydliste, datum_narozeni, telefonni_cislo, email, narodnost, statni_obcanstvi, vzdelani);
 
             //zpracování výsledku a vypsání informací uživateli
             if (result == true)
@@ -131,16 +141,16 @@ namespace ScitaniLidu
                 MessageBox.Show("Nastala chyba při ukládání dat do databáze.");
             }
 
-            // Odstranění dat z textových polí po úspěšném uložení do databáze
-            usernameTextBox.Text = "";
-            lastnameTextBox.Text = "";
-            adressTextBox.Text = "";
-            textBoxReligion.Text = "";
-            textBoxPhoneNumber.Text = "";
-            textBoxEmail.Text = "";
-            textBoxNationality.Text = "";
-            textBoxCitizenShip.Text = "";
-            textBoxEdjucation.Text = "";
+            // Odstranění dat po úspěšném uložení do databáze
+            usernameTextBox.Clear();
+            lastnameTextBox.Clear();
+            adressTextBox.Clear();
+            dateTimePicker1.Value = DateTimePicker.MinimumDateTime; // Přidána nová řádka pro vynulování dateTimePicker1
+            textBoxPhoneNumber.Clear();
+            textBoxEmail.Clear();
+            textBoxNationality.Clear();
+            textBoxCitizenShip.Clear();
+            checkedListBox1.ClearSelected(); // Přidána nová řádka pro odznačení položek v checkedListBoxEducation
         }
 
         private void linkLabelGDPR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

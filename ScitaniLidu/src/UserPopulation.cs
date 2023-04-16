@@ -11,7 +11,7 @@ namespace ScitaniLidu
         public string jmeno { get; set; }
         public string prijmeni { get; set; }
         public string bydliste { get; set; }
-        public string nabozenstvi { get; set; }
+        public string datum_narozeni { get; set; }
         public string telefonni_cislo { get; set; }
         public string email { get; set; }
         public string narodnost { get; set; }

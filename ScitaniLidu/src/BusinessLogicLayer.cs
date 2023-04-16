@@ -9,14 +9,14 @@ namespace ScitaniLidu
 {
     public class BusinessLogicLayer
     {
-        public bool InsertUser(string jmeno, string prijmeni, string bydliste, string nabozenstvi, string telefonni_cislo, string email, string narodnost, string statni_obcanstvi, string vzdelani)
+        public bool InsertUser(string jmeno, string prijmeni, string bydliste, string datum_narozeni, string telefonni_cislo, string email, string narodnost, string statni_obcanstvi, string vzdelani)
         {
             //vytvoření objektu uživatele s daty
             UserPopulation user = new UserPopulation();
             user.jmeno = jmeno;
             user.prijmeni = prijmeni;
             user.bydliste = bydliste;
-            user.nabozenstvi = nabozenstvi;
+            user.datum_narozeni = datum_narozeni;
             user.telefonni_cislo = telefonni_cislo;
             user.email = email;
             user.narodnost = narodnost;
