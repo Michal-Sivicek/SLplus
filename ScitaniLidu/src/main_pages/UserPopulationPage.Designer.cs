@@ -25,273 +25,269 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.username = new System.Windows.Forms.Label();
-            this.lastname = new System.Windows.Forms.Label();
-            this.lastnameTextBox = new System.Windows.Forms.TextBox();
-            this.adressTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.datum_narozeni = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.phoneNumber = new System.Windows.Forms.Label();
-            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
-            this.email = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.nationality = new System.Windows.Forms.Label();
-            this.textBoxNationality = new System.Windows.Forms.TextBox();
-            this.citizenShip = new System.Windows.Forms.Label();
-            this.textBoxCitizenShip = new System.Windows.Forms.TextBox();
-            this.edjucation = new System.Windows.Forms.Label();
-            this.sendButton = new System.Windows.Forms.Button();
-            this.checkBoxGDPR = new System.Windows.Forms.CheckBox();
-            this.linkLabelGDPR = new System.Windows.Forms.LinkLabel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.SuspendLayout();
+            usernameTextBox = new TextBox();
+            username = new Label();
+            lastname = new Label();
+            lastnameTextBox = new TextBox();
+            adressTextBox = new TextBox();
+            label1 = new Label();
+            datum_narozeni = new Label();
+            label2 = new Label();
+            phoneNumber = new Label();
+            textBoxPhoneNumber = new TextBox();
+            email = new Label();
+            textBoxEmail = new TextBox();
+            nationality = new Label();
+            textBoxNationality = new TextBox();
+            citizenShip = new Label();
+            textBoxCitizenShip = new TextBox();
+            edjucation = new Label();
+            sendButton = new Button();
+            checkBoxGDPR = new CheckBox();
+            linkLabelGDPR = new LinkLabel();
+            dateTimePicker1 = new DateTimePicker();
+            checkedListBox1 = new CheckedListBox();
+            SuspendLayout();
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.usernameTextBox.Location = new System.Drawing.Point(270, 36);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(308, 23);
-            this.usernameTextBox.TabIndex = 0;
+            usernameTextBox.Anchor = AnchorStyles.Top;
+            usernameTextBox.Location = new Point(270, 36);
+            usernameTextBox.Name = "usernameTextBox";
+            usernameTextBox.Size = new Size(308, 23);
+            usernameTextBox.TabIndex = 0;
             // 
             // username
             // 
-            this.username.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.username.AutoSize = true;
-            this.username.Location = new System.Drawing.Point(222, 39);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(42, 15);
-            this.username.TabIndex = 1;
-            this.username.Text = "Jmeno";
+            username.Anchor = AnchorStyles.Top;
+            username.AutoSize = true;
+            username.Location = new Point(222, 39);
+            username.Name = "username";
+            username.Size = new Size(42, 15);
+            username.TabIndex = 1;
+            username.Text = "Jmeno";
             // 
             // lastname
             // 
-            this.lastname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lastname.AutoSize = true;
-            this.lastname.Location = new System.Drawing.Point(213, 68);
-            this.lastname.Name = "lastname";
-            this.lastname.Size = new System.Drawing.Size(51, 15);
-            this.lastname.TabIndex = 2;
-            this.lastname.Text = "Příjmení";
+            lastname.Anchor = AnchorStyles.Top;
+            lastname.AutoSize = true;
+            lastname.Location = new Point(213, 68);
+            lastname.Name = "lastname";
+            lastname.Size = new Size(51, 15);
+            lastname.TabIndex = 2;
+            lastname.Text = "Příjmení";
             // 
             // lastnameTextBox
             // 
-            this.lastnameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lastnameTextBox.Location = new System.Drawing.Point(270, 65);
-            this.lastnameTextBox.Name = "lastnameTextBox";
-            this.lastnameTextBox.Size = new System.Drawing.Size(308, 23);
-            this.lastnameTextBox.TabIndex = 3;
+            lastnameTextBox.Anchor = AnchorStyles.Top;
+            lastnameTextBox.Location = new Point(270, 65);
+            lastnameTextBox.Name = "lastnameTextBox";
+            lastnameTextBox.Size = new Size(308, 23);
+            lastnameTextBox.TabIndex = 3;
             // 
             // adressTextBox
             // 
-            this.adressTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.adressTextBox.Location = new System.Drawing.Point(270, 94);
-            this.adressTextBox.Name = "adressTextBox";
-            this.adressTextBox.Size = new System.Drawing.Size(308, 23);
-            this.adressTextBox.TabIndex = 4;
+            adressTextBox.Anchor = AnchorStyles.Top;
+            adressTextBox.Location = new Point(270, 94);
+            adressTextBox.Name = "adressTextBox";
+            adressTextBox.Size = new Size(308, 23);
+            adressTextBox.TabIndex = 4;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(172, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 15);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Bydliště (město)";
+            label1.Anchor = AnchorStyles.Top;
+            label1.AutoSize = true;
+            label1.Location = new Point(172, 97);
+            label1.Name = "label1";
+            label1.Size = new Size(92, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Bydliště (město)";
             // 
             // datum_narozeni
             // 
-            this.datum_narozeni.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.datum_narozeni.AutoSize = true;
-            this.datum_narozeni.Location = new System.Drawing.Point(174, 126);
-            this.datum_narozeni.Name = "datum_narozeni";
-            this.datum_narozeni.Size = new System.Drawing.Size(90, 15);
-            this.datum_narozeni.TabIndex = 7;
-            this.datum_narozeni.Text = "DatumNarozeni";
+            datum_narozeni.Anchor = AnchorStyles.Top;
+            datum_narozeni.AutoSize = true;
+            datum_narozeni.Location = new Point(174, 126);
+            datum_narozeni.Name = "datum_narozeni";
+            datum_narozeni.Size = new Size(90, 15);
+            datum_narozeni.TabIndex = 7;
+            datum_narozeni.Text = "DatumNarozeni";
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(234, 224);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 15);
-            this.label2.TabIndex = 10;
+            label2.Anchor = AnchorStyles.Top;
+            label2.AutoSize = true;
+            label2.Location = new Point(234, 224);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 15);
+            label2.TabIndex = 10;
             // 
             // phoneNumber
             // 
-            this.phoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.phoneNumber.AutoSize = true;
-            this.phoneNumber.Location = new System.Drawing.Point(211, 157);
-            this.phoneNumber.Name = "phoneNumber";
-            this.phoneNumber.Size = new System.Drawing.Size(53, 15);
-            this.phoneNumber.TabIndex = 11;
-            this.phoneNumber.Text = "Tel. Číslo";
+            phoneNumber.Anchor = AnchorStyles.Top;
+            phoneNumber.AutoSize = true;
+            phoneNumber.Location = new Point(211, 157);
+            phoneNumber.Name = "phoneNumber";
+            phoneNumber.Size = new Size(53, 15);
+            phoneNumber.TabIndex = 11;
+            phoneNumber.Text = "Tel. Číslo";
             // 
             // textBoxPhoneNumber
             // 
-            this.textBoxPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(268, 149);
-            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
-            this.textBoxPhoneNumber.Size = new System.Drawing.Size(308, 23);
-            this.textBoxPhoneNumber.TabIndex = 12;
+            textBoxPhoneNumber.Anchor = AnchorStyles.Top;
+            textBoxPhoneNumber.Location = new Point(268, 149);
+            textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            textBoxPhoneNumber.Size = new Size(308, 23);
+            textBoxPhoneNumber.TabIndex = 12;
             // 
             // email
             // 
-            this.email.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.email.AutoSize = true;
-            this.email.Location = new System.Drawing.Point(228, 186);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(36, 15);
-            this.email.TabIndex = 13;
-            this.email.Text = "Email";
+            email.Anchor = AnchorStyles.Top;
+            email.AutoSize = true;
+            email.Location = new Point(228, 186);
+            email.Name = "email";
+            email.Size = new Size(36, 15);
+            email.TabIndex = 13;
+            email.Text = "Email";
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxEmail.Location = new System.Drawing.Point(268, 178);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(308, 23);
-            this.textBoxEmail.TabIndex = 14;
+            textBoxEmail.Anchor = AnchorStyles.Top;
+            textBoxEmail.Location = new Point(268, 178);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(308, 23);
+            textBoxEmail.TabIndex = 14;
             // 
             // nationality
             // 
-            this.nationality.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.nationality.AutoSize = true;
-            this.nationality.Location = new System.Drawing.Point(199, 210);
-            this.nationality.Name = "nationality";
-            this.nationality.Size = new System.Drawing.Size(63, 15);
-            this.nationality.TabIndex = 15;
-            this.nationality.Text = "Národnost";
+            nationality.Anchor = AnchorStyles.Top;
+            nationality.AutoSize = true;
+            nationality.Location = new Point(199, 210);
+            nationality.Name = "nationality";
+            nationality.Size = new Size(63, 15);
+            nationality.TabIndex = 15;
+            nationality.Text = "Národnost";
             // 
             // textBoxNationality
             // 
-            this.textBoxNationality.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxNationality.Location = new System.Drawing.Point(268, 207);
-            this.textBoxNationality.Name = "textBoxNationality";
-            this.textBoxNationality.Size = new System.Drawing.Size(308, 23);
-            this.textBoxNationality.TabIndex = 16;
+            textBoxNationality.Anchor = AnchorStyles.Top;
+            textBoxNationality.Location = new Point(268, 207);
+            textBoxNationality.Name = "textBoxNationality";
+            textBoxNationality.Size = new Size(308, 23);
+            textBoxNationality.TabIndex = 16;
             // 
             // citizenShip
             // 
-            this.citizenShip.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.citizenShip.AutoSize = true;
-            this.citizenShip.Location = new System.Drawing.Point(170, 239);
-            this.citizenShip.Name = "citizenShip";
-            this.citizenShip.Size = new System.Drawing.Size(93, 15);
-            this.citizenShip.TabIndex = 17;
-            this.citizenShip.Text = "Státní Občanství";
+            citizenShip.Anchor = AnchorStyles.Top;
+            citizenShip.AutoSize = true;
+            citizenShip.Location = new Point(170, 239);
+            citizenShip.Name = "citizenShip";
+            citizenShip.Size = new Size(93, 15);
+            citizenShip.TabIndex = 17;
+            citizenShip.Text = "Státní Občanství";
             // 
             // textBoxCitizenShip
             // 
-            this.textBoxCitizenShip.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxCitizenShip.Location = new System.Drawing.Point(269, 236);
-            this.textBoxCitizenShip.Name = "textBoxCitizenShip";
-            this.textBoxCitizenShip.Size = new System.Drawing.Size(308, 23);
-            this.textBoxCitizenShip.TabIndex = 18;
+            textBoxCitizenShip.Anchor = AnchorStyles.Top;
+            textBoxCitizenShip.Location = new Point(269, 236);
+            textBoxCitizenShip.Name = "textBoxCitizenShip";
+            textBoxCitizenShip.Size = new Size(308, 23);
+            textBoxCitizenShip.TabIndex = 18;
             // 
             // edjucation
             // 
-            this.edjucation.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.edjucation.AutoSize = true;
-            this.edjucation.Location = new System.Drawing.Point(213, 268);
-            this.edjucation.Name = "edjucation";
-            this.edjucation.Size = new System.Drawing.Size(51, 15);
-            this.edjucation.TabIndex = 19;
-            this.edjucation.Text = "Vzdělání";
+            edjucation.Anchor = AnchorStyles.Top;
+            edjucation.AutoSize = true;
+            edjucation.Location = new Point(116, 265);
+            edjucation.Name = "edjucation";
+            edjucation.Size = new Size(148, 15);
+            edjucation.TabIndex = 19;
+            edjucation.Text = "Nejvyšší dosažené vzdělání";
             // 
             // sendButton
             // 
-            this.sendButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.sendButton.Location = new System.Drawing.Point(503, 346);
-            this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(75, 23);
-            this.sendButton.TabIndex = 21;
-            this.sendButton.Text = "Odeslat";
-            this.sendButton.UseVisualStyleBackColor = true;
-            this.sendButton.Click += new System.EventHandler(this.sendButton_Click_1);
+            sendButton.Anchor = AnchorStyles.Top;
+            sendButton.Location = new Point(503, 346);
+            sendButton.Name = "sendButton";
+            sendButton.Size = new Size(75, 23);
+            sendButton.TabIndex = 21;
+            sendButton.Text = "Odeslat";
+            sendButton.UseVisualStyleBackColor = true;
+            sendButton.Click += sendButton_Click_1;
             // 
             // checkBoxGDPR
             // 
-            this.checkBoxGDPR.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.checkBoxGDPR.Location = new System.Drawing.Point(270, 327);
-            this.checkBoxGDPR.Name = "checkBoxGDPR";
-            this.checkBoxGDPR.Size = new System.Drawing.Size(288, 16);
-            this.checkBoxGDPR.TabIndex = 24;
-            this.checkBoxGDPR.Text = "Souhlasím s podmínkami ochrana osobních údajů\r\n\r\n";
-            this.checkBoxGDPR.UseVisualStyleBackColor = true;
+            checkBoxGDPR.Anchor = AnchorStyles.Top;
+            checkBoxGDPR.Location = new Point(270, 327);
+            checkBoxGDPR.Name = "checkBoxGDPR";
+            checkBoxGDPR.Size = new Size(288, 16);
+            checkBoxGDPR.TabIndex = 24;
+            checkBoxGDPR.Text = "Souhlasím s podmínkami ochrana osobních údajů\r\n\r\n";
+            checkBoxGDPR.UseVisualStyleBackColor = true;
             // 
             // linkLabelGDPR
             // 
-            this.linkLabelGDPR.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.linkLabelGDPR.AutoSize = true;
-            this.linkLabelGDPR.Location = new System.Drawing.Point(289, 346);
-            this.linkLabelGDPR.Name = "linkLabelGDPR";
-            this.linkLabelGDPR.Size = new System.Drawing.Size(37, 15);
-            this.linkLabelGDPR.TabIndex = 25;
-            this.linkLabelGDPR.TabStop = true;
-            this.linkLabelGDPR.Text = "GDPR";
-            this.linkLabelGDPR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelGDPR_LinkClicked);
+            linkLabelGDPR.Anchor = AnchorStyles.Top;
+            linkLabelGDPR.AutoSize = true;
+            linkLabelGDPR.Location = new Point(289, 346);
+            linkLabelGDPR.Name = "linkLabelGDPR";
+            linkLabelGDPR.Size = new Size(37, 15);
+            linkLabelGDPR.TabIndex = 25;
+            linkLabelGDPR.TabStop = true;
+            linkLabelGDPR.Text = "GDPR";
+            linkLabelGDPR.LinkClicked += linkLabelGDPR_LinkClicked;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker1.Location = new System.Drawing.Point(270, 120);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 28;
+            dateTimePicker1.Anchor = AnchorStyles.Top;
+            dateTimePicker1.Location = new Point(270, 120);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 28;
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "základní škola",
-            "střední škola",
-            "vysoká škola"});
-            this.checkedListBox1.Location = new System.Drawing.Point(270, 265);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 58);
-            this.checkedListBox1.TabIndex = 29;
+            checkedListBox1.Anchor = AnchorStyles.Top;
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Items.AddRange(new object[] { "základní škola", "střední škola", "vysoká škola" });
+            checkedListBox1.Location = new Point(270, 265);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(120, 58);
+            checkedListBox1.TabIndex = 29;
             // 
             // UserPopulationPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.linkLabelGDPR);
-            this.Controls.Add(this.checkBoxGDPR);
-            this.Controls.Add(this.sendButton);
-            this.Controls.Add(this.edjucation);
-            this.Controls.Add(this.textBoxCitizenShip);
-            this.Controls.Add(this.citizenShip);
-            this.Controls.Add(this.textBoxNationality);
-            this.Controls.Add(this.nationality);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.email);
-            this.Controls.Add(this.textBoxPhoneNumber);
-            this.Controls.Add(this.phoneNumber);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.datum_narozeni);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.adressTextBox);
-            this.Controls.Add(this.lastnameTextBox);
-            this.Controls.Add(this.lastname);
-            this.Controls.Add(this.username);
-            this.Controls.Add(this.usernameTextBox);
-            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Name = "UserPopulationPage";
-            this.Text = "UserPopulationPage";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            ClientSize = new Size(800, 450);
+            Controls.Add(checkedListBox1);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(linkLabelGDPR);
+            Controls.Add(checkBoxGDPR);
+            Controls.Add(sendButton);
+            Controls.Add(edjucation);
+            Controls.Add(textBoxCitizenShip);
+            Controls.Add(citizenShip);
+            Controls.Add(textBoxNationality);
+            Controls.Add(nationality);
+            Controls.Add(textBoxEmail);
+            Controls.Add(email);
+            Controls.Add(textBoxPhoneNumber);
+            Controls.Add(phoneNumber);
+            Controls.Add(label2);
+            Controls.Add(datum_narozeni);
+            Controls.Add(label1);
+            Controls.Add(adressTextBox);
+            Controls.Add(lastnameTextBox);
+            Controls.Add(lastname);
+            Controls.Add(username);
+            Controls.Add(usernameTextBox);
+            ForeColor = SystemColors.ActiveCaptionText;
+            Name = "UserPopulationPage";
+            Text = "UserPopulationPage";
+            ResumeLayout(false);
+            PerformLayout();
         }
         #endregion
         private TextBox usernameTextBox;
