@@ -1,2 +1,137 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ScitaniLidu.AdminFlatsPage">
+    <Position X="12.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAQAAACAAAAAAAACAAAACAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\AdminFlatsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.AdminHousesPage">
+    <Position X="14.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACIAAACAAgAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>src\AdminHousesPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.AdminPage" Collapsed="true">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQABARCCAEAAgAAgCAAABCQAAAAEAAAAAAAQAACJA=</HashCode>
+      <FileName>src\AdminPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.AdminPopulationPage">
+    <Position X="16" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAgIAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>src\AdminPopulationPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.BusinessLogicLayer" Collapsed="true">
+    <Position X="10.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAEAAACAAEAEAAAAAAEAAAA=</HashCode>
+      <FileName>src\BusinessLogicLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.Config">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>src\Config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.Contact">
+    <Position X="2.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAACCAABAAAACAAAACAgAIAAACAEACAAAAAAA=</HashCode>
+      <FileName>src\Contact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.DataAccessLayer" Collapsed="true">
+    <Position X="10.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEABAAIABAAEAAACAAEAEAAAAAgEAAAI=</HashCode>
+      <FileName>src\DataAccessLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.LoginPage" Collapsed="true">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAQgCAAEABAAASBAgACAgEABEgCCQCAAgAEAAI=</HashCode>
+      <FileName>src\LoginPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.MainPage" Collapsed="true">
+    <Position X="8.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEYAAABAKIAACIAAECAAQyCAQAgAAJAAQAgBQQAAAg=</HashCode>
+      <FileName>src\MainPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.Program">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>src\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.RegisterPage" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAIAAAACAQEIhQAASBEABDFAAsAAAAAEBAAgAAAAI=</HashCode>
+      <FileName>src\RegisterPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.UserFlats">
+    <Position X="6.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAQAAAAAQAAAAAAAAAAAAgAAQAAAgAAEAAAAQAAA=</HashCode>
+      <FileName>src\UserFlats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.UserFlatsPage" Collapsed="true">
+    <Position X="4.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>qAIBAAIIBCAAABBAgACAEBDCAAACAQAIAAgAAAAQACQ=</HashCode>
+      <FileName>src\UserFlatsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.UserHouse">
+    <Position X="4.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAIAEAAAAAAAAABAAAAAgAAAAAAgAAgAAAAQAAA=</HashCode>
+      <FileName>src\UserHouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.UserHousesPage">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAQAAACAAIABEACCAUCBCEEIIAQAIUEAAACEQIAQ=</HashCode>
+      <FileName>src\UserHousesPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.UserPopulation">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAQAAAAAAAAQAAAAAIAAYgAAAQQ=</HashCode>
+      <FileName>src\UserPopulation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.UserPopulationPage" Collapsed="true">
+    <Position X="2.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAQAACwAABAmBACAFAECEkAEAAAAYAQIQAAAIgA=</HashCode>
+      <FileName>src\UserPopulationPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScitaniLidu.UserSumPeople" Collapsed="true">
+    <Position X="1" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAACAAABAAAACAAAACAgA4AAgAATAAAAAAAAA=</HashCode>
+      <FileName>src\UserSumPeople.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
