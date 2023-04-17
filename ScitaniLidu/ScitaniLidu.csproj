@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="NewFolder\NewFolder\" />
+    <Folder Include="folder\NewFolder\" />
     <Folder Include="Properties\" />
   </ItemGroup>
 
