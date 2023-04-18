@@ -28,145 +28,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.vypisBytu = new MaterialSkin.Controls.MaterialFlatButton();
-            this.vypisDomu = new MaterialSkin.Controls.MaterialFlatButton();
-            this.vypisObyvatelstva = new MaterialSkin.Controls.MaterialFlatButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.labelPanel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            vypisBytu = new MaterialSkin.Controls.MaterialFlatButton();
+            vypisDomu = new MaterialSkin.Controls.MaterialFlatButton();
+            vypisObyvatelstva = new MaterialSkin.Controls.MaterialFlatButton();
+            panel3 = new Panel();
+            labelPanel = new Label();
+            panel2 = new Panel();
+            materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            panel1.SuspendLayout();
+            panel3.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel1.Controls.Add(this.vypisBytu);
-            this.panel1.Controls.Add(this.vypisDomu);
-            this.panel1.Controls.Add(this.vypisObyvatelstva);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(0, 63);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(180, 388);
-            this.panel1.TabIndex = 0;
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            panel1.BackColor = SystemColors.ButtonShadow;
+            panel1.Controls.Add(vypisBytu);
+            panel1.Controls.Add(vypisDomu);
+            panel1.Controls.Add(vypisObyvatelstva);
+            panel1.Controls.Add(panel3);
+            panel1.Location = new Point(0, 63);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(180, 388);
+            panel1.TabIndex = 0;
             // 
             // vypisBytu
             // 
-            this.vypisBytu.AutoSize = true;
-            this.vypisBytu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.vypisBytu.Depth = 0;
-            this.vypisBytu.Location = new System.Drawing.Point(47, 268);
-            this.vypisBytu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.vypisBytu.MouseState = MaterialSkin.MouseState.HOVER;
-            this.vypisBytu.Name = "vypisBytu";
-            this.vypisBytu.Primary = false;
-            this.vypisBytu.Size = new System.Drawing.Size(88, 36);
-            this.vypisBytu.TabIndex = 3;
-            this.vypisBytu.Text = "Výpis bytů";
-            this.vypisBytu.UseVisualStyleBackColor = true;
-            this.vypisBytu.Click += new System.EventHandler(this.vypisBytu_Click);
+            vypisBytu.AutoSize = true;
+            vypisBytu.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            vypisBytu.Depth = 0;
+            vypisBytu.Location = new Point(47, 268);
+            vypisBytu.Margin = new Padding(4, 6, 4, 6);
+            vypisBytu.MouseState = MaterialSkin.MouseState.HOVER;
+            vypisBytu.Name = "vypisBytu";
+            vypisBytu.Primary = false;
+            vypisBytu.Size = new Size(88, 36);
+            vypisBytu.TabIndex = 3;
+            vypisBytu.Text = "Výpis bytů";
+            vypisBytu.UseVisualStyleBackColor = true;
+            vypisBytu.Click += vypisBytu_Click;
             // 
             // vypisDomu
             // 
-            this.vypisDomu.AutoSize = true;
-            this.vypisDomu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.vypisDomu.Depth = 0;
-            this.vypisDomu.Location = new System.Drawing.Point(42, 197);
-            this.vypisDomu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.vypisDomu.MouseState = MaterialSkin.MouseState.HOVER;
-            this.vypisDomu.Name = "vypisDomu";
-            this.vypisDomu.Primary = false;
-            this.vypisDomu.Size = new System.Drawing.Size(93, 36);
-            this.vypisDomu.TabIndex = 2;
-            this.vypisDomu.Text = "Výpis domů";
-            this.vypisDomu.UseVisualStyleBackColor = true;
-            this.vypisDomu.Click += new System.EventHandler(this.vypisDomu_Click);
+            vypisDomu.AutoSize = true;
+            vypisDomu.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            vypisDomu.Depth = 0;
+            vypisDomu.Location = new Point(42, 197);
+            vypisDomu.Margin = new Padding(4, 6, 4, 6);
+            vypisDomu.MouseState = MaterialSkin.MouseState.HOVER;
+            vypisDomu.Name = "vypisDomu";
+            vypisDomu.Primary = false;
+            vypisDomu.Size = new Size(93, 36);
+            vypisDomu.TabIndex = 2;
+            vypisDomu.Text = "Výpis domů";
+            vypisDomu.UseVisualStyleBackColor = true;
+            vypisDomu.Click += vypisDomu_Click;
             // 
             // vypisObyvatelstva
             // 
-            this.vypisObyvatelstva.AutoSize = true;
-            this.vypisObyvatelstva.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.vypisObyvatelstva.Depth = 0;
-            this.vypisObyvatelstva.Location = new System.Drawing.Point(7, 121);
-            this.vypisObyvatelstva.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.vypisObyvatelstva.MouseState = MaterialSkin.MouseState.HOVER;
-            this.vypisObyvatelstva.Name = "vypisObyvatelstva";
-            this.vypisObyvatelstva.Primary = false;
-            this.vypisObyvatelstva.Size = new System.Drawing.Size(165, 36);
-            this.vypisObyvatelstva.TabIndex = 1;
-            this.vypisObyvatelstva.Text = "Výpisy obyvatelstva";
-            this.vypisObyvatelstva.UseVisualStyleBackColor = true;
-            this.vypisObyvatelstva.Click += new System.EventHandler(this.vypisObyvatelstva_Click);
+            vypisObyvatelstva.AutoSize = true;
+            vypisObyvatelstva.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            vypisObyvatelstva.Depth = 0;
+            vypisObyvatelstva.Location = new Point(13, 125);
+            vypisObyvatelstva.Margin = new Padding(4, 6, 4, 6);
+            vypisObyvatelstva.MouseState = MaterialSkin.MouseState.HOVER;
+            vypisObyvatelstva.Name = "vypisObyvatelstva";
+            vypisObyvatelstva.Primary = false;
+            vypisObyvatelstva.Size = new Size(156, 36);
+            vypisObyvatelstva.TabIndex = 1;
+            vypisObyvatelstva.Text = "Výpis obyvatelstva";
+            vypisObyvatelstva.UseVisualStyleBackColor = true;
+            vypisObyvatelstva.Click += vypisObyvatelstva_Click;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel3.Controls.Add(this.labelPanel);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(180, 84);
-            this.panel3.TabIndex = 0;
+            panel3.BackColor = SystemColors.ControlDarkDark;
+            panel3.Controls.Add(labelPanel);
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(180, 84);
+            panel3.TabIndex = 0;
             // 
             // labelPanel
             // 
-            this.labelPanel.AutoSize = true;
-            this.labelPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPanel.Location = new System.Drawing.Point(21, 31);
-            this.labelPanel.Name = "labelPanel";
-            this.labelPanel.Size = new System.Drawing.Size(143, 21);
-            this.labelPanel.TabIndex = 0;
-            this.labelPanel.Text = "Vyberte si možnost";
+            labelPanel.AutoSize = true;
+            labelPanel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelPanel.Location = new Point(21, 31);
+            labelPanel.Name = "labelPanel";
+            labelPanel.Size = new Size(143, 21);
+            labelPanel.TabIndex = 0;
+            labelPanel.Text = "Vyberte si možnost";
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Location = new System.Drawing.Point(179, 63);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(623, 388);
-            this.panel2.TabIndex = 1;
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Location = new Point(179, 63);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(623, 388);
+            panel2.TabIndex = 1;
             // 
             // materialFlatButton1
             // 
-            this.materialFlatButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(701, 27);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(97, 36);
-            this.materialFlatButton1.TabIndex = 2;
-            this.materialFlatButton1.Text = "Odhlásit se";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
-            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
+            materialFlatButton1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            materialFlatButton1.AutoSize = true;
+            materialFlatButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialFlatButton1.Depth = 0;
+            materialFlatButton1.Location = new Point(701, 27);
+            materialFlatButton1.Margin = new Padding(4, 6, 4, 6);
+            materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialFlatButton1.Name = "materialFlatButton1";
+            materialFlatButton1.Primary = false;
+            materialFlatButton1.Size = new Size(97, 36);
+            materialFlatButton1.TabIndex = 2;
+            materialFlatButton1.Text = "Odhlásit se";
+            materialFlatButton1.UseVisualStyleBackColor = true;
+            materialFlatButton1.Click += materialFlatButton1_Click;
             // 
             // AdminPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.materialFlatButton1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "AdminPage";
-            this.Text = "AdminPage";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminPage_FormClosing);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(800, 450);
+            Controls.Add(materialFlatButton1);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Name = "AdminPage";
+            Text = "AdminPage";
+            FormClosing += AdminPage_FormClosing;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
