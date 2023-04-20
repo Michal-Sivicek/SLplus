@@ -66,34 +66,46 @@ namespace ScitaniLidu
 
 
             //získání dat z textových polí a kontrolních prvků
-            string jmeno = Regex.Replace(usernameTextBox.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
+            string jmeno = Regex.Replace(usernameTextBox.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]{0,}", "");
 
-            //ověření, zda jméno obsahuje pouze písmena
-            if (jmeno.Length != usernameTextBox.Text.Length)
+            //ověření, zda jméno obsahuje pouze písmena a je alespoň 3 písmena dlouhé
+            if (jmeno.Length < 3 || jmeno.Length != usernameTextBox.Text.Length)
             {
-                MessageBox.Show("Jméno musí obsahovat pouze písmena.");
+                MessageBox.Show("Jméno musí obsahovat pouze písmena a být alespoň 3 písmena dlouhé.");
                 return; // ukončí metodu bez uložení dat do databáze
             }
-            string prijmeni = Regex.Replace(lastnameTextBox.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
 
-            if (prijmeni.Length != lastnameTextBox.Text.Length)
+            string prijmeni = Regex.Replace(lastnameTextBox.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]{0,}", "");
+
+            //ověření, zda příjmení obsahuje pouze písmena a je alespoň 3 písmena dlouhé
+            if (prijmeni.Length < 3 || prijmeni.Length != lastnameTextBox.Text.Length)
             {
-                MessageBox.Show("Příjmení musí obsahovat pouze písmena.");
+                MessageBox.Show("Příjmení musí obsahovat pouze písmena a být alespoň 3 písmena dlouhé.");
+                return; // ukončí metodu bez uložení dat do databáze
+            }
+
+            string bydliste = Regex.Replace(adressTextBox.Text, @"[^a-zA-Z0-9/ ]{0,}", "");
+
+            //ověření, zda bydliště obsahuje pouze písmena, čísla, lomítka a je alespoň 3 znaky dlouhé
+            if (bydliste.Length < 3 || bydliste.Length != adressTextBox.Text.Length)
+            {
+                MessageBox.Show("Bydliště musí obsahovat pouze písmena, čísla, lomítka a mít alespoň 3 znaky.");
+                return; // ukončí metodu bez uložení dat do databáze
+            }
+
+            DateTime datum_narozeni = dateTimePicker1.Value;
+
+            if (datum_narozeni > DateTime.Now)
+            {
+                MessageBox.Show("Datum narození nemůže být v budoucnosti.");
                 return;
             }
 
-            string bydliste = Regex.Replace(adressTextBox.Text, @"[^a-zA-Z0-9/ ]+", "");
+            string datum_narozeni_str = datum_narozeni.ToString("dd.MM.yyyy"); // převod na řetězec
 
-            if (bydliste.Length != adressTextBox.Text.Length)
-            {
-                MessageBox.Show("Bydliště musí obsahovat pouze písmena, čísla, lomítka.");
-                return;
-            }
-
-            string datum_narozeni = dateTimePicker1.Value.ToString("dd.MM.yyyy");
             Regex datum_regex = new Regex(@"^\d{2}\.\d{2}\.\d{4}$");
 
-            if (!datum_regex.IsMatch(datum_narozeni))
+            if (!datum_regex.IsMatch(datum_narozeni_str))
             {
                 MessageBox.Show("Datum narození musí být ve formátu dd.mm.yyyy.");
                 return;
@@ -101,36 +113,41 @@ namespace ScitaniLidu
 
 
 
-            string telefonni_cislo = Regex.Replace(textBoxPhoneNumber.Text, @"[^0-9 +]+", "");
 
-            if (telefonni_cislo.Length != textBoxPhoneNumber.Text.Length)
+            string telefonni_cislo = Regex.Replace(textBoxPhoneNumber.Text, @"[^0-9 +]{0,}", "");
+
+            // ověření, zda telefonní číslo obsahuje pouze čísla a má alespoň 3 číslice
+            if (telefonni_cislo.Length < 3 || telefonni_cislo.Length != textBoxPhoneNumber.Text.Length)
             {
-                MessageBox.Show("Telefonní číslo musí obsahovat pouze čísla.");
-                return;
+                MessageBox.Show("Telefonní číslo musí obsahovat pouze čísla a být alespoň 3 číslice dlouhé (píše se bez předvolby).");
+                return; // ukončí metodu bez uložení dat do databáze
             }
 
             string email = Regex.Replace(textBoxEmail.Text, @"[^a-zA-Z0-9@._-]+", "");
 
-            if (email.Length != textBoxEmail.Text.Length || !email.Contains("@")) //povinny znak "@"
+            // ověření, zda email obsahuje pouze písmena, čísla, @, ., - a _ a obsahuje povinné znaky @ a .
+            if (email.Length != textBoxEmail.Text.Length || !email.Contains("@") || !email.Contains("."))
             {
-                MessageBox.Show("Email musí obsahovat pouze písmena, čísla, @, ., - a _ a musí obsahovat znak @.");
-                return;
+                MessageBox.Show("Email musí obsahovat pouze písmena, čísla, @, ., - a _ a musí obsahovat povinné znaky @ a .");
+                return; // ukončí metodu bez uložení dat do databáze
             }
 
-            string narodnost = Regex.Replace(textBoxNationality.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
+            string narodnost = Regex.Replace(textBoxNationality.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ ]{0,}", "");
 
-            if (narodnost.Length != textBoxNationality.Text.Length)
+            // ověření, zda národnost obsahuje pouze písmena a mezery a má alespoň 5 znaků
+            if (narodnost.Length < 5 || narodnost.Length != textBoxNationality.Text.Length)
             {
-                MessageBox.Show("Národnost musí obsahovat pouze písmena a mezery.");
-                return;
+                MessageBox.Show("Národnost musí obsahovat pouze písmena a mezery a být alespoň 5 znaků dlouhá.");
+                return; // ukončí metodu bez uložení dat do databáze
             }
 
-            string statni_obcanstvi = Regex.Replace(textBoxCitizenShip.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
+            string statni_obcanstvi = Regex.Replace(textBoxCitizenShip.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ ]{0,}", "");
 
-            if (statni_obcanstvi.Length != textBoxCitizenShip.Text.Length)
+            // ověření, zda státní občanství obsahuje pouze písmena a mezery a má alespoň 5 znaků
+            if (statni_obcanstvi.Length < 5 || statni_obcanstvi.Length != textBoxCitizenShip.Text.Length)
             {
-                MessageBox.Show("Státní občanství musí obsahovat pouze písmena a mezery.");
-                return;
+                MessageBox.Show("Státní občanství musí obsahovat pouze písmena a mezery a být alespoň 5 znaků dlouhé.");
+                return; // ukončí metodu bez uložení dat do databáze
             }
 
             // Kontrola vzdělání
@@ -150,7 +167,7 @@ namespace ScitaniLidu
 
             //předání dat do vrstvy business logiky
             BusinessLogicLayer BLL = new BusinessLogicLayer();
-            bool result = BLL.InsertUser(jmeno, prijmeni, bydliste, datum_narozeni, telefonni_cislo, email, narodnost, statni_obcanstvi, vzdelani);
+            bool result = BLL.InsertUser(jmeno, prijmeni, bydliste, datum_narozeni_str, telefonni_cislo, email, narodnost, statni_obcanstvi, vzdelani);
 
             //zpracování výsledku a vypsání informací uživateli
             if (result == true)
