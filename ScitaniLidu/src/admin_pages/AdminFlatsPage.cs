@@ -1,6 +1,4 @@
-﻿using DocumentFormat.OpenXml.Wordprocessing;
-using Google.Protobuf.WellKnownTypes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +12,8 @@ namespace ScitaniLidu
 {
     public partial class AdminFlatsPage : Form
     {
+
+
         /// <summary>
         /// V této metodě je volána metoda InitializeComponent(), která inicializuje všechny komponenty formuláře, včetně grafických prvků a událostí.  
         /// </summary>

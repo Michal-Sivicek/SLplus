@@ -291,7 +291,7 @@ namespace ScitaniLidu
                 connection.Open();
 
                 // vytvoření SQL dotazu pro výběr všech záznamů z tabulky users_info_flats
-                string query = "SELECT jmeno, obec, cislo_domu, ulice, psc, obydlenost_bytu, velikost_bytu, podlazi_bytu, pocet_lidi FROM users_info_flats JOIN users ON users_info_flats.user_id = users.id";
+                string query = "SELECT jmeno, obec, cislo_domu, ulice, psc, obydlenost_bytu, velikost_bytu, podlazi_bytu, pocet_lidi FROM users_info_flats";
                 MySqlCommand command = new MySqlCommand(query, connection);
 
                 // provedení dotazu a načtení výsledků

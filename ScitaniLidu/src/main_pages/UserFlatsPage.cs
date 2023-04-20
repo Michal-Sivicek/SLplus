@@ -65,12 +65,12 @@ namespace ScitaniLidu
         /// <param name="e"></param>
         private void buttonOdeslat_Click(object sender, EventArgs e)
         {
-            string jmeno = Regex.Replace(textBoxName.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
+            string jmeno = Regex.Replace(textBoxName.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ\s]+", "");
 
-            //ověření, zda jméno obsahuje pouze písmena
-            if (jmeno.Length != textBoxName.Text.Length)
+            // ověření, zda jméno obsahuje pouze písmena a má alespoň 7 znaků
+            if (jmeno.Length != textBoxName.Text.Length || jmeno.Length < 7)
             {
-                MessageBox.Show("Jméno musí obsahovat pouze písmena.");
+                MessageBox.Show("Jméno a příjmení musí obsahovat pouze písmena a musí být alespoň 7 znaků dlouhé.");
                 return; // ukončí metodu bez uložení dat do databáze
             }
 
@@ -90,19 +90,19 @@ namespace ScitaniLidu
                 return; // ukončí metodu bez uložení dat do databáze
             }
 
-            string ulice = Regex.Replace(textBoxAdress.Text, @"[^a-zA-Z0-9]+", "");
+            string ulice = Regex.Replace(textBoxAdress.Text, @"[^a-zA-Z0-9áčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ., /]+", "");
 
-            if (ulice.Length != textBoxAdress.Text.Length)
+            if (ulice.Length < 3 || ulice.Length != textBoxAdress.Text.Length)
             {
-                MessageBox.Show("Název ulice musí obsahovat pouze čísla a písmena.");
-                return; // ukončí metodu bez uložení dat do databáze
+                MessageBox.Show("Název ulice musí být alespoň tři písmena dlouhý a obsahovat pouze čísla, písmena a některé speciální znaky (háčky, čárky, tečky, lomítka a mezery).");
+                return;
             }
 
             string psc = Regex.Replace(textBoxPSC.Text, @"[^0-9]+", "");
 
-            if (psc.Length != textBoxPSC.Text.Length)
+            if (psc.Length < 5)
             {
-                MessageBox.Show("PSČ musí obsahovat pouze čísla.");
+                MessageBox.Show("PSČ musí obsahovat alespoň 5 čísel.");
                 return; // ukončí metodu bez uložení dat do databáze
             }
 
