@@ -32,7 +32,7 @@ namespace ScitaniLidu
         private void buttonVypisBytu_Click(object sender, EventArgs e)
         {
             BusinessLogicLayer BLL = new BusinessLogicLayer();
-            List<UserHouse> users = BLL.GetAllUserHouses();
+            List<UserFlats> users = BLL.GetAllUserFlats();
 
             dataGridView1.DataSource = users;
         }

@@ -62,11 +62,12 @@ namespace ScitaniLidu
                 return;
             }
 
-            string jmeno_prijmeni = Regex.Replace(textBox1.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
+            string jmeno_prijmeni = Regex.Replace(textBox1.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ ]{0,}", "");
 
-            if (jmeno_prijmeni.Length != textBox1.Text.Length)
+            // ověření, zda jméno a příjmení obsahuje pouze písmena a mezery a má alespoň 7 znaků
+            if (jmeno_prijmeni.Length < 7 || jmeno_prijmeni.Length != textBox1.Text.Length)
             {
-                MessageBox.Show("Jméno musí obsahovat pouze písmena.");
+                MessageBox.Show("Jméno a příjmení musí obsahovat pouze písmena a mezery a být alespoň 7 znaků dlouhé.");
                 return; // ukončí metodu bez uložení dat do databáze
             }
 
@@ -86,19 +87,19 @@ namespace ScitaniLidu
                 return; // ukončí metodu bez uložení dat do databáze
             }
 
-            string ulice = Regex.Replace(textBoxAdress.Text, @"[^a-zA-Z0-9]+", "");
+            string ulice = Regex.Replace(textBoxAdress.Text, @"[^a-zA-Z0-9áčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ, ]+", "");
 
-            if (ulice.Length != textBoxAdress.Text.Length)
+            if (ulice.Length < 3 || ulice.Length != textBoxAdress.Text.Length)
             {
-                MessageBox.Show("Název ulice musí obsahovat pouze čísla a písmena.");
+                MessageBox.Show("Název ulice musí být alespoň tři písmena dlouhý a obsahovat pouze čísla, písmena, čárky a diakritické znaky.");
                 return; // ukončí metodu bez uložení dat do databáze
             }
 
             string psc = Regex.Replace(textBoxPSC.Text, @"[^0-9]+", "");
 
-            if (psc.Length != textBoxPSC.Text.Length)
+            if (psc.Length != 5 || psc.Length != textBoxPSC.Text.Length)
             {
-                MessageBox.Show("PSČ musí obsahovat pouze čísla.");
+                MessageBox.Show("PSČ musí být pět číslic dlouhé a obsahovat pouze čísla.");
                 return; // ukončí metodu bez uložení dat do databáze
             }
 
@@ -112,17 +113,26 @@ namespace ScitaniLidu
 
             string rok_vystavby = Regex.Replace(textBoxVystavbaRekonstrukce.Text, @"[^0-9]+", "");
 
+            // ověření, zda rok výstavby obsahuje pouze čísla
             if (rok_vystavby.Length != textBoxVystavbaRekonstrukce.Text.Length)
             {
                 MessageBox.Show("Rok výstavby musí obsahovat pouze čísla.");
                 return; // ukončí metodu bez uložení dat do databáze
             }
 
+            // ověření, zda rok výstavby není v budoucnosti
+            int aktualni_rok = DateTime.Now.Year;
+            if (Convert.ToInt32(rok_vystavby) > aktualni_rok)
+            {
+                MessageBox.Show("Rok výstavby nemůže být v budoucnosti.");
+                return; // ukončí metodu bez uložení dat do databáze
+            }
+
             string material_zdi = Regex.Replace(textBoxMaterialZdi.Text, @"[^a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+", "");
 
-            if (material_zdi.Length != textBoxMaterialZdi.Text.Length)
+            if (material_zdi.Length != textBoxMaterialZdi.Text.Length || material_zdi.Length < 3)
             {
-                MessageBox.Show("Material zdi musí obsahovat pouze písmena.");
+                MessageBox.Show("Název materiálu zdi musí obsahovat pouze písmena a musí mít minimálně 3 znaky.");
                 return; // ukončí metodu bez uložení dat do databáze
             }
 

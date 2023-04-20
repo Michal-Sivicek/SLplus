@@ -192,7 +192,7 @@ namespace ScitaniLidu
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            int count = GetNumberOfHouses();
+            int count = GetNumberOfFlats();
             label3.Text = "Sečtený počet vlastněných bytů: " + count.ToString();
         }
     }
